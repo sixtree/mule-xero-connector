@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?artifactRepository version='1.1.0'?>
-<repository name='file:/C:/Users/Andy/Documents/GitHub/mule-dev/xero-connector/target/update-site/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+<repository name='file:/C:/Users/Andy/Documents/GitHub/mule-dev/xero-connector/target/update-site/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1344473488396'/>
+    <property name='p2.timestamp' value='1344478933260'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
@@ -10,12 +10,27 @@
     <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
-  <artifacts size='2'>
+  <artifacts size='4'>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208091222'>
+      <properties size='3'>
+        <property name='artifact.size' value='587539'/>
+        <property name='download.size' value='587539'/>
+        <property name='download.md5' value='eebd80af0ca41a6024437be7847e6414'/>
+      </properties>
+    </artifact>
     <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208091051'>
       <properties size='4'>
         <property name='artifact.size' value='635'/>
         <property name='download.size' value='635'/>
         <property name='download.md5' value='bea919a171a316b521a0a5278d4c6b47'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208091222'>
+      <properties size='4'>
+        <property name='artifact.size' value='634'/>
+        <property name='download.size' value='634'/>
+        <property name='download.md5' value='72671233d6f65db37366d6b35190caec'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>

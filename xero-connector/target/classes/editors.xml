@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" prefix="xero" url="http://www.mulesoft.org/schema/mule/xero">
+  <global-cloud-connector extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" image="icons/large/xero-connector-48x32.png" localId="config" icon="icons/small/xero-connector-24x16.png" description="Global Xero configuration information." caption="Xero">
+    <attribute-category description="Xero configuration properties." caption="General">
+      <group caption="Generic" id="xeroGenericProperties">
+        <name required="true" description="Give a name to this configuration so it can be later referenced by config-ref." caption="Name" name="name"></name>
+      </group>
+      <group caption="Connection" id="connection"></group>
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Key" name="consumerKey"></string>
+        <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Secret" name="consumerSecret"></string>
+        <string javaType="java.lang.String" required="true" description="Configurable." caption="Private Key Loc" name="privateKeyLoc"></string>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" image="icons/large/xero-connector-48x32.png" localId="xero-connector" icon="icons/small/xero-connector-24x16.png" description="Cloud Connector." caption="Xero" aliasId="org.mule.tooling.ui.modules.core.pattern.xero">
+    <attribute-category description="General." caption="General">
+      <group caption="Generic" id="xeroConnectorGeneric">
+        <modeSwitch description="Operation." caption="Operation" name="Xero operations to execute">
+          <mode modeLabel="Get account" modeId="http://www.mulesoft.org/schema/mule/xero/get-account"></mode>
+          <mode modeLabel="Get all accounts" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-accounts"></mode>
+          <mode modeLabel="Get all invoices" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-invoices"></mode>
+          <mode modeLabel="Get invoice" modeId="http://www.mulesoft.org/schema/mule/xero/get-invoice"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector abstract="true" image="icons/large/xero-connector-48x32.png" localId="abstractXeroConnectorGeneric" icon="icons/small/xero-connector-24x16.png" description="Interact with Xero." caption="Abstractxeroconnectorgeneric">
+    <attribute-category description="General." caption="General">
+      <group caption="Generic" id="abstractXeroConnectorGeneric">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/xero/config" required="true" description="Specify which configuration to use for this invocation." caption="Config Reference" name="config-ref"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-all-accounts" icon="icons/small/xero-connector-24x16.png" caption="Get All Accounts">
+    <attribute-category description="General." caption="General"></attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-account" icon="icons/small/xero-connector-24x16.png" caption="Get Account">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="true" description="A unique Xero account id." caption="Account Id" name="accountId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-all-invoices" icon="icons/small/xero-connector-24x16.png" caption="Get All Invoices">
+    <attribute-category description="General." caption="General"></attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-invoice" icon="icons/small/xero-connector-24x16.png" caption="Get Invoice">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="true" description="A unique Xero invoice id." caption="Invoice Id" name="invoiceId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
