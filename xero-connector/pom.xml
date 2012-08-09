@@ -229,31 +229,16 @@
 			<groupId>net.oauth.core</groupId>
 			<artifactId>oauth</artifactId>
 			<version>20100527</version>
-			<scope>provided</scope>
         </dependency>
         <dependency>
 			<groupId>net.oauth.core</groupId>
 			<artifactId>oauth-consumer</artifactId>
 			<version>20100527</version>
-			<scope>provided</scope>
-        </dependency>
-        <dependency>
-			<groupId>net.oauth.core</groupId>
-			<artifactId>oauth-consumer</artifactId>
-			<version>20100527</version>
-			<scope>provided</scope>
-        </dependency>
-        <dependency>
-			<groupId>net.oauth.core</groupId>
-			<artifactId>oauth-httpclient3</artifactId>
-			<version>20100527</version>
-			<scope>provided</scope>
         </dependency>
         <dependency>
 			<groupId>net.oauth.core</groupId>
 			<artifactId>oauth-httpclient3</artifactId>
 			<version>20090617</version>
-			<scope>provided</scope>
         </dependency>
     </dependencies>
     <repositories>
