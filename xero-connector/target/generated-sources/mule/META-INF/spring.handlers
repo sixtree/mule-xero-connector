@@ -1,0 +1,1 @@
+http\://www.mulesoft.org/schema/mule/xero=org.mule.module.xero.config.XeroConnectorNamespaceHandler

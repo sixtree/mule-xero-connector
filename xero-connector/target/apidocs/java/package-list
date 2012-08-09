@@ -1,0 +1,5 @@
+org.mule.module.xero
+org.mule.module.xero.adapters
+org.mule.module.xero.config
+org.mule.module.xero.processors
+

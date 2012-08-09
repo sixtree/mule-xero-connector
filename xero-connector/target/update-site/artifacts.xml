@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='file:/C:/xero-connector/target/update-site/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1.0.0'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1344468974514'/>
+    <property name='p2.compressed' value='false'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='28'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080749'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='294c1ac0e4b3b77bf55b74459b4fe2b5'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080730'>
+      <properties size='3'>
+        <property name='artifact.size' value='177481'/>
+        <property name='download.size' value='177481'/>
+        <property name='download.md5' value='a61fd2ec961e64f7f0fb57fb3d5a3293'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080905'>
+      <properties size='3'>
+        <property name='artifact.size' value='177482'/>
+        <property name='download.size' value='177482'/>
+        <property name='download.md5' value='7f88e49e7e3a4c3ddc56d72fb9842168'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081605'>
+      <properties size='4'>
+        <property name='artifact.size' value='635'/>
+        <property name='download.size' value='635'/>
+        <property name='download.md5' value='b0e083cd676674fe4f10585333502810'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080802'>
+      <properties size='4'>
+        <property name='artifact.size' value='630'/>
+        <property name='download.size' value='630'/>
+        <property name='download.md5' value='6b8f22dceeee884c515e594bd65eeffa'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081605'>
+      <properties size='3'>
+        <property name='artifact.size' value='177409'/>
+        <property name='download.size' value='177409'/>
+        <property name='download.md5' value='479bb80eb4afdf42f7365cb5ab1632bc'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080900'>
+      <properties size='3'>
+        <property name='artifact.size' value='177420'/>
+        <property name='download.size' value='177420'/>
+        <property name='download.md5' value='b9218ebd86fde028d3de5ee09fb743d5'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081030'>
+      <properties size='3'>
+        <property name='artifact.size' value='177469'/>
+        <property name='download.size' value='177469'/>
+        <property name='download.md5' value='1d0247306b6aff08f6d9d684d6b1926a'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080737'>
+      <properties size='3'>
+        <property name='artifact.size' value='177436'/>
+        <property name='download.size' value='177436'/>
+        <property name='download.md5' value='7e5e3165cf4eed9f6a1adda3deb8bb27'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080733'>
+      <properties size='3'>
+        <property name='artifact.size' value='177461'/>
+        <property name='download.size' value='177461'/>
+        <property name='download.md5' value='051d96982a0f1c8bdb5320dc0be8c2a8'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080733'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='86ed448e7d45d7d4357df81e08e376f1'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080730'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='24df4196078f5c84eb6688786f174f0f'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080737'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='54bd7b94699d73e4709f4a20e362c7b3'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080728'>
+      <properties size='3'>
+        <property name='artifact.size' value='177439'/>
+        <property name='download.size' value='177439'/>
+        <property name='download.md5' value='25e74b531ae3b814ac1cd60d192af239'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080852'>
+      <properties size='3'>
+        <property name='artifact.size' value='177466'/>
+        <property name='download.size' value='177466'/>
+        <property name='download.md5' value='3ad3851e47e32119b2ca78cc2e72557a'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080749'>
+      <properties size='3'>
+        <property name='artifact.size' value='177466'/>
+        <property name='download.size' value='177466'/>
+        <property name='download.md5' value='65575b809f6e853f779f935de71af950'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080852'>
+      <properties size='4'>
+        <property name='artifact.size' value='632'/>
+        <property name='download.size' value='632'/>
+        <property name='download.md5' value='6b07342546df397ac17761ece18c449b'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080900'>
+      <properties size='4'>
+        <property name='artifact.size' value='632'/>
+        <property name='download.size' value='632'/>
+        <property name='download.md5' value='55a220dd976c0ae7c0aa52f2daaa3603'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081610'>
+      <properties size='4'>
+        <property name='artifact.size' value='635'/>
+        <property name='download.size' value='635'/>
+        <property name='download.md5' value='782017f1b25729bc926d0fa5bd7f8e30'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080744'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='8c388554525cc6950f1f2d3d4e9ee4ac'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081030'>
+      <properties size='4'>
+        <property name='artifact.size' value='634'/>
+        <property name='download.size' value='634'/>
+        <property name='download.md5' value='94c3633b27b0a356db9d537b3274c5ff'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080802'>
+      <properties size='3'>
+        <property name='artifact.size' value='218861'/>
+        <property name='download.size' value='218861'/>
+        <property name='download.md5' value='28be2815c2a8db2e130311a16f3e37a5'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208090936'>
+      <properties size='4'>
+        <property name='artifact.size' value='636'/>
+        <property name='download.size' value='636'/>
+        <property name='download.md5' value='cb02298181158965cccff0a5f785d802'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080744'>
+      <properties size='3'>
+        <property name='artifact.size' value='177437'/>
+        <property name='download.size' value='177437'/>
+        <property name='download.md5' value='ce3b7547b9f21f3e1730ac0d4f73e71d'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080905'>
+      <properties size='4'>
+        <property name='artifact.size' value='633'/>
+        <property name='download.size' value='633'/>
+        <property name='download.md5' value='641bcba676c5daaaa0bd064531f557c4'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208080728'>
+      <properties size='4'>
+        <property name='artifact.size' value='632'/>
+        <property name='download.size' value='632'/>
+        <property name='download.md5' value='cb925e56e00bb191399077595cab17f9'/>
+        <property name='download.contentType' value='application/zip'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208090936'>
+      <properties size='3'>
+        <property name='artifact.size' value='177451'/>
+        <property name='download.size' value='177451'/>
+        <property name='download.md5' value='6c11864edb93ad62ef42b805a1e945c1'/>
+      </properties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201208081610'>
+      <properties size='3'>
+        <property name='artifact.size' value='177409'/>
+        <property name='download.size' value='177409'/>
+        <property name='download.md5' value='4df82a625f1b546038b9aab8eacdb080'/>
+      </properties>
+    </artifact>
+  </artifacts>
+</repository>

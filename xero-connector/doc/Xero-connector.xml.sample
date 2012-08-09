@@ -1,0 +1,15 @@
+<!-- BEGIN_INCLUDE(xero:get-all-accounts) -->
+    <xero:get-all-accounts/>
+<!-- END_INCLUDE(xero:get-all-accounts) -->
+
+<!-- BEGIN_INCLUDE(xero:get-account) -->
+    <xero:get-account accountId="ACCOUNT_ID"/>
+<!-- END_INCLUDE(xero:get-account) -->
+
+<!-- BEGIN_INCLUDE(xero:get-all-invoices) -->
+    <xero:get-all-invoices/>
+<!-- END_INCLUDE(xero:get-all-invoices) -->
+
+<!-- BEGIN_INCLUDE(xero:get-invoice) -->
+    <xero:get-invoice accountId="INVOICE_ID"/>
+<!-- END_INCLUDE(xero:get-invoice) -->
