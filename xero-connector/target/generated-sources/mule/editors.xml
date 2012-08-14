@@ -18,6 +18,7 @@
     <attribute-category description="General." caption="General">
       <group caption="Generic" id="xeroConnectorGeneric">
         <modeSwitch description="Operation." caption="Operation" name="Xero operations to execute">
+          <mode modeLabel="Create" modeId="http://www.mulesoft.org/schema/mule/xero/create"></mode>
           <mode modeLabel="Get account" modeId="http://www.mulesoft.org/schema/mule/xero/get-account"></mode>
           <mode modeLabel="Get all accounts" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-accounts"></mode>
           <mode modeLabel="Get all invoices" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-invoices"></mode>
@@ -68,6 +69,40 @@
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
         <string javaType="java.lang.String" required="true" description="A unique Xero invoice id." caption="Invoice Id" name="invoiceId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="create" icon="icons/small/xero-connector-24x16.png" caption="Create">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[payload]" javaType="java.lang.String" required="false" description="The optional content of the object to be created in Xero." caption="Optional Payload" name="optionalPayload"></string>
+        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroAllTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
+          <option value="ACCOUNTS"></option>
+          <option value="BANKTRANSACTIONS"></option>
+          <option value="BRANDINGTHEMES"></option>
+          <option value="CONTACTS"></option>
+          <option value="CREDITNOTES"></option>
+          <option value="CURRENCIES"></option>
+          <option value="EMPLOYEES"></option>
+          <option value="EXPENSECLAIMS"></option>
+          <option value="INVOICES"></option>
+          <option value="ITEMS"></option>
+          <option value="JOURNALS"></option>
+          <option value="MANUALJOURNALS"></option>
+          <option value="ORGANISATION"></option>
+          <option value="PAYMENTS"></option>
+          <option value="RECEIPTS"></option>
+          <option value="REPORTS"></option>
+          <option value="TAXRATES"></option>
+          <option value="TRACKINGCATEGORIES"></option>
+          <option value="USERS"></option>
+        </enum>
       </group>
     </attribute-category>
     <attribute-category description="Connection." caption="Connection">

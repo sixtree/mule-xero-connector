@@ -24,6 +24,7 @@ public class XeroConnectorNamespaceHandler
         registerBeanDefinitionParser("get-account", new GetAccountDefinitionParser());
         registerBeanDefinitionParser("get-all-invoices", new GetAllInvoicesDefinitionParser());
         registerBeanDefinitionParser("get-invoice", new GetInvoiceDefinitionParser());
+        registerBeanDefinitionParser("create", new CreateDefinitionParser());
     }
 
 }

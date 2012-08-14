@@ -387,7 +387,7 @@ public class GetAllInvoicesMessageProcessor
                     StringBuilder _messageStringBuilder = new StringBuilder();
                     _messageStringBuilder.append("Connection has been acquired with ");
                     _messageStringBuilder.append("[id = ");
-                    _messageStringBuilder.append(connection.connectionId());
+                    _messageStringBuilder.append(connection.getSessionId());
                     _messageStringBuilder.append("] ");
                     logger.debug(_messageStringBuilder.toString());
                 }
@@ -415,7 +415,7 @@ public class GetAllInvoicesMessageProcessor
                     if (logger.isDebugEnabled()) {
                         StringBuilder _messageStringBuilder = new StringBuilder();
                         _messageStringBuilder.append("Releasing the connection back into the pool [id=");
-                        _messageStringBuilder.append(connection.connectionId());
+                        _messageStringBuilder.append(connection.getSessionId());
                         _messageStringBuilder.append("].");
                         logger.debug(_messageStringBuilder.toString());
                     }

@@ -8,7 +8,10 @@ import org.mule.api.annotations.Connect;
 import org.mule.api.annotations.ValidateConnection;
 import org.mule.api.annotations.ConnectionIdentifier;
 import org.mule.api.annotations.Disconnect;
-import org.mule.api.annotations.param.ConnectionKey;
+import org.mule.api.annotations.display.Placement;
+import org.mule.api.annotations.param.Default;
+import org.mule.api.annotations.param.Optional;
+import org.mule.api.annotations.param.Payload;
 import org.mule.api.ConnectionException;
 import org.mule.api.annotations.Configurable;
 import org.mule.api.annotations.Processor;
@@ -74,7 +77,6 @@ public class XeroConnector
     @Processor
     public String getAllAccounts()
     {
-
     	String accounts = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
     	accounts = xeroClient.getAllAccounts();
@@ -125,9 +127,31 @@ public class XeroConnector
     @Processor
     public String getInvoice(String invoiceId)
     {
-        String invoices = null;
+    	String invoice = null;
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	invoice = xeroClient.getInvoice(invoiceId);
 
-        return invoices;
+        return invoice;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:create}
+     * 
+     * create
+     * @param objectType The type of object to be created in Xero
+     * @param payload The content of the object to be created in Xero
+     * @param optionalPayload The optional content of the object to be created in Xero
+     * @return - returns the status of the create request
+     */
+    @Processor
+    public String create(XeroObjectTypes.XeroAllTypes objectType, 
+    					@Optional @Default("#[payload]") String optionalPayload,
+    					@Payload String payload)
+    {
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	String createResponse = xeroClient.create(objectType, optionalPayload, payload);    	
+    	        
+    	return createResponse;
     }
     
     
@@ -157,21 +181,18 @@ public class XeroConnector
          * CODE FOR CLOSING A CONNECTION GOES IN HERE
          */
     }
-
-    /**
-     * Are we connected
-     */
+    
     @ValidateConnection
     public boolean isConnected() {
-        return true;
+		return false;
+    	
     }
 
-    /**
-     * Are we connected
-     */
     @ConnectionIdentifier
-    public String connectionId() {
-        return "001";
+    public String getSessionId() {
+		String sessionId = null;
+    	
+    	return sessionId; 
+    
     }
-
 }

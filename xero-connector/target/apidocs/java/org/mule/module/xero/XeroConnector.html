@@ -210,6 +210,8 @@
   <a href="../../../../../java/org/mule/module/xero/config/package-summary.html">org.mule.module.xero.config</a></li>
     <li class="api apilevel-">
   <a href="../../../../../java/org/mule/module/xero/processors/package-summary.html">org.mule.module.xero.processors</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../java/org/mule/module/xero/transformers/package-summary.html">org.mule.module.xero.transformers</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -221,10 +223,20 @@
       <ul>
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnector.html">XeroConnector</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnectorClient.html">XeroConnectorClient</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.html">XeroObjectTypes</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroXmlHandler.html">XeroXmlHandler</a></li>
       </ul>
     </li>
               
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroGetType.html">XeroObjectTypes.XeroGetType</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostType.html">XeroObjectTypes.XeroPostType</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPutType.html">XeroObjectTypes.XeroPutType</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -602,10 +614,11 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#connectionId()">connectionId</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#create(org.mule.module.xero.XeroObjectTypes.XeroAllTypes, java.lang.String, java.lang.String)">create</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> optionalPayload, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
         
-        <div class="jd-descrdiv">Are we connected
-</div>
+        <div class="jd-descrdiv">
+ 
+ create</div>
   
   </td></tr>
 
@@ -717,19 +730,32 @@ Summary:
             
             
             
-            boolean</nobr>
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#isConnected()">isConnected</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getSessionId()">getSessionId</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Are we connected
-</div>
-  
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#isConnected()">isConnected</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -747,7 +773,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -765,7 +791,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1248,7 +1274,7 @@ From class
 </div>
 
 
-<A NAME="connectionId()"></A>
+<A NAME="create(org.mule.module.xero.XeroObjectTypes.XeroAllTypes, java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1260,8 +1286,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">connectionId</span>
-      <span class="normal">()</span>
+      <span class="sympad">create</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> optionalPayload, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1273,8 +1299,31 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Are we connected
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ create</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objectType</td>
+          <td>The type of object to be created in Xero</td>
+        </tr>
+        <tr>
+          <th>optionalPayload</td>
+          <td>The optional content of the object to be created in Xero</td>
+        </tr>
+        <tr>
+          <th>payload</td>
+          <td>The content of the object to be created in Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns the status of the create request
+</li></ul>
+  </div>
 
     </div>
 </div>
@@ -1482,6 +1531,37 @@ From class
 </div>
 
 
+<A NAME="getSessionId()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getSessionId</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <A NAME="isConnected()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1507,8 +1587,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Are we connected
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     </div>
 </div>

@@ -7,9 +7,16 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 
 
 import net.oauth.OAuth;
+import net.oauth.OAuth.Parameter;
 import net.oauth.OAuthAccessor;
 import net.oauth.OAuthConsumer;
 import net.oauth.OAuthException;
@@ -144,5 +151,111 @@ public class XeroConnectorClient {
 		return accountData;
 	}
 	
-
+	public String getInvoice(String invoiceId)
+	{
+		String invoiceData = null;
+		
+		try {
+			OAuthClient client = new OAuthClient(new HttpClient3());
+			OAuthAccessor accessor = createOAuthAccessor();
+			OAuthMessage response = client.invoke(accessor, OAuthMessage.GET, xeroApiUrl + "Invoices" + "/" + invoiceId, null);
+			
+			invoiceData = response.readBodyAsString();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (OAuthException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return invoiceData;
+	}
+	
+	public String create(XeroObjectTypes.XeroAllTypes objectType,
+						 String optionalPayload,
+						 String payload)
+	{
+		String responseString = null;
+		
+		//Check if the user has configured the connector to pass data other than the message payload to the endpoint. 
+		//If so, pass this data instead
+		if (!optionalPayload.isEmpty())
+		{
+			payload = optionalPayload;
+		}
+		
+		try {
+			OAuthClient client = new OAuthClient(new HttpClient3());
+			OAuthAccessor accessor = createOAuthAccessor();			
+			OAuthMessage response = client.invoke(accessor, OAuthMessage.POST, setApiUrl(objectType), OAuth.newList("xml", payload));
+			responseString = response.readBodyAsString();
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (OAuthException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (URISyntaxException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+				
+		return responseString;
+	}
+	
+	public String setApiUrl (XeroObjectTypes.XeroAllTypes objectType)
+	{
+		String fullApiUri = null;
+		
+		switch (objectType) {
+        case ACCOUNTS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.ACCOUNTS.toString();
+                 break;
+        case BANKTRANSACTIONS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.BANKTRANSACTIONS.toString();
+                 break;
+        case BRANDINGTHEMES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.BRANDINGTHEMES.toString();
+                 break;
+        case CONTACTS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.CONTACTS.toString();
+        		break;
+        case CREDITNOTES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.CREDITNOTES.toString();
+				break;
+        case CURRENCIES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.CURRENCIES.toString();
+				break;
+        case EMPLOYEES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.EMPLOYEES.toString();
+				break;
+        case EXPENSECLAIMS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.EXPENSECLAIMS.toString();
+				break;
+        case INVOICES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.INVOICES.toString();
+				break;
+        case ITEMS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.ITEMS.toString();
+				break;
+        case JOURNALS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.JOURNALS.toString();
+				break;
+        case MANUALJOURNALS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.MANUALJOURNALS.toString();
+				break;
+        case ORGANISATION:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.ORGANISATION.toString();
+				break;
+        case PAYMENTS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.PAYMENTS.toString();
+				break;
+        case RECEIPTS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.RECEIPTS.toString();
+				break;
+        case REPORTS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.REPORTS.toString();
+				break;
+        case TAXRATES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.TAXRATES.toString();
+				break;
+        case TRACKINGCATEGORIES:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.TRACKINGCATEGORIES.toString();
+				break;
+        case USERS:  fullApiUri = xeroApiUrl + XeroObjectTypes.XeroAllTypes.USERS.toString();
+				break;
+        default: fullApiUri = "xeroApiUrl";
+                break;
+		}
+		
+		return fullApiUri;
+	}
 }

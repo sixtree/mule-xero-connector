@@ -22,5 +22,13 @@
     <flow name="testGetAccount">
         <xero:get-account accountId="74f0de47-0206-49d4-9a19-5b5338232ce9"/>
     </flow>
+    
+    <flow name="testGetInvoice">
+        <xero:get-invoice invoiceId="f7701dda-baf7-4974-872a-37bd57803701"/>
+    </flow>
+    
+    <flow name="testCreateInvoice">
+        <xero:create objectType="INVOICES"/>
+    </flow>
 
 </mule>
