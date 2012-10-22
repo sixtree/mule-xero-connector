@@ -140,16 +140,14 @@ public class XeroConnector
      * create
      * @param objectType The type of object to be created in Xero
      * @param payload The content of the object to be created in Xero
-     * @param optionalPayload The optional content of the object to be created in Xero
      * @return - returns the status of the create request
      */
     @Processor
     public String create(XeroObjectTypes.XeroAllTypes objectType, 
-    					@Optional @Default("#[payload]") String optionalPayload,
-    					@Payload String payload)
+    					 String payload)
     {
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	String createResponse = xeroClient.create(objectType, optionalPayload, payload);    	
+    	String createResponse = xeroClient.create(objectType, payload);    	
     	        
     	return createResponse;
     }

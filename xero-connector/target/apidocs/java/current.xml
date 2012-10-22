@@ -42,8 +42,6 @@
 >
 <parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroAllTypes">
 </parameter>
-<parameter name="optionalPayload" type="java.lang.String">
-</parameter>
 <parameter name="payload" type="java.lang.String">
 </parameter>
 </method>
@@ -243,8 +241,6 @@
  visibility="public"
 >
 <parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroAllTypes">
-</parameter>
-<parameter name="optionalPayload" type="java.lang.String">
 </parameter>
 <parameter name="payload" type="java.lang.String">
 </parameter>
@@ -1423,19 +1419,6 @@
 <parameter name="value" type="java.lang.Object">
 </parameter>
 </method>
-<method name="setOptionalPayload"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="value" type="java.lang.Object">
-</parameter>
-</method>
 <method name="setPayload"
  return="void"
  abstract="false"
@@ -1490,16 +1473,6 @@
 </method>
 <field name="_objectTypeType"
  type="org.mule.module.xero.XeroObjectTypes.XeroAllTypes"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="private"
->
-</field>
-<field name="_optionalPayloadType"
- type="java.lang.String"
  transient="false"
  volatile="false"
  static="false"
@@ -1569,16 +1542,6 @@
 >
 </field>
 <field name="objectType"
- type="java.lang.Object"
- transient="false"
- volatile="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="private"
->
-</field>
-<field name="optionalPayload"
  type="java.lang.Object"
  transient="false"
  volatile="false"

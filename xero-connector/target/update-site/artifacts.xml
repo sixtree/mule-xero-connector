@@ -2,7 +2,7 @@
 <?artifactRepository version='1.1.0'?>
 <repository name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/ - artifacts' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1350867668072'/>
+    <property name='p2.timestamp' value='1350946889195'/>
     <property name='p2.compressed' value='false'/>
   </properties>
   <mappings size='3'>
@@ -11,18 +11,18 @@
     <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
   </mappings>
   <artifacts size='2'>
-    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201210221201'>
+    <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201210231001'>
       <properties size='3'>
-        <property name='artifact.size' value='3960595'/>
-        <property name='download.size' value='3960595'/>
-        <property name='download.md5' value='79073d1150df0d78b0823ec9a48b5cae'/>
+        <property name='artifact.size' value='3973028'/>
+        <property name='download.size' value='3973028'/>
+        <property name='download.md5' value='2ef61c99903432bb7139998774fc2d7b'/>
       </properties>
     </artifact>
-    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201210221201'>
+    <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201210231001'>
       <properties size='4'>
-        <property name='artifact.size' value='631'/>
-        <property name='download.size' value='631'/>
-        <property name='download.md5' value='693da3b65285fcbe412becff6a6c8f6b'/>
+        <property name='artifact.size' value='634'/>
+        <property name='download.size' value='634'/>
+        <property name='download.md5' value='0caf910852f64c933802817900aa0899'/>
         <property name='download.contentType' value='application/zip'/>
       </properties>
     </artifact>

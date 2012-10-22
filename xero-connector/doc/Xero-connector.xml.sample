@@ -11,7 +11,7 @@
 <!-- END_INCLUDE(xero:get-all-invoices) -->
 
 <!-- BEGIN_INCLUDE(xero:get-invoice) -->
-    <xero:get-invoice accountId="INVOICE_ID"/>
+    <xero:get-invoice invoiceId="INVOICE_ID"/>
 <!-- END_INCLUDE(xero:get-invoice) -->
 
 <!-- BEGIN_INCLUDE(xero:create) -->

@@ -66,7 +66,7 @@ public class XeroConnectorTest extends FunctionalTestCase
     	Flow flow = lookupFlowConstruct("testCreateInvoice");
     	String payload = "<Invoice><Type>ACCREC</Type><Contact>    <Name>ABC Limited</Name>  </Contact>  <Date>2009-08-30</Date>  <DueDate>2009-09-20</DueDate>  <LineAmountTypes>Exclusive</LineAmountTypes>  <LineItems>    <LineItem>      <Description>Consulting services as agreed</Description>      <Quantity>5.0000</Quantity>      <UnitAmount>120.00</UnitAmount>      <AccountCode>200</AccountCode></LineItem>  </LineItems></Invoice>";
     	//TODO - look this xml request up from a file
-    	MuleEvent event = getTestEvent(payload);
+    	MuleEvent event = getTestEvent(payload);    	
         MuleEvent responseEvent = flow.process(event);
         System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));

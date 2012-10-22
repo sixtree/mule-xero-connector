@@ -177,17 +177,9 @@ public class XeroConnectorClient {
 	}
 	
 	public String create(XeroObjectTypes.XeroAllTypes objectType,
-						 String optionalPayload,
 						 String payload)
 	{
 		String responseString = null;
-		
-		//Check if the user has configured the connector to pass data other than the message payload to the endpoint. 
-		//If so, pass this data instead
-		if (!optionalPayload.isEmpty())
-		{
-			payload = optionalPayload;
-		}
 		
 		try {
 			OAuthClient client = new OAuthClient(new HttpClient3());
