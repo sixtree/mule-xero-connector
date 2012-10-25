@@ -11,12 +11,12 @@
 
     <xero:config name="Xero" consumerKey="BSTGZO7PWHTUKRX4O2IZQLLEXDZLVB" consumerSecret="GULPOIEWW2L27NAESNFZE4WOAG3O7O" privateKeyLoc="./privateKey.pem"/>
     
-    <flow name="testGetAllAccounts">
-        <xero:get-all-accounts/>
+    <flow name="testGetAccountsList">
+        <xero:get-accounts-list/>
     </flow>
     
-    <flow name="testGetAllInvoices">
-        <xero:get-all-invoices/>
+    <flow name="testGetInvoicesList">
+        <xero:get-invoices-list/>
     </flow>
     
     <flow name="testGetAccount">
@@ -28,7 +28,7 @@
     </flow>
     
     <flow name="testCreateInvoice">
-        <xero:create objectType="INVOICES" payload="#[message.payload]"/>
+        <xero:create objectType="Invoices" payload="#[message.payload]"/>
     </flow>
 
 </mule>

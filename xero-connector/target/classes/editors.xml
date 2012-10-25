@@ -20,9 +20,9 @@
         <modeSwitch description="Operation." caption="Operation" name="Xero operations to execute">
           <mode modeLabel="Create" modeId="http://www.mulesoft.org/schema/mule/xero/create"></mode>
           <mode modeLabel="Get account" modeId="http://www.mulesoft.org/schema/mule/xero/get-account"></mode>
-          <mode modeLabel="Get all accounts" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-accounts"></mode>
-          <mode modeLabel="Get all invoices" modeId="http://www.mulesoft.org/schema/mule/xero/get-all-invoices"></mode>
+          <mode modeLabel="Get accounts list" modeId="http://www.mulesoft.org/schema/mule/xero/get-accounts-list"></mode>
           <mode modeLabel="Get invoice" modeId="http://www.mulesoft.org/schema/mule/xero/get-invoice"></mode>
+          <mode modeLabel="Get invoices list" modeId="http://www.mulesoft.org/schema/mule/xero/get-invoices-list"></mode>
         </modeSwitch>
       </group>
     </attribute-category>
@@ -34,8 +34,12 @@
       </group>
     </attribute-category>
   </cloud-connector>
-  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-all-accounts" icon="icons/small/xero-connector-24x16.png" caption="Get All Accounts">
-    <attribute-category description="General." caption="General"></attribute-category>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-accounts-list" icon="icons/small/xero-connector-24x16.png" caption="Get Accounts List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Filter String" name="filterString"></string>
+      </group>
+    </attribute-category>
     <attribute-category description="Connection." caption="Connection">
       <group caption="Connection" id="connection">
         <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
@@ -56,8 +60,12 @@
       </group>
     </attribute-category>
   </cloud-connector>
-  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-all-invoices" icon="icons/small/xero-connector-24x16.png" caption="Get All Invoices">
-    <attribute-category description="General." caption="General"></attribute-category>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-invoices-list" icon="icons/small/xero-connector-24x16.png" caption="Get Invoices List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Filter String" name="filterString"></string>
+      </group>
+    </attribute-category>
     <attribute-category description="Connection." caption="Connection">
       <group caption="Connection" id="connection">
         <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
@@ -82,26 +90,16 @@
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
         <string javaType="java.lang.String" required="true" description="The content of the object to be created in Xero." caption="Payload" name="payload"></string>
-        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroAllTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
-          <option value="ACCOUNTS"></option>
-          <option value="BANKTRANSACTIONS"></option>
-          <option value="BRANDINGTHEMES"></option>
-          <option value="CONTACTS"></option>
-          <option value="CREDITNOTES"></option>
-          <option value="CURRENCIES"></option>
-          <option value="EMPLOYEES"></option>
-          <option value="EXPENSECLAIMS"></option>
-          <option value="INVOICES"></option>
-          <option value="ITEMS"></option>
-          <option value="JOURNALS"></option>
-          <option value="MANUALJOURNALS"></option>
-          <option value="ORGANISATION"></option>
-          <option value="PAYMENTS"></option>
-          <option value="RECEIPTS"></option>
-          <option value="REPORTS"></option>
-          <option value="TAXRATES"></option>
-          <option value="TRACKINGCATEGORIES"></option>
-          <option value="USERS"></option>
+        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
+          <option value="BankTransactions"></option>
+          <option value="Contacts"></option>
+          <option value="CreditNotes"></option>
+          <option value="Employees"></option>
+          <option value="ExpenseClaims"></option>
+          <option value="Invoices"></option>
+          <option value="Items"></option>
+          <option value="ManualJournals"></option>
+          <option value="Receipts"></option>
         </enum>
       </group>
     </attribute-category>

@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.mule.config.spring.MuleHierarchicalBeanDefinitionParserDelegate;
 import org.mule.config.spring.util.SpringXMLUtils;
-import org.mule.module.xero.processors.GetAllAccountsMessageProcessor;
+import org.mule.module.xero.processors.GetInvoicesListMessageProcessor;
 import org.mule.util.TemplateParser;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
@@ -16,7 +16,7 @@ import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
-public class GetAllAccountsDefinitionParser
+public class GetInvoicesListDefinitionParser
     implements BeanDefinitionParser
 {
 
@@ -26,15 +26,18 @@ public class GetAllAccountsDefinitionParser
      */
     private TemplateParser.PatternInfo patternInfo;
 
-    public GetAllAccountsDefinitionParser() {
+    public GetInvoicesListDefinitionParser() {
         patternInfo = TemplateParser.createMuleStyleParser().getStyle();
     }
 
     public BeanDefinition parse(Element element, ParserContext parserContent) {
-        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(GetAllAccountsMessageProcessor.class.getName());
+        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(GetInvoicesListMessageProcessor.class.getName());
         String configRef = element.getAttribute("config-ref");
         if ((configRef!= null)&&(!StringUtils.isBlank(configRef))) {
             builder.addPropertyValue("moduleObject", configRef);
+        }
+        if ((element.getAttribute("filterString")!= null)&&(!StringUtils.isBlank(element.getAttribute("filterString")))) {
+            builder.addPropertyValue("filterString", element.getAttribute("filterString"));
         }
         if ((element.getAttribute("retryMax")!= null)&&(!StringUtils.isBlank(element.getAttribute("retryMax")))) {
             builder.addPropertyValue("retryMax", element.getAttribute("retryMax"));

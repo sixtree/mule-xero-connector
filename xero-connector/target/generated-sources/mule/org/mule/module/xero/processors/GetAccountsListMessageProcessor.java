@@ -43,16 +43,16 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * GetInvoiceByIdMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getInvoiceById(java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * GetAccountsListMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getAccountsList(java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
-public class GetInvoiceByIdMessageProcessor
+public class GetAccountsListMessageProcessor
     implements FlowConstructAware, MuleContextAware, Disposable, Initialisable, Startable, Stoppable, MessageProcessor
 {
 
-    private Object invoiceId;
-    private String _invoiceIdType;
-    private static Logger logger = LoggerFactory.getLogger(GetInvoiceByIdMessageProcessor.class);
+    private Object filterString;
+    private String _filterStringType;
+    private static Logger logger = LoggerFactory.getLogger(GetAccountsListMessageProcessor.class);
     /**
      * Module object
      * 
@@ -168,12 +168,12 @@ public class GetInvoiceByIdMessageProcessor
     }
 
     /**
-     * Sets invoiceId
+     * Sets filterString
      * 
      * @param value Value to set
      */
-    public void setInvoiceId(Object value) {
-        this.invoiceId = value;
+    public void setFilterString(Object value) {
+        this.filterString = value;
     }
 
     /**
@@ -378,14 +378,14 @@ public class GetInvoiceByIdMessageProcessor
         if (moduleObject instanceof String) {
             _castedModuleObject = ((XeroConnectorConnectionManager) muleContext.getRegistry().lookupObject(((String) moduleObject)));
             if (_castedModuleObject == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("getInvoiceById"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
+                throw new MessagingException(CoreMessages.failedToCreate("getAccountsList"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
             }
         } else {
             _castedModuleObject = ((XeroConnectorConnectionManager) moduleObject);
         }
         XeroConnectorLifecycleAdapter connection = null;
         try {
-            String _transformedInvoiceId = ((String) evaluateAndTransform(_muleMessage, GetInvoiceByIdMessageProcessor.class.getDeclaredField("_invoiceIdType").getGenericType(), null, invoiceId));
+            String _transformedFilterString = ((String) evaluateAndTransform(_muleMessage, GetAccountsListMessageProcessor.class.getDeclaredField("_filterStringType").getGenericType(), null, filterString));
             if (logger.isDebugEnabled()) {
                 StringBuilder _messageStringBuilder = new StringBuilder();
                 _messageStringBuilder.append("Attempting to acquire a connection using ");
@@ -393,7 +393,7 @@ public class GetInvoiceByIdMessageProcessor
             }
             connection = _castedModuleObject.acquireConnection(new XeroConnectorConnectionManager.ConnectionKey());
             if (connection == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("getInvoiceById"), event, new RuntimeException("Cannot create connection"));
+                throw new MessagingException(CoreMessages.failedToCreate("getAccountsList"), event, new RuntimeException("Cannot create connection"));
             } else {
                 if (logger.isDebugEnabled()) {
                     StringBuilder _messageStringBuilder = new StringBuilder();
@@ -406,7 +406,7 @@ public class GetInvoiceByIdMessageProcessor
             }
             retryCount.getAndIncrement();
             Object resultPayload;
-            resultPayload = connection.getInvoiceById(_transformedInvoiceId);
+            resultPayload = connection.getAccountsList(_transformedFilterString);
             TransformerTemplate.OverwitePayloadCallback overwritePayloadCallback = null;
             if (resultPayload == null) {
                 overwritePayloadCallback = new TransformerTemplate.OverwitePayloadCallback(NullPayload.getInstance());
@@ -420,7 +420,7 @@ public class GetInvoiceByIdMessageProcessor
             retryCount.set(0);
             return event;
         } catch (Exception e) {
-            throw new MessagingException(CoreMessages.failedToInvoke("getInvoiceById"), event, e);
+            throw new MessagingException(CoreMessages.failedToInvoke("getAccountsList"), event, e);
         } finally {
             try {
                 if (connection!= null) {
@@ -434,7 +434,7 @@ public class GetInvoiceByIdMessageProcessor
                     _castedModuleObject.releaseConnection(new XeroConnectorConnectionManager.ConnectionKey(), connection);
                 }
             } catch (Exception e) {
-                throw new MessagingException(CoreMessages.failedToInvoke("getInvoiceById"), event, e);
+                throw new MessagingException(CoreMessages.failedToInvoke("getAccountsList"), event, e);
             }
         }
     }

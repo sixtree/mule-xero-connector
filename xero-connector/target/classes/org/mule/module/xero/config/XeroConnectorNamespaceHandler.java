@@ -20,9 +20,9 @@ public class XeroConnectorNamespaceHandler
      */
     public void init() {
         registerBeanDefinitionParser("config", new XeroConnectorConfigDefinitionParser());
-        registerBeanDefinitionParser("get-all-accounts", new GetAllAccountsDefinitionParser());
+        registerBeanDefinitionParser("get-accounts-list", new GetAccountsListDefinitionParser());
         registerBeanDefinitionParser("get-account", new GetAccountDefinitionParser());
-        registerBeanDefinitionParser("get-all-invoices", new GetAllInvoicesDefinitionParser());
+        registerBeanDefinitionParser("get-invoices-list", new GetInvoicesListDefinitionParser());
         registerBeanDefinitionParser("get-invoice", new GetInvoiceDefinitionParser());
         registerBeanDefinitionParser("create", new CreateDefinitionParser());
     }

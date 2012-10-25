@@ -43,14 +43,16 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * GetAllAccountsMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getAllAccounts()} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * GetInvoicesListMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getInvoicesList(java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
-public class GetAllAccountsMessageProcessor
+public class GetInvoicesListMessageProcessor
     implements FlowConstructAware, MuleContextAware, Disposable, Initialisable, Startable, Stoppable, MessageProcessor
 {
 
-    private static Logger logger = LoggerFactory.getLogger(GetAllAccountsMessageProcessor.class);
+    private Object filterString;
+    private String _filterStringType;
+    private static Logger logger = LoggerFactory.getLogger(GetInvoicesListMessageProcessor.class);
     /**
      * Module object
      * 
@@ -163,6 +165,15 @@ public class GetAllAccountsMessageProcessor
      */
     public void setRetryMax(int value) {
         this.retryMax = value;
+    }
+
+    /**
+     * Sets filterString
+     * 
+     * @param value Value to set
+     */
+    public void setFilterString(Object value) {
+        this.filterString = value;
     }
 
     /**
@@ -367,13 +378,14 @@ public class GetAllAccountsMessageProcessor
         if (moduleObject instanceof String) {
             _castedModuleObject = ((XeroConnectorConnectionManager) muleContext.getRegistry().lookupObject(((String) moduleObject)));
             if (_castedModuleObject == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("getAllAccounts"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
+                throw new MessagingException(CoreMessages.failedToCreate("getInvoicesList"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
             }
         } else {
             _castedModuleObject = ((XeroConnectorConnectionManager) moduleObject);
         }
         XeroConnectorLifecycleAdapter connection = null;
         try {
+            String _transformedFilterString = ((String) evaluateAndTransform(_muleMessage, GetInvoicesListMessageProcessor.class.getDeclaredField("_filterStringType").getGenericType(), null, filterString));
             if (logger.isDebugEnabled()) {
                 StringBuilder _messageStringBuilder = new StringBuilder();
                 _messageStringBuilder.append("Attempting to acquire a connection using ");
@@ -381,7 +393,7 @@ public class GetAllAccountsMessageProcessor
             }
             connection = _castedModuleObject.acquireConnection(new XeroConnectorConnectionManager.ConnectionKey());
             if (connection == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("getAllAccounts"), event, new RuntimeException("Cannot create connection"));
+                throw new MessagingException(CoreMessages.failedToCreate("getInvoicesList"), event, new RuntimeException("Cannot create connection"));
             } else {
                 if (logger.isDebugEnabled()) {
                     StringBuilder _messageStringBuilder = new StringBuilder();
@@ -394,7 +406,7 @@ public class GetAllAccountsMessageProcessor
             }
             retryCount.getAndIncrement();
             Object resultPayload;
-            resultPayload = connection.getAllAccounts();
+            resultPayload = connection.getInvoicesList(_transformedFilterString);
             TransformerTemplate.OverwitePayloadCallback overwritePayloadCallback = null;
             if (resultPayload == null) {
                 overwritePayloadCallback = new TransformerTemplate.OverwitePayloadCallback(NullPayload.getInstance());
@@ -408,7 +420,7 @@ public class GetAllAccountsMessageProcessor
             retryCount.set(0);
             return event;
         } catch (Exception e) {
-            throw new MessagingException(CoreMessages.failedToInvoke("getAllAccounts"), event, e);
+            throw new MessagingException(CoreMessages.failedToInvoke("getInvoicesList"), event, e);
         } finally {
             try {
                 if (connection!= null) {
@@ -422,7 +434,7 @@ public class GetAllAccountsMessageProcessor
                     _castedModuleObject.releaseConnection(new XeroConnectorConnectionManager.ConnectionKey(), connection);
                 }
             } catch (Exception e) {
-                throw new MessagingException(CoreMessages.failedToInvoke("getAllAccounts"), event, e);
+                throw new MessagingException(CoreMessages.failedToInvoke("getInvoicesList"), event, e);
             }
         }
     }

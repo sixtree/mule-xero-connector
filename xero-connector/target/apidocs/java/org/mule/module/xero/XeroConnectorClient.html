@@ -232,9 +232,9 @@
     <li><h2>Enums</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroGetType.html">XeroObjectTypes.XeroGetType</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostType.html">XeroObjectTypes.XeroPostType</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPutType.html">XeroObjectTypes.XeroPutType</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroGetTypes.html">XeroObjectTypes.XeroGetTypes</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a></li>
+          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPutTypes.html">XeroObjectTypes.XeroPutTypes</a></li>
       </ul>
     </li>
               
@@ -525,10 +525,10 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;OAuth.Parameter&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#create(org.mule.module.xero.XeroObjectTypes.XeroAllTypes, java.lang.String)">create</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#addFilterParam(java.lang.String)">addFilterParam</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
         
   </td></tr>
 
@@ -541,10 +541,42 @@ Summary:
             
             
             
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#create(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">create</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             OAuthAccessor</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#createOAuthAccessor()">createOAuthAccessor</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#createRequestUri(java.lang.String)">createRequestUri</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</nobr>
         
   </td></tr>
 
@@ -576,29 +608,13 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getAllAccounts()">getAllAccounts</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getAccountsList(java.lang.String)">getAccountsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getAllInvoices()">getAllInvoices</a></span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -614,7 +630,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -624,7 +640,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#setApiUrl(org.mule.module.xero.XeroObjectTypes.XeroAllTypes)">setApiUrl</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getInvoicesList(java.lang.String)">getInvoicesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
         
   </td></tr>
 
@@ -1073,7 +1089,47 @@ From class
 
 
 
-<A NAME="create(org.mule.module.xero.XeroObjectTypes.XeroAllTypes, java.lang.String)"></A>
+<A NAME="addFilterParam(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;OAuth.Parameter&gt;
+      </span>
+      <span class="sympad">addFilterParam</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>filterString</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="create(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1086,7 +1142,7 @@ From class
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
       <span class="sympad">create</span>
-      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1148,6 +1204,46 @@ From class
 </div>
 
 
+<A NAME="createRequestUri(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">createRequestUri</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objectType</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="getAccount(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1188,7 +1284,7 @@ From class
 </div>
 
 
-<A NAME="getAllAccounts()"></A>
+<A NAME="getAccountsList(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1200,8 +1296,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">getAllAccounts</span>
-      <span class="normal">()</span>
+      <span class="sympad">getAccountsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1214,37 +1310,15 @@ From class
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="getAllInvoices()"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
-      </span>
-      <span class="sympad">getAllInvoices</span>
-      <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>filterString</td>
+          <td></td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
@@ -1290,7 +1364,7 @@ From class
 </div>
 
 
-<A NAME="setApiUrl(org.mule.module.xero.XeroObjectTypes.XeroAllTypes)"></A>
+<A NAME="getInvoicesList(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1302,8 +1376,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">setApiUrl</span>
-      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroAllTypes.html">XeroObjectTypes.XeroAllTypes</a> objectType)</span>
+      <span class="sympad">getInvoicesList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1320,7 +1394,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>objectType</td>
+          <th>filterString</td>
           <td></td>
         </tr>
       </table>

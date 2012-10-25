@@ -8,7 +8,7 @@ import org.mule.api.transformer.TransformerException;
 import org.mule.transformer.AbstractTransformer;
 import org.mule.transformer.types.DataTypeFactory;
 
-public class XeroAllTypesEnumTransformer
+public class XeroPostTypesEnumTransformer
     extends AbstractTransformer
     implements MuleContextAware, DiscoverableTransformer
 {
@@ -20,10 +20,10 @@ public class XeroAllTypesEnumTransformer
     private MuleContext muleContext;
     private int weighting = DiscoverableTransformer.DEFAULT_PRIORITY_WEIGHTING;
 
-    public XeroAllTypesEnumTransformer() {
+    public XeroPostTypesEnumTransformer() {
         registerSourceType(DataTypeFactory.create(String.class));
-        setReturnClass(org.mule.module.xero.XeroObjectTypes.XeroAllTypes.class);
-        setName("XeroAllTypesEnumTransformer");
+        setReturnClass(org.mule.module.xero.XeroObjectTypes.XeroPostTypes.class);
+        setName("XeroPostTypesEnumTransformer");
     }
 
     /**
@@ -38,8 +38,8 @@ public class XeroAllTypesEnumTransformer
     protected Object doTransform(Object src, String encoding)
         throws TransformerException
     {
-        org.mule.module.xero.XeroObjectTypes.XeroAllTypes result = null;
-        result = Enum.valueOf(org.mule.module.xero.XeroObjectTypes.XeroAllTypes.class, ((String) src));
+        org.mule.module.xero.XeroObjectTypes.XeroPostTypes result = null;
+        result = Enum.valueOf(org.mule.module.xero.XeroObjectTypes.XeroPostTypes.class, ((String) src));
         return result;
     }
 

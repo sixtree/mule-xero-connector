@@ -2,96 +2,72 @@ package org.mule.module.xero;
 
 public class XeroObjectTypes {
 	
-	public enum XeroGetType {
-	    ACCOUNTS, 
-	    BANKTRANSACTIONS, 
-	    BRANDINGTHEMES, 
-	    CONTACTS, 
-	    CREDITNOTES, 
-	    CURRENCIES, 
-	    EMPLOYEES, 
-	    EXPENSECLAIMS, 
-	    INVOICES, 
-	    ITEMS, 
-	    JOURNALS, 
-	    MANUALJOURNALS, 
-	    ORGANISATION, 
-	    PAYMENTS,
-	    RECEIPTS,
-	    REPORTS, 
-	    TAXRATES, 
-	    TRACKINGCATEGORIES, 
-	    USERS;
-	    
-	    @Override public String toString() {
-	    //only capitalize the first letter
-	    String s = super.toString();
-	    return s.substring(0, 1) + s.substring(1).toLowerCase();
-	    }
+	public enum XeroGetTypes {
+	    Accounts, 
+	    BankTransactions, 
+	    BrandingThemes, 
+	    Contacts, 
+	    CreditNotes, 
+	    Currencies, 
+	    Employees, 
+	    ExpenseClaims, 
+	    Invoices, 
+	    Items, 
+	    Journals, 
+	    ManualJournals, 
+	    Organisation, 
+	    Payments,
+	    Receipts,
+	    Reports, 
+	    TaxRates, 
+	    TrackingCategories, 
+	    Users;	    
 	}
 	
-	public enum XeroPostType {
-	    BANKTRANSACTIONS, 
-	    CONTACTS, 
-	    CREDITNOTES,  
-	    EMPLOYEES, 
-	    EXPENSECLAIMS, 
-	    INVOICES, 
-	    ITEMS, 
-	    MANUALJOURNALS, 
-	    RECEIPTS;
-	    
-	    @Override public String toString() {
-	    //only capitalize the first letter
-	    String s = super.toString();
-	    return s.substring(0, 1) + s.substring(1).toLowerCase();
-	    }
+	public enum XeroPostTypes {
+	    BankTransactions, 
+	    Contacts, 
+	    CreditNotes,  
+	    Employees, 
+	    ExpenseClaims, 
+	    Invoices, 
+	    Items, 
+	    ManualJournals, 
+	    Receipts;
 	}
 	
-	public enum XeroPutType {
-	    BANKTRANSACTIONS, 
-	    CONTACTS, 
-	    CREDITNOTES,  
-	    EMPLOYEES, 
-	    EXPENSECLAIMS, 
-	    INVOICES, 
-	    ITEMS, 
-	    MANUALJOURNALS, 
-	    PAYMENTS,
-	    RECEIPTS;
-	    
-	    @Override public String toString() {
-	    //only capitalize the first letter
-	    String s = super.toString();
-	    return s.substring(0, 1) + s.substring(1).toLowerCase();
-	    }
+	public enum XeroPutTypes {
+	    BankTransactions, 
+	    Contacts, 
+	    CreditNotes,  
+	    Employees, 
+	    ExpenseClaims, 
+	    Invoices, 
+	    Items, 
+	    ManualJournals,
+	    Payments,
+	    Receipts;
 	}
 	
 	public enum XeroAllTypes {
-	    ACCOUNTS, 
-	    BANKTRANSACTIONS, 
-	    BRANDINGTHEMES, 
-	    CONTACTS, 
-	    CREDITNOTES, 
-	    CURRENCIES, 
-	    EMPLOYEES, 
-	    EXPENSECLAIMS, 
-	    INVOICES, 
-	    ITEMS, 
-	    JOURNALS, 
-	    MANUALJOURNALS, 
-	    ORGANISATION, 
-	    PAYMENTS,
-	    RECEIPTS,
-	    REPORTS, 
-	    TAXRATES, 
-	    TRACKINGCATEGORIES, 
-	    USERS;
-	    
-	    @Override public String toString() {
-	    //only capitalize the first letter
-	    String s = super.toString();
-	    return s.substring(0, 1) + s.substring(1).toLowerCase();
-	    }
+		Accounts, 
+	    BankTransactions, 
+	    BrandingThemes, 
+	    Contacts, 
+	    CreditNotes, 
+	    Currencies, 
+	    Employees, 
+	    ExpenseClaims, 
+	    Invoices, 
+	    Items, 
+	    Journals, 
+	    ManualJournals, 
+	    Organisation, 
+	    Payments,
+	    Receipts,
+	    Reports, 
+	    TaxRates, 
+	    TrackingCategories, 
+	    Users;
 	}
 }

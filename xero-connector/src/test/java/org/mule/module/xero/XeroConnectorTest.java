@@ -21,9 +21,9 @@ public class XeroConnectorTest extends FunctionalTestCase
     }
 
     @Test
-    public void testGetAllAccountsSuccess() throws Exception
+    public void testGetAccountsListSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetAllAccounts");
+    	Flow flow = lookupFlowConstruct("testGetAccountsList");
         MuleEvent event = getTestEvent(null);
         MuleEvent responseEvent = flow.process(event);
         System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
@@ -31,9 +31,9 @@ public class XeroConnectorTest extends FunctionalTestCase
     }
     
     @Test
-    public void testGetAllInvoicesSuccess() throws Exception
+    public void testGetInvoicesListSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetAllInvoices");
+    	Flow flow = lookupFlowConstruct("testGetInvoicesList");
         MuleEvent event = getTestEvent(null);
         MuleEvent responseEvent = flow.process(event);
         System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        

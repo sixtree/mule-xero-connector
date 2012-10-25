@@ -176,17 +176,22 @@
       </xs:complexContent>
     </xs:complexType>
   </xs:element>
-  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-all-accounts" substitutionGroup="mule:abstract-message-processor" type="GetAllAccountsType">
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-accounts-list" substitutionGroup="mule:abstract-message-processor" type="GetAccountsListType">
     <xs:annotation>
-      <xs:documentation>getAllAccounts</xs:documentation>
+      <xs:documentation>getAccountsList</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="GetAllAccountsType">
+  <xs:complexType name="GetAccountsListType">
     <xs:complexContent>
       <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
         <xs:attribute name="config-ref" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="filterString" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
@@ -223,17 +228,22 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-all-invoices" substitutionGroup="mule:abstract-message-processor" type="GetAllInvoicesType">
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-invoices-list" substitutionGroup="mule:abstract-message-processor" type="GetInvoicesListType">
     <xs:annotation>
-      <xs:documentation>getAllInvoices</xs:documentation>
+      <xs:documentation>getInvoicesList</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="GetAllInvoicesType">
+  <xs:complexType name="GetInvoicesListType">
     <xs:complexContent>
       <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
         <xs:attribute name="config-ref" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="filterString" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
@@ -283,7 +293,7 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroAllTypesEnumType">
+        <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroPostTypesEnumType">
           <xs:annotation>
             <xs:documentation>The type of object to be created in Xero</xs:documentation>
           </xs:annotation>
@@ -301,29 +311,19 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:simpleType name="XeroAllTypesEnumType">
+  <xs:simpleType name="XeroPostTypesEnumType">
     <xs:union>
       <xs:simpleType>
         <xs:restriction base="xs:string">
-          <xs:enumeration value="ACCOUNTS"></xs:enumeration>
-          <xs:enumeration value="BANKTRANSACTIONS"></xs:enumeration>
-          <xs:enumeration value="BRANDINGTHEMES"></xs:enumeration>
-          <xs:enumeration value="CONTACTS"></xs:enumeration>
-          <xs:enumeration value="CREDITNOTES"></xs:enumeration>
-          <xs:enumeration value="CURRENCIES"></xs:enumeration>
-          <xs:enumeration value="EMPLOYEES"></xs:enumeration>
-          <xs:enumeration value="EXPENSECLAIMS"></xs:enumeration>
-          <xs:enumeration value="INVOICES"></xs:enumeration>
-          <xs:enumeration value="ITEMS"></xs:enumeration>
-          <xs:enumeration value="JOURNALS"></xs:enumeration>
-          <xs:enumeration value="MANUALJOURNALS"></xs:enumeration>
-          <xs:enumeration value="ORGANISATION"></xs:enumeration>
-          <xs:enumeration value="PAYMENTS"></xs:enumeration>
-          <xs:enumeration value="RECEIPTS"></xs:enumeration>
-          <xs:enumeration value="REPORTS"></xs:enumeration>
-          <xs:enumeration value="TAXRATES"></xs:enumeration>
-          <xs:enumeration value="TRACKINGCATEGORIES"></xs:enumeration>
-          <xs:enumeration value="USERS"></xs:enumeration>
+          <xs:enumeration value="BankTransactions"></xs:enumeration>
+          <xs:enumeration value="Contacts"></xs:enumeration>
+          <xs:enumeration value="CreditNotes"></xs:enumeration>
+          <xs:enumeration value="Employees"></xs:enumeration>
+          <xs:enumeration value="ExpenseClaims"></xs:enumeration>
+          <xs:enumeration value="Invoices"></xs:enumeration>
+          <xs:enumeration value="Items"></xs:enumeration>
+          <xs:enumeration value="ManualJournals"></xs:enumeration>
+          <xs:enumeration value="Receipts"></xs:enumeration>
         </xs:restriction>
       </xs:simpleType>
       <xs:simpleType>

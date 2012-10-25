@@ -42,7 +42,7 @@ public class XeroConnector
     private String xeroApiURL = "https://api.xero.com/api.xro/2.0/";
 
     /**
-     * The OAuth Consumer Secret 
+     * The OAuth Consumer Key 
      * @param consumerKey Consumer Key
      */
     public void setConsumerKey(String consumerKey)
@@ -69,17 +69,18 @@ public class XeroConnector
     }
 
     /**
-     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-all-accounts}
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-accounts-list}
      * 
-     * getAllAccounts
+     * getAccountsList
+     * @param filterString filter string used to filter query results from Xero
      * @return - returns all accounts listed for the Xero domain.
      */    
     @Processor
-    public String getAllAccounts()
+    public String getAccountsList(@Optional String filterString)
     {
     	String accounts = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	accounts = xeroClient.getAllAccounts();
+    	accounts = xeroClient.getAccountsList(filterString);
 
         return accounts;
     }
@@ -102,17 +103,18 @@ public class XeroConnector
     }
     
     /**
-     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-all-invoices}
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-invoices-list}
      * 
-     * getAllInvoices
+     * getInvoicesList
+     * @param filterString filter string used to filter query results from Xero
      * @return - returns all invoices listed for the Xero domain.
      */    
     @Processor
-    public String getAllInvoices()
+    public String getInvoicesList(@Optional String filterString)
     {
     	String invoices = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	invoices = xeroClient.getAllInvoices();
+    	invoices = xeroClient.getInvoicesList(filterString);
 
         return invoices;
     }
@@ -143,7 +145,7 @@ public class XeroConnector
      * @return - returns the status of the create request
      */
     @Processor
-    public String create(XeroObjectTypes.XeroAllTypes objectType, 
+    public String create(XeroObjectTypes.XeroPostTypes objectType, 
     					 String payload)
     {
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);

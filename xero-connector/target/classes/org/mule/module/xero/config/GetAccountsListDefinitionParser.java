@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.mule.config.spring.MuleHierarchicalBeanDefinitionParserDelegate;
 import org.mule.config.spring.util.SpringXMLUtils;
-import org.mule.module.xero.processors.GetInvoiceByIdMessageProcessor;
+import org.mule.module.xero.processors.GetAccountsListMessageProcessor;
 import org.mule.util.TemplateParser;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
@@ -16,7 +16,7 @@ import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
-public class GetInvoiceByIdDefinitionParser
+public class GetAccountsListDefinitionParser
     implements BeanDefinitionParser
 {
 
@@ -26,18 +26,18 @@ public class GetInvoiceByIdDefinitionParser
      */
     private TemplateParser.PatternInfo patternInfo;
 
-    public GetInvoiceByIdDefinitionParser() {
+    public GetAccountsListDefinitionParser() {
         patternInfo = TemplateParser.createMuleStyleParser().getStyle();
     }
 
     public BeanDefinition parse(Element element, ParserContext parserContent) {
-        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(GetInvoiceByIdMessageProcessor.class.getName());
+        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(GetAccountsListMessageProcessor.class.getName());
         String configRef = element.getAttribute("config-ref");
         if ((configRef!= null)&&(!StringUtils.isBlank(configRef))) {
             builder.addPropertyValue("moduleObject", configRef);
         }
-        if ((element.getAttribute("invoiceId")!= null)&&(!StringUtils.isBlank(element.getAttribute("invoiceId")))) {
-            builder.addPropertyValue("invoiceId", element.getAttribute("invoiceId"));
+        if ((element.getAttribute("filterString")!= null)&&(!StringUtils.isBlank(element.getAttribute("filterString")))) {
+            builder.addPropertyValue("filterString", element.getAttribute("filterString"));
         }
         if ((element.getAttribute("retryMax")!= null)&&(!StringUtils.isBlank(element.getAttribute("retryMax")))) {
             builder.addPropertyValue("retryMax", element.getAttribute("retryMax"));
