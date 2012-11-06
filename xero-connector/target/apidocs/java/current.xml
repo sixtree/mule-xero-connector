@@ -156,7 +156,7 @@
 <parameter name="consumerSecret" type="java.lang.String">
 </parameter>
 </method>
-<method name="setPrivateKeyLoc"
+<method name="setPrivateKeyPath"
  return="void"
  abstract="false"
  native="false"
@@ -166,10 +166,10 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="privateKeyLoc" type="java.lang.String">
+<parameter name="privateKeyPath" type="java.lang.String">
 </parameter>
 </method>
-<method name="setXeroApiURL"
+<method name="setXeroApiUrl"
  return="void"
  abstract="false"
  native="false"
@@ -179,9 +179,20 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="xeroApiURL" type="java.lang.String">
+<parameter name="xeroApiUrl" type="java.lang.String">
 </parameter>
 </method>
+<field name="XERO_BASE_ENDPOINT"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ value="&quot;https://api.xero.com/api.xro/2.0/&quot;"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="private"
+>
+</field>
 <field name="consumerKey"
  type="java.lang.String"
  transient="false"
@@ -202,7 +213,7 @@
  visibility="private"
 >
 </field>
-<field name="privateKeyLoc"
+<field name="privateKeyPath"
  type="java.lang.String"
  transient="false"
  volatile="false"
@@ -212,7 +223,7 @@
  visibility="private"
 >
 </field>
-<field name="xeroApiURL"
+<field name="xeroApiUrl"
  type="java.lang.String"
  transient="false"
  volatile="false"
@@ -244,7 +255,7 @@
 </parameter>
 <parameter name="consumerSecret" type="java.lang.String">
 </parameter>
-<parameter name="privateKeyLoc" type="java.lang.String">
+<parameter name="privateKeyPath" type="java.lang.String">
 </parameter>
 </constructor>
 <method name="addFilterParam"
@@ -391,7 +402,7 @@
  visibility="private"
 >
 </field>
-<field name="privateKeyLoc"
+<field name="privateKeyPath"
  type="java.lang.String"
  transient="false"
  volatile="false"
@@ -753,7 +764,7 @@
  visibility="public"
 >
 </method>
-<method name="getPrivateKeyLoc"
+<method name="getPrivateKeyPath"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -764,7 +775,7 @@
  visibility="public"
 >
 </method>
-<method name="getXeroApiURL"
+<method name="getXeroApiUrl"
  return="java.lang.String"
  abstract="false"
  native="false"
@@ -881,7 +892,7 @@
 <parameter name="context" type="org.mule.api.MuleContext">
 </parameter>
 </method>
-<method name="setPrivateKeyLoc"
+<method name="setPrivateKeyPath"
  return="void"
  abstract="false"
  native="false"
@@ -894,7 +905,7 @@
 <parameter name="value" type="java.lang.String">
 </parameter>
 </method>
-<method name="setXeroApiURL"
+<method name="setXeroApiUrl"
  return="void"
  abstract="false"
  native="false"
@@ -977,7 +988,7 @@
  visibility="private"
 >
 </field>
-<field name="privateKeyLoc"
+<field name="privateKeyPath"
  type="java.lang.String"
  transient="false"
  volatile="false"
@@ -987,7 +998,7 @@
  visibility="private"
 >
 </field>
-<field name="xeroApiURL"
+<field name="xeroApiUrl"
  type="java.lang.String"
  transient="false"
  volatile="false"

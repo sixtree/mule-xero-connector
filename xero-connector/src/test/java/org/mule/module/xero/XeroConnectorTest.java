@@ -3,12 +3,17 @@
  */
 package org.mule.module.xero;
 
+import net.oauth.OAuthProblemException;
+
 import org.mule.api.MuleEvent;
+import org.mule.api.MuleException;
 import org.mule.construct.Flow;
 import org.mule.tck.FunctionalTestCase;
 import org.mule.tck.AbstractMuleTestCase;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class XeroConnectorTest extends FunctionalTestCase
 {
@@ -60,15 +65,20 @@ public class XeroConnectorTest extends FunctionalTestCase
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
-    @Test
-    public void testGetInvoiceInvalidId() throws Exception
+    @Test(expected=MuleException.class)
+    public void testGetInvoiceInvalidId() 
     {
-    	Flow flow = lookupFlowConstruct("testGetInvoiceInvalidId");
-    	String ResponseError = "HTTP/1.1 404 Not Found";
-        MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
-        assertTrue(responseEvent.getMessage().getPayload().toString().contains(ResponseError));
+        try {
+        	Flow flow = lookupFlowConstruct("testGetInvoiceInvalidId");
+            MuleEvent event = getTestEvent(null); 
+			MuleEvent responseEvent = flow.process(event);
+		} catch (MuleException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
     
     @Test

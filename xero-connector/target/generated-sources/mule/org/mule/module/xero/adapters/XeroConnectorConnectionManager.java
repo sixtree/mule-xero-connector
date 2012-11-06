@@ -29,8 +29,8 @@ public class XeroConnectorConnectionManager
 
     private String consumerKey;
     private String consumerSecret;
-    private String privateKeyLoc;
-    private String xeroApiURL;
+    private String privateKeyPath;
+    private String xeroApiUrl;
     private static Logger logger = LoggerFactory.getLogger(XeroConnectorConnectionManager.class);
     /**
      * Mule Context
@@ -84,37 +84,37 @@ public class XeroConnectorConnectionManager
     }
 
     /**
-     * Sets privateKeyLoc
+     * Sets privateKeyPath
      * 
      * @param value Value to set
      */
-    public void setPrivateKeyLoc(String value) {
-        this.privateKeyLoc = value;
+    public void setPrivateKeyPath(String value) {
+        this.privateKeyPath = value;
     }
 
     /**
-     * Retrieves privateKeyLoc
+     * Retrieves privateKeyPath
      * 
      */
-    public String getPrivateKeyLoc() {
-        return this.privateKeyLoc;
+    public String getPrivateKeyPath() {
+        return this.privateKeyPath;
     }
 
     /**
-     * Sets xeroApiURL
+     * Sets xeroApiUrl
      * 
      * @param value Value to set
      */
-    public void setXeroApiURL(String value) {
-        this.xeroApiURL = value;
+    public void setXeroApiUrl(String value) {
+        this.xeroApiUrl = value;
     }
 
     /**
-     * Retrieves xeroApiURL
+     * Retrieves xeroApiUrl
      * 
      */
-    public String getXeroApiURL() {
-        return this.xeroApiURL;
+    public String getXeroApiUrl() {
+        return this.xeroApiUrl;
     }
 
     /**
@@ -214,8 +214,8 @@ public class XeroConnectorConnectionManager
             XeroConnectorLifecycleAdapter connector = new XeroConnectorLifecycleAdapter();
             connector.setConsumerKey(connectionManager.getConsumerKey());
             connector.setConsumerSecret(connectionManager.getConsumerSecret());
-            connector.setPrivateKeyLoc(connectionManager.getPrivateKeyLoc());
-            connector.setXeroApiURL(connectionManager.getXeroApiURL());
+            connector.setPrivateKeyPath(connectionManager.getPrivateKeyPath());
+            connector.setXeroApiUrl(connectionManager.getXeroApiUrl());
             if (connector instanceof Initialisable) {
                 connector.initialise();
             }

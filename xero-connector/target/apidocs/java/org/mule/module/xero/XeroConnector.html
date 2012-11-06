@@ -299,9 +299,12 @@ Summary:
 
 
 
+  <a href="#constants">Constants</a>
+  
 
 
-  <a href="#lfields">Fields</a>
+
+  &#124; <a href="#lfields">Fields</a>
   
 
 
@@ -491,6 +494,22 @@ Summary:
 
 
 
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="constants" class="jd-sumtable"><tr><th colspan="12">Constants</th></tr>
+
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#XERO_BASE_ENDPOINT">XERO_BASE_ENDPOINT</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+
+</table>
+
+
 
 
 
@@ -508,7 +527,7 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#consumerKey">consumerKey</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Key
 </td>
       </tr>
       
@@ -520,7 +539,7 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#consumerSecret">consumerSecret</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Secret
 </td>
       </tr>
       
@@ -531,8 +550,8 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#privateKeyLoc">privateKeyLoc</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#privateKeyPath">privateKeyPath</a></td>
+          <td class="jd-descrcol" width="100%">Local path to Xero account private key file
 </td>
       </tr>
       
@@ -543,8 +562,8 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#xeroApiURL">xeroApiURL</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#xeroApiUrl">xeroApiUrl</a></td>
+          <td class="jd-descrcol" width="100%">Xero API Endpoint
 </td>
       </tr>
       
@@ -808,7 +827,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyLoc(java.lang.String)">setPrivateKeyLoc</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyLoc)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyPath(java.lang.String)">setPrivateKeyPath</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</nobr>
         
         <div class="jd-descrdiv">The location of the private key file  </div>
   
@@ -826,9 +845,9 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setXeroApiURL(java.lang.String)">setXeroApiURL</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiURL)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setXeroApiUrl(java.lang.String)">setXeroApiUrl</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl)</nobr>
         
-        <div class="jd-descrdiv">The Xero API URL </div>
+        <div class="jd-descrdiv">The Xero API URL - defaults to https://api.xero.com/api.xro/2.0/</div>
   
   </td></tr>
 
@@ -1072,6 +1091,52 @@ From class
 <!-- Constants -->
 
 
+<!-- ========= ENUM CONSTANTS DETAIL ======== -->
+<h2>Constants</h2>
+
+
+
+
+<A NAME="XERO_BASE_ENDPOINT"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        private 
+        static 
+        final 
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+        XERO_BASE_ENDPOINT
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    
+        <div class="jd-tagdata">
+        <span class="jd-tagtitle">Constant Value: </span>
+        <span>
+            
+                "https://api.xero.com/api.xro/2.0/"
+            
+        </span>
+        </div>
+    
+    </div>
+</div>
+
+
+
+
 <!-- Fields -->
 
 
@@ -1103,7 +1168,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Configurable
+  <div class="jd-tagdata jd-tagdescr"><p>Xero Account Consumer Key
 </p></div>
 
     
@@ -1134,7 +1199,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Configurable
+  <div class="jd-tagdata jd-tagdescr"><p>Xero Account Consumer Secret
 </p></div>
 
     
@@ -1143,7 +1208,7 @@ From class
 
 
 
-<A NAME="privateKeyLoc"></A>
+<A NAME="privateKeyPath"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1153,7 +1218,7 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-        privateKeyLoc
+        privateKeyPath
     </h4>
       <div class="api-level">
         
@@ -1165,7 +1230,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Configurable
+  <div class="jd-tagdata jd-tagdescr"><p>Local path to Xero account private key file
 </p></div>
 
     
@@ -1174,7 +1239,7 @@ From class
 
 
 
-<A NAME="xeroApiURL"></A>
+<A NAME="xeroApiUrl"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1184,7 +1249,7 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-        xeroApiURL
+        xeroApiUrl
     </h4>
       <div class="api-level">
         
@@ -1196,7 +1261,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Configurable
+  <div class="jd-tagdata jd-tagdescr"><p>Xero API Endpoint
 </p></div>
 
     
@@ -1715,7 +1780,7 @@ From class
 </div>
 
 
-<A NAME="setPrivateKeyLoc(java.lang.String)"></A>
+<A NAME="setPrivateKeyPath(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1727,8 +1792,8 @@ From class
          
         void
       </span>
-      <span class="sympad">setPrivateKeyLoc</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyLoc)</span>
+      <span class="sympad">setPrivateKeyPath</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1745,9 +1810,8 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>privateKeyLoc</td>
-          <td>Private Key File
- </td>
+          <th>privateKeyPath</td>
+          <td></td>
         </tr>
       </table>
   </div>
@@ -1756,7 +1820,7 @@ From class
 </div>
 
 
-<A NAME="setXeroApiURL(java.lang.String)"></A>
+<A NAME="setXeroApiUrl(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1768,8 +1832,8 @@ From class
          
         void
       </span>
-      <span class="sympad">setXeroApiURL</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiURL)</span>
+      <span class="sympad">setXeroApiUrl</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1781,12 +1845,12 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The Xero API URL </p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>The Xero API URL - defaults to https://api.xero.com/api.xro/2.0/</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>xeroApiURL</td>
+          <th>xeroApiUrl</td>
           <td>Xero API URL
 </td>
         </tr>

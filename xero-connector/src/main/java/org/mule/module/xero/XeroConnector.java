@@ -15,38 +15,42 @@ import org.mule.api.annotations.param.Payload;
 import org.mule.api.ConnectionException;
 import org.mule.api.annotations.Configurable;
 import org.mule.api.annotations.Processor;
+import org.springframework.beans.factory.annotation.Value;
 
 /**
  * Cloud Connector
  *
  * @author MuleSoft, Inc.
  */
+
 @Connector(name="xero", schemaVersion="1.0")
 public class XeroConnector
 {
-    /**
-     * Configurable
+	private static final String XERO_BASE_ENDPOINT = "https://api.xero.com/api.xro/2.0/";
+	
+	/**
+     * Xero Account Consumer Key
      */
     @Configurable
     private String consumerKey;
     /**
-     * Configurable
+     * Xero Account Consumer Secret
      */
     @Configurable
     private String consumerSecret;
     /**
-     * Configurable
+     * Local path to Xero account private key file
      */
     @Configurable
-    private String privateKeyLoc;
+    private String privateKeyPath;
     
     /**
-     * Configurable
+     * Xero API Endpoint
      */
-    @Configurable 
+    @Configurable
     @Optional
-    @Default("https://api.xero.com/api.xro/2.0/") 
-    private String xeroApiURL;
+    @Default(XERO_BASE_ENDPOINT) 
+    private String xeroApiUrl;
 
     /**
      * The OAuth Consumer Key 
@@ -70,18 +74,18 @@ public class XeroConnector
 	 * The location of the private key file  
 	 * @param privateKeyLoc Private Key File
 	 * */
-    public void setPrivateKeyLoc(String privateKeyLoc)
+    public void setPrivateKeyPath(String privateKeyPath)
     {
-        this.privateKeyLoc = privateKeyLoc;
+        this.privateKeyPath = privateKeyPath;
     }
     
     /**
-     * The Xero API URL 
-     * @param xeroApiURL Xero API URL
+     * The Xero API URL - defaults to https://api.xero.com/api.xro/2.0/
+     * @param xeroApiUrl Xero API URL
      */
-    public void setXeroApiURL(String xeroApiURL)
+    public void setXeroApiUrl(String xeroApiUrl)
     {
-        this.xeroApiURL = xeroApiURL;
+        this.xeroApiUrl = xeroApiUrl;
     }
 
     /**
@@ -95,15 +99,13 @@ public class XeroConnector
     public String getAccountsList(@Optional String filterString)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
     	try {
     		response = xeroClient.getAccountsList(filterString);
 		} catch (XeroConnectorClientException e) {
-			// TODO Auto-generated catch block
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}  
 
         return response;
@@ -117,18 +119,16 @@ public class XeroConnector
      * @return - returns details of an individual account
      */
     @Processor
-    public String getAccount(String accountId)
+    public String getAccount(@Optional @Default("#[message.payload]") String accountId)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
     	try {
     		response = xeroClient.getAccount(accountId);
 		} catch (XeroConnectorClientException e) {
-			// TODO Auto-generated catch block
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}  
         
     	return response;
@@ -145,15 +145,13 @@ public class XeroConnector
     public String getInvoicesList(@Optional String filterString)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
     	try {
     		response = xeroClient.getInvoicesList(filterString);
 		} catch (XeroConnectorClientException e) {
-			// TODO Auto-generated catch block
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}  
 
         return response;
@@ -167,18 +165,16 @@ public class XeroConnector
      * @return - returns details of an individual invoice
      */
     @Processor
-    public String getInvoice(String invoiceId)
+    public String getInvoice(@Optional @Default("#[message.payload]") String invoiceId)
     {
     	String response = null;
-        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
     	try {
     		response = xeroClient.getInvoice(invoiceId);
 		} catch (XeroConnectorClientException e) {
-			// TODO Auto-generated catch block
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}  
 
         return response;
@@ -194,18 +190,16 @@ public class XeroConnector
      */
     @Processor
     public String create(XeroObjectTypes.XeroPostTypes objectType, 
-    					 String payload)
+    					 @Optional @Default("#[message.payload]") String payload)
     {
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
     	String response = null;
 		try {
 			response = xeroClient.create(objectType, payload);
 		} catch (XeroConnectorClientException e) {
-			// TODO Auto-generated catch block
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new RuntimeException(e);
 		}    	
     	        
     	return response;

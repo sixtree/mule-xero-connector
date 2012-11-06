@@ -403,7 +403,7 @@ specify which configuration to use.</p>
           xs:string</nobr></td>
           <td class="jd-linkcol"><nobr>consumerKey</nobr></td>
           <td class="jd-descrcol"></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Key
 </td>
       </tr>
       
@@ -413,7 +413,7 @@ specify which configuration to use.</p>
           xs:string</nobr></td>
           <td class="jd-linkcol"><nobr>consumerSecret</nobr></td>
           <td class="jd-descrcol"></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Secret
 </td>
       </tr>
       
@@ -421,9 +421,9 @@ specify which configuration to use.</p>
       <tr class=" api apilevel-" >
           <td class="jd-typecol"><nobr>
           xs:string</nobr></td>
-          <td class="jd-linkcol"><nobr>privateKeyLoc</nobr></td>
+          <td class="jd-linkcol"><nobr>privateKeyPath</nobr></td>
           <td class="jd-descrcol"></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Local path to Xero account private key file
 </td>
       </tr>
       
@@ -431,9 +431,9 @@ specify which configuration to use.</p>
       <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
           xs:string</nobr></td>
-          <td class="jd-linkcol"><nobr>xeroApiURL</nobr></td>
+          <td class="jd-linkcol"><nobr>xeroApiUrl</nobr></td>
           <td class="jd-descrcol">https://api.xero.com/api.xro/2.0/</td>
-          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Configurable
+          <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>Xero API Endpoint
 </td>
       </tr>
       
@@ -524,8 +524,8 @@ attribute on each operation.</p>
                 
                 <tr class="alt-color api apilevel-" >
                     <td class="jd-linkcol"><nobr>payload</nobr></td>
-                    <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%">The content of the object to be created in Xero</td>
+                    <td class="jd-descrcol">#[message.payload]</td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>The content of the object to be created in Xero</td>
                 </tr>
                 
                 
@@ -601,8 +601,8 @@ attribute on each operation.</p>
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>accountId</nobr></td>
-                    <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%">A unique Xero account id</td>
+                    <td class="jd-descrcol">#[message.payload]</td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>A unique Xero account id</td>
                 </tr>
                 
                 
@@ -751,8 +751,8 @@ attribute on each operation.</p>
                 
                 <tr class=" api apilevel-" >
                     <td class="jd-linkcol"><nobr>invoiceId</nobr></td>
-                    <td class="jd-descrcol"></td>
-                    <td class="jd-descrcol" width="100%">A unique Xero invoice id</td>
+                    <td class="jd-descrcol">#[message.payload]</td>
+                    <td class="jd-descrcol" width="100%"><i>Optional.&nbsp;</i>A unique Xero invoice id</td>
                 </tr>
                 
                 

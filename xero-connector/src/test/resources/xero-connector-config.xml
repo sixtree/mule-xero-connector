@@ -9,7 +9,7 @@
         http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
         http://www.mulesoft.org/schema/mule/xero http://www.mulesoft.org/schema/mule/xero/1.0/mule-xero.xsd">
 
-    <xero:config name="Xero" consumerKey="BSTGZO7PWHTUKRX4O2IZQLLEXDZLVB" consumerSecret="GULPOIEWW2L27NAESNFZE4WOAG3O7O" privateKeyLoc="./privateKey.pem"/>
+    <xero:config name="Xero" consumerKey="BSTGZO7PWHTUKRX4O2IZQLLEXDZLVB" consumerSecret="GULPOIEWW2L27NAESNFZE4WOAG3O7O" privateKeyPath="./privateKey.pem" xeroApiUrl="https://api.xero.com/api.xro/2.0/" />
     
     <flow name="testGetAccountsList">
         <xero:get-accounts-list/>

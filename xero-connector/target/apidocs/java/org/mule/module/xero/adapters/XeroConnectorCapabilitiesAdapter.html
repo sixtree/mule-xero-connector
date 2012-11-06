@@ -272,6 +272,8 @@
    
   
   
+   
+  
   
    
   
@@ -302,9 +304,12 @@ Summary:
 
 
 
+  <a href="#inhconstants">Inherited Constants</a>
+  
 
 
-  <a href="#inhfields">Inherited Fields</a>
+
+  &#124; <a href="#inhfields">Inherited Fields</a>
   
 
 
@@ -486,6 +491,49 @@ Summary:
 
 
 
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.mule.module.xero.XeroConnector" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.mule.module.xero.XeroConnector-trigger"
+          src="../../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From class
+<a href="../../../../../../org/mule/module/xero/XeroConnector.html">org.mule.module.xero.XeroConnector</a>
+<div id="inherited-constants-org.mule.module.xero.XeroConnector">
+  <div id="inherited-constants-org.mule.module.xero.XeroConnector-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.mule.module.xero.XeroConnector-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
+        <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#XERO_BASE_ENDPOINT">XERO_BASE_ENDPOINT</a></td>
+        <td class="jd-descrcol" width="100%"></td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+
+
+</table>
+
+
 
 
 
@@ -521,7 +569,7 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#consumerKey">consumerKey</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Key
 </td>
       </tr>
       
@@ -533,7 +581,7 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#consumerSecret">consumerSecret</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-descrcol" width="100%">Xero Account Consumer Secret
 </td>
       </tr>
       
@@ -544,8 +592,8 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#privateKeyLoc">privateKeyLoc</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#privateKeyPath">privateKeyPath</a></td>
+          <td class="jd-descrcol" width="100%">Local path to Xero account private key file
 </td>
       </tr>
       
@@ -556,8 +604,8 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#xeroApiURL">xeroApiURL</a></td>
-          <td class="jd-descrcol" width="100%">Configurable
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#xeroApiUrl">xeroApiUrl</a></td>
+          <td class="jd-descrcol" width="100%">Xero API Endpoint
 </td>
       </tr>
       
@@ -881,7 +929,7 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyLoc(java.lang.String)">setPrivateKeyLoc</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyLoc)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyPath(java.lang.String)">setPrivateKeyPath</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</nobr>
         
         <div class="jd-descrdiv">The location of the private key file  </div>
   
@@ -899,9 +947,9 @@ From class
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#setXeroApiURL(java.lang.String)">setXeroApiURL</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiURL)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/XeroConnector.html#setXeroApiUrl(java.lang.String)">setXeroApiUrl</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl)</nobr>
         
-        <div class="jd-descrdiv">The Xero API URL </div>
+        <div class="jd-descrdiv">The Xero API URL - defaults to https://api.xero.com/api.xro/2.0/</div>
   
   </td></tr>
 

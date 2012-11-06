@@ -159,22 +159,22 @@
           </xs:attribute>
           <xs:attribute name="consumerKey" use="required" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Configurable</xs:documentation>
+              <xs:documentation>Xero Account Consumer Key</xs:documentation>
             </xs:annotation>
           </xs:attribute>
           <xs:attribute name="consumerSecret" use="required" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Configurable</xs:documentation>
+              <xs:documentation>Xero Account Consumer Secret</xs:documentation>
             </xs:annotation>
           </xs:attribute>
-          <xs:attribute name="privateKeyLoc" use="required" type="xs:string">
+          <xs:attribute name="privateKeyPath" use="required" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Configurable</xs:documentation>
+              <xs:documentation>Local path to Xero account private key file</xs:documentation>
             </xs:annotation>
           </xs:attribute>
-          <xs:attribute name="xeroApiURL" default="https://api.xero.com/api.xro/2.0/" use="optional" type="xs:string">
+          <xs:attribute name="xeroApiUrl" default="https://api.xero.com/api.xro/2.0/" use="optional" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Configurable</xs:documentation>
+              <xs:documentation>Xero API Endpoint</xs:documentation>
             </xs:annotation>
           </xs:attribute>
         </xs:extension>
@@ -220,7 +220,7 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="accountId" use="required" type="xs:string">
+        <xs:attribute name="accountId" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>a unique Xero account id</xs:documentation>
           </xs:annotation>
@@ -272,7 +272,7 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="invoiceId" use="required" type="xs:string">
+        <xs:attribute name="invoiceId" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>a unique Xero invoice id</xs:documentation>
           </xs:annotation>
@@ -303,7 +303,7 @@
             <xs:documentation>The type of object to be created in Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="payload" use="required" type="xs:string">
+        <xs:attribute name="payload" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>The content of the object to be created in Xero</xs:documentation>
           </xs:annotation>

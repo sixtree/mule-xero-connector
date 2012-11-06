@@ -21,12 +21,13 @@ public class XeroConnectorClientException extends Exception {
                 Object o = params.get(key);
                 oAuthProblemExceptionString = key + "=" + o.toString();
                 xeroException = oAuthProblemExceptionString;
-            }
-            
-            if (xeroException == null){
-            	xeroException = (String) oAuthProblemException.getParameters().get(HttpMessage.RESPONSE);
-            }
-        }        
+            }    
+        }
+        
+        if (xeroException == null && (oAuthProblemException.getHttpStatusCode()!=200)){
+        	throw new RuntimeException(oAuthProblemException);
+        	//xeroException = (String) oAuthProblemException.getParameters().get(HttpMessage.RESPONSE);
+        }
 	}
 	
 	public String getXeroException(){

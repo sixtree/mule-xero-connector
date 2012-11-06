@@ -33,13 +33,13 @@ public class XeroConnectorClient {
     private String xeroApiUrl;
     private String consumerKey;
     private String consumerSecret;
-    private String privateKeyLoc;
+    private String privateKeyPath;
 
-    public XeroConnectorClient(String xeroApiUrl, String consumerKey, String consumerSecret, String privateKeyLoc) {
+    public XeroConnectorClient(String xeroApiUrl, String consumerKey, String consumerSecret, String privateKeyPath) {
         this.xeroApiUrl = xeroApiUrl;
         this.consumerKey = consumerKey;
         this.consumerSecret = consumerSecret;
-        this.privateKeyLoc = privateKeyLoc;
+        this.privateKeyPath = privateKeyPath;
     }
 		
 	//Sets up the OAuth accessor credentials to be passed in all requests to the Xero API
@@ -49,7 +49,7 @@ public class XeroConnectorClient {
         
         //Load private key from File
         String privateKey = null;
-        File keyFile = new File(privateKeyLoc);
+        File keyFile = new File(privateKeyPath);
         
         try{
         	

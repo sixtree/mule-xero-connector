@@ -8,10 +8,10 @@
       </group>
       <group caption="Connection" id="connection"></group>
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Key" name="consumerKey"></string>
-        <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Secret" name="consumerSecret"></string>
-        <string javaType="java.lang.String" required="true" description="Configurable." caption="Private Key Loc" name="privateKeyLoc"></string>
-        <string defaultValue="https://api.xero.com/api.xro/2.0/" javaType="java.lang.String" required="false" description="Configurable." caption="Xero Api U R L" name="xeroApiURL"></string>
+        <string javaType="java.lang.String" required="true" description="Xero Account Consumer Key." caption="Consumer Key" name="consumerKey"></string>
+        <string javaType="java.lang.String" required="true" description="Xero Account Consumer Secret." caption="Consumer Secret" name="consumerSecret"></string>
+        <string javaType="java.lang.String" required="true" description="Local path to Xero account private key file." caption="Private Key Path" name="privateKeyPath"></string>
+        <string defaultValue="https://api.xero.com/api.xro/2.0/" javaType="java.lang.String" required="false" description="Xero API Endpoint." caption="Xero Api Url" name="xeroApiUrl"></string>
       </group>
     </attribute-category>
   </global-cloud-connector>
@@ -51,7 +51,7 @@
   <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-account" icon="icons/small/xero-connector-24x16.png" caption="Get Account">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="true" description="A unique Xero account id." caption="Account Id" name="accountId"></string>
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero account id." caption="Account Id" name="accountId"></string>
       </group>
     </attribute-category>
     <attribute-category description="Connection." caption="Connection">
@@ -77,7 +77,7 @@
   <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-invoice" icon="icons/small/xero-connector-24x16.png" caption="Get Invoice">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="true" description="A unique Xero invoice id." caption="Invoice Id" name="invoiceId"></string>
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero invoice id." caption="Invoice Id" name="invoiceId"></string>
       </group>
     </attribute-category>
     <attribute-category description="Connection." caption="Connection">
@@ -90,7 +90,7 @@
   <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="create" icon="icons/small/xero-connector-24x16.png" caption="Create">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="true" description="The content of the object to be created in Xero." caption="Payload" name="payload"></string>
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be created in Xero." caption="Payload" name="payload"></string>
         <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
           <option value="BankTransactions"></option>
           <option value="Contacts"></option>
