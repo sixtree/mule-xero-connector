@@ -27,7 +27,15 @@
         <xero:get-invoice invoiceId="f7701dda-baf7-4974-872a-37bd57803701"/>
     </flow>
     
+    <flow name="testGetInvoiceInvalidId">
+        <xero:get-invoice invoiceId="99999999"/>
+    </flow>
+    
     <flow name="testCreateInvoice">
+        <xero:create objectType="Invoices" payload="#[message.payload]"/>
+    </flow>
+    
+    <flow name="testCreateInvoiceFailure">
         <xero:create objectType="Invoices" payload="#[message.payload]"/>
     </flow>
 

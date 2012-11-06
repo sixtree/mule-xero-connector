@@ -61,6 +61,17 @@ public class XeroConnectorTest extends FunctionalTestCase
     }
     
     @Test
+    public void testGetInvoiceInvalidId() throws Exception
+    {
+    	Flow flow = lookupFlowConstruct("testGetInvoiceInvalidId");
+    	String ResponseError = "HTTP/1.1 404 Not Found";
+        MuleEvent event = getTestEvent(null);
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(ResponseError));
+    }
+    
+    @Test
     public void testCreateInvoiceSuccess() throws Exception
     {
     	Flow flow = lookupFlowConstruct("testCreateInvoice");
@@ -70,6 +81,19 @@ public class XeroConnectorTest extends FunctionalTestCase
         MuleEvent responseEvent = flow.process(event);
         System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testCreateInvoiceFailure() throws Exception
+    {
+    	Flow flow = lookupFlowConstruct("testCreateInvoiceFailure");
+    	String responseError = "<ErrorNumber>10</ErrorNumber>";
+    	String payload = "<Invoice><Type>ACCREC</Type><Contact>      </Contact>  <Date>2009-08-30</Date>  <DueDate>2009-09-20</DueDate>  <LineAmountTypes>Exclusive</LineAmountTypes>  <LineItems>    <LineItem>      <Description>Consulting services as agreed</Description>      <Quantity>5.0000</Quantity>      <UnitAmount>120.00</UnitAmount>      <AccountCode>200</AccountCode></LineItem>  </LineItems></Invoice>";
+    	//TODO - look this xml request up from a file
+    	MuleEvent event = getTestEvent(payload);    	
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseError));
     }
     
     /**

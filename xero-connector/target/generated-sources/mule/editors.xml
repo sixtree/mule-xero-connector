@@ -11,6 +11,7 @@
         <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Key" name="consumerKey"></string>
         <string javaType="java.lang.String" required="true" description="Configurable." caption="Consumer Secret" name="consumerSecret"></string>
         <string javaType="java.lang.String" required="true" description="Configurable." caption="Private Key Loc" name="privateKeyLoc"></string>
+        <string defaultValue="https://api.xero.com/api.xro/2.0/" javaType="java.lang.String" required="false" description="Configurable." caption="Xero Api U R L" name="xeroApiURL"></string>
       </group>
     </attribute-category>
   </global-cloud-connector>

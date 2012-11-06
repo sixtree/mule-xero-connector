@@ -39,7 +39,14 @@ public class XeroConnector
      */
     @Configurable
     private String privateKeyLoc;
-    private String xeroApiURL = "https://api.xero.com/api.xro/2.0/";
+    
+    /**
+     * Configurable
+     */
+    @Configurable 
+    @Optional
+    @Default("https://api.xero.com/api.xro/2.0/") 
+    private String xeroApiURL;
 
     /**
      * The OAuth Consumer Key 
@@ -67,6 +74,15 @@ public class XeroConnector
     {
         this.privateKeyLoc = privateKeyLoc;
     }
+    
+    /**
+     * The Xero API URL 
+     * @param xeroApiURL Xero API URL
+     */
+    public void setXeroApiURL(String xeroApiURL)
+    {
+        this.xeroApiURL = xeroApiURL;
+    }
 
     /**
      *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-accounts-list}
@@ -78,11 +94,19 @@ public class XeroConnector
     @Processor
     public String getAccountsList(@Optional String filterString)
     {
-    	String accounts = null;
+    	String response = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	accounts = xeroClient.getAccountsList(filterString);
+    	try {
+    		response = xeroClient.getAccountsList(filterString);
+		} catch (XeroConnectorClientException e) {
+			// TODO Auto-generated catch block
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 
-        return accounts;
+        return response;
     }
     
     /**
@@ -95,11 +119,19 @@ public class XeroConnector
     @Processor
     public String getAccount(String accountId)
     {
-    	String accountData = null;
+    	String response = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	accountData = xeroClient.getAccount(accountId);
+    	try {
+    		response = xeroClient.getAccount(accountId);
+		} catch (XeroConnectorClientException e) {
+			// TODO Auto-generated catch block
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
         
-    	return accountData;
+    	return response;
     }
     
     /**
@@ -112,11 +144,19 @@ public class XeroConnector
     @Processor
     public String getInvoicesList(@Optional String filterString)
     {
-    	String invoices = null;
+    	String response = null;
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	invoices = xeroClient.getInvoicesList(filterString);
+    	try {
+    		response = xeroClient.getInvoicesList(filterString);
+		} catch (XeroConnectorClientException e) {
+			// TODO Auto-generated catch block
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 
-        return invoices;
+        return response;
     }
     
     /**
@@ -129,11 +169,19 @@ public class XeroConnector
     @Processor
     public String getInvoice(String invoiceId)
     {
-    	String invoice = null;
+    	String response = null;
         XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	invoice = xeroClient.getInvoice(invoiceId);
+    	try {
+    		response = xeroClient.getInvoice(invoiceId);
+		} catch (XeroConnectorClientException e) {
+			// TODO Auto-generated catch block
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  
 
-        return invoice;
+        return response;
     }
     
     /**
@@ -149,9 +197,18 @@ public class XeroConnector
     					 String payload)
     {
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiURL, consumerKey, consumerSecret, privateKeyLoc);
-    	String createResponse = xeroClient.create(objectType, payload);    	
+    	String response = null;
+		try {
+			response = xeroClient.create(objectType, payload);
+		} catch (XeroConnectorClientException e) {
+			// TODO Auto-generated catch block
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}    	
     	        
-    	return createResponse;
+    	return response;
     }
     
     

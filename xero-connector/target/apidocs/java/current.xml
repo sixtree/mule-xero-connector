@@ -169,6 +169,19 @@
 <parameter name="privateKeyLoc" type="java.lang.String">
 </parameter>
 </method>
+<method name="setXeroApiURL"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="xeroApiURL" type="java.lang.String">
+</parameter>
+</method>
 <field name="consumerKey"
  type="java.lang.String"
  transient="false"
@@ -261,6 +274,10 @@
 </parameter>
 <parameter name="payload" type="java.lang.String">
 </parameter>
+<exception name="XeroConnectorClientException" type="org.mule.module.xero.XeroConnectorClientException">
+</exception>
+<exception name="XeroConnectorClientUnexpectedException" type="org.mule.module.xero.XeroConnectorClientUnexpectedException">
+</exception>
 </method>
 <method name="createOAuthAccessor"
  return="net.oauth.OAuthAccessor"
@@ -298,6 +315,10 @@
 >
 <parameter name="accountId" type="java.lang.String">
 </parameter>
+<exception name="XeroConnectorClientException" type="org.mule.module.xero.XeroConnectorClientException">
+</exception>
+<exception name="XeroConnectorClientUnexpectedException" type="org.mule.module.xero.XeroConnectorClientUnexpectedException">
+</exception>
 </method>
 <method name="getAccountsList"
  return="java.lang.String"
@@ -311,6 +332,10 @@
 >
 <parameter name="filterString" type="java.lang.String">
 </parameter>
+<exception name="XeroConnectorClientException" type="org.mule.module.xero.XeroConnectorClientException">
+</exception>
+<exception name="XeroConnectorClientUnexpectedException" type="org.mule.module.xero.XeroConnectorClientUnexpectedException">
+</exception>
 </method>
 <method name="getInvoice"
  return="java.lang.String"
@@ -324,6 +349,10 @@
 >
 <parameter name="invoiceId" type="java.lang.String">
 </parameter>
+<exception name="XeroConnectorClientException" type="org.mule.module.xero.XeroConnectorClientException">
+</exception>
+<exception name="XeroConnectorClientUnexpectedException" type="org.mule.module.xero.XeroConnectorClientUnexpectedException">
+</exception>
 </method>
 <method name="getInvoicesList"
  return="java.lang.String"
@@ -337,6 +366,10 @@
 >
 <parameter name="filterString" type="java.lang.String">
 </parameter>
+<exception name="XeroConnectorClientException" type="org.mule.module.xero.XeroConnectorClientException">
+</exception>
+<exception name="XeroConnectorClientUnexpectedException" type="org.mule.module.xero.XeroConnectorClientUnexpectedException">
+</exception>
 </method>
 <field name="consumerKey"
  type="java.lang.String"
@@ -378,6 +411,65 @@
  visibility="private"
 >
 </field>
+</class>
+<class name="XeroConnectorClientException"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XeroConnectorClientException"
+ type="org.mule.module.xero.XeroConnectorClientException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="oAuthProblemException" type="net.oauth.OAuthProblemException">
+</parameter>
+</constructor>
+<method name="getXeroException"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<field name="xeroException"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="private"
+>
+</field>
+</class>
+<class name="XeroConnectorClientUnexpectedException"
+ extends="java.lang.Exception"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XeroConnectorClientUnexpectedException"
+ type="org.mule.module.xero.XeroConnectorClientUnexpectedException"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="cause" type="java.lang.Throwable">
+</parameter>
+</constructor>
 </class>
 <class name="XeroObjectTypes"
  extends="java.lang.Object"
@@ -672,6 +764,17 @@
  visibility="public"
 >
 </method>
+<method name="getXeroApiURL"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="initialise"
  return="void"
  abstract="false"
@@ -791,6 +894,19 @@
 <parameter name="value" type="java.lang.String">
 </parameter>
 </method>
+<method name="setXeroApiURL"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
 <field name="connectionPool"
  type="org.apache.commons.pool.impl.GenericKeyedObjectPool"
  transient="false"
@@ -862,6 +978,16 @@
 >
 </field>
 <field name="privateKeyLoc"
+ type="java.lang.String"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="private"
+>
+</field>
+<field name="xeroApiURL"
  type="java.lang.String"
  transient="false"
  volatile="false"

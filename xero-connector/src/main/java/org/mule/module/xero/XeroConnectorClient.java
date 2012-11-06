@@ -23,6 +23,7 @@ import net.oauth.OAuthAccessor;
 import net.oauth.OAuthConsumer;
 import net.oauth.OAuthException;
 import net.oauth.OAuthMessage;
+import net.oauth.OAuthProblemException;
 import net.oauth.client.OAuthClient;
 import net.oauth.client.httpclient3.HttpClient3;
 import net.oauth.signature.RSA_SHA1;
@@ -78,7 +79,7 @@ public class XeroConnectorClient {
         return accessor;
     }
 	
-	public String getAccountsList(String filterString)
+	public String getAccountsList(String filterString) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;
 		String stringObjectType = "Accounts";
@@ -92,21 +93,18 @@ public class XeroConnectorClient {
 			
 			responseString = response.readBodyAsString();
 			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (OAuthException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
+			throw new XeroConnectorClientException((OAuthProblemException) e);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new XeroConnectorClientUnexpectedException(e);
 		}
 		
 		return responseString;
 	}
 	
-	public String getInvoicesList(String filterString)
+	public String getInvoicesList(String filterString) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;
 		String stringObjectType = "Invoices"; 
@@ -120,21 +118,18 @@ public class XeroConnectorClient {
 			
 			responseString = response.readBodyAsString();
 			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (OAuthException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
+			throw new XeroConnectorClientException((OAuthProblemException) e);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new XeroConnectorClientUnexpectedException(e);
 		}
 		
 		return responseString;
 	}
 	
-	public String getAccount(String accountId)
+	public String getAccount(String accountId) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;
 		String stringObjectType = "Accounts"; 
@@ -146,21 +141,18 @@ public class XeroConnectorClient {
 			
 			responseString = response.readBodyAsString();
 			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (OAuthException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
+			throw new XeroConnectorClientException((OAuthProblemException) e);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new XeroConnectorClientUnexpectedException(e);
 		}
 		
 		return responseString;
 	}
 	
-	public String getInvoice(String invoiceId)
+	public String getInvoice(String invoiceId) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;
 		String stringObjectType = "Invoices"; 
@@ -172,22 +164,19 @@ public class XeroConnectorClient {
 			
 			responseString = response.readBodyAsString();
 			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (OAuthException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
+			throw new XeroConnectorClientException((OAuthProblemException) e);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new XeroConnectorClientUnexpectedException(e);
 		}
 		
 		return responseString;
 	}
 	
 	public String create(XeroObjectTypes.XeroPostTypes objectType,
-						 String payload)
+						 String payload) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;
 		String stringObjectType = objectType.toString();
@@ -198,15 +187,12 @@ public class XeroConnectorClient {
 			OAuthMessage response = client.invoke(accessor, OAuthMessage.POST, createRequestUri(stringObjectType), OAuth.newList("xml", payload));
 			responseString = response.readBodyAsString();
 			
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (OAuthException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (URISyntaxException e) {
+			throw new XeroConnectorClientException((OAuthProblemException) e);
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			throw new XeroConnectorClientUnexpectedException(e);
 		}
 				
 		return responseString;

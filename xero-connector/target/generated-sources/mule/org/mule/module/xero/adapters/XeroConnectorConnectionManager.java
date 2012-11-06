@@ -30,6 +30,7 @@ public class XeroConnectorConnectionManager
     private String consumerKey;
     private String consumerSecret;
     private String privateKeyLoc;
+    private String xeroApiURL;
     private static Logger logger = LoggerFactory.getLogger(XeroConnectorConnectionManager.class);
     /**
      * Mule Context
@@ -97,6 +98,23 @@ public class XeroConnectorConnectionManager
      */
     public String getPrivateKeyLoc() {
         return this.privateKeyLoc;
+    }
+
+    /**
+     * Sets xeroApiURL
+     * 
+     * @param value Value to set
+     */
+    public void setXeroApiURL(String value) {
+        this.xeroApiURL = value;
+    }
+
+    /**
+     * Retrieves xeroApiURL
+     * 
+     */
+    public String getXeroApiURL() {
+        return this.xeroApiURL;
     }
 
     /**
@@ -197,6 +215,7 @@ public class XeroConnectorConnectionManager
             connector.setConsumerKey(connectionManager.getConsumerKey());
             connector.setConsumerSecret(connectionManager.getConsumerSecret());
             connector.setPrivateKeyLoc(connectionManager.getPrivateKeyLoc());
+            connector.setXeroApiURL(connectionManager.getXeroApiURL());
             if (connector instanceof Initialisable) {
                 connector.initialise();
             }

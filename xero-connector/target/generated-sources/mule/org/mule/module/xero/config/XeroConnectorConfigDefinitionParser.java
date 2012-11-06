@@ -51,6 +51,9 @@ public class XeroConnectorConfigDefinitionParser
         if ((element.getAttribute("privateKeyLoc")!= null)&&(!StringUtils.isBlank(element.getAttribute("privateKeyLoc")))) {
             builder.addPropertyValue("privateKeyLoc", element.getAttribute("privateKeyLoc"));
         }
+        if ((element.getAttribute("xeroApiURL")!= null)&&(!StringUtils.isBlank(element.getAttribute("xeroApiURL")))) {
+            builder.addPropertyValue("xeroApiURL", element.getAttribute("xeroApiURL"));
+        }
         BeanDefinitionBuilder connectionPoolingProfileBuilder = BeanDefinitionBuilder.rootBeanDefinition(PoolingProfile.class.getName());
         Element connectionPoolingProfileElement = DomUtils.getChildElementByTagName(element, "connection-pooling-profile");
         if (connectionPoolingProfileElement!= null) {
