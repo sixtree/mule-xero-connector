@@ -2,6 +2,11 @@ package org.mule.module.xero;
 
 import java.util.Map;
 
+/**
+ * @author Andy Evans on behalf of Sixtree
+ *
+ */
+
 import net.oauth.OAuthException;
 import net.oauth.OAuthProblemException;
 import net.oauth.http.HttpMessage;

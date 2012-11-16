@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="25.123" errors="0" skipped="0" tests="7" name="org.mule.module.xero.XeroConnectorTest">
+<testsuite failures="0" time="54.765" errors="0" skipped="0" tests="11" name="org.mule.module.xero.XeroConnectorTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_33\jre\bin"/>
@@ -60,11 +60,15 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="6.508" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountsListSuccess"/>
-  <testcase time="4.375" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoicesListSuccess"/>
-  <testcase time="2.36" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountSuccess"/>
-  <testcase time="3.795" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceSuccess"/>
-  <testcase time="1.99" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceInvalidId"/>
-  <testcase time="2.523" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceSuccess"/>
-  <testcase time="3.572" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceFailure"/>
+  <testcase time="12.292" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountsListSuccess"/>
+  <testcase time="8.802" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoicesListSuccess"/>
+  <testcase time="5.34" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBankTransactionsListSuccess"/>
+  <testcase time="3.615" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBrandingThemesListSuccess"/>
+  <testcase time="2.897" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountSuccess"/>
+  <testcase time="3.783" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceSuccess"/>
+  <testcase time="3.173" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceInvalidId"/>
+  <testcase time="3.47" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceSuccess"/>
+  <testcase time="2.562" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceWithInvoiceNumberSuccess"/>
+  <testcase time="6.564" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceFailure"/>
+  <testcase time="2.267" classname="org.mule.module.xero.XeroConnectorTest" name="testUpdateInvoiceSuccess"/>
 </testsuite>

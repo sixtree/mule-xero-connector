@@ -224,7 +224,6 @@
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnector.html">XeroConnector</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnectorClient.html">XeroConnectorClient</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.html">XeroObjectTypes</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroXmlHandler.html">XeroXmlHandler</a></li>
       </ul>
     </li>
               
@@ -454,7 +453,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Cloud Connector</p>
+<p>Xero Cloud Connector for Mule</p>
 
 
 
@@ -550,7 +549,7 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#privateKeyPath">privateKeyPath</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#privateKeyFile">privateKeyFile</a></td>
           <td class="jd-descrcol" width="100%">Local path to Xero account private key file
 </td>
       </tr>
@@ -563,8 +562,7 @@ Summary:
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnector.html#xeroApiUrl">xeroApiUrl</a></td>
-          <td class="jd-descrcol" width="100%">Xero API Endpoint
-</td>
+          <td class="jd-descrcol" width="100%">The base Xero API URI.</td>
       </tr>
       
     
@@ -699,7 +697,7 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getAccountsList(java.lang.String)">getAccountsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getAccountsList(java.lang.String, java.lang.String)">getAccountsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
         
         <div class="jd-descrdiv">
  
@@ -719,11 +717,11 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getInvoice(java.lang.String)">getInvoice</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> invoiceId)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getBankTransaction(java.lang.String)">getBankTransaction</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> bankTransactionId)</nobr>
         
         <div class="jd-descrdiv">
  
- getInvoice</div>
+ getBankTransaction</div>
   
   </td></tr>
 
@@ -739,11 +737,491 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getInvoicesList(java.lang.String)">getInvoicesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getBankTransactionsList(java.lang.String, java.lang.String)">getBankTransactionsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getBankTransactionsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getBrandingTheme(java.lang.String)">getBrandingTheme</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> brandingThemeId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getBrandingTheme</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getBrandingThemesList()">getBrandingThemesList</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getBrandingThemesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getContact(java.lang.String)">getContact</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> contactId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getContact</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getContactsList(java.lang.String, java.lang.String)">getContactsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getContactsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getCreditNote(java.lang.String)">getCreditNote</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> creditNoteId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getCreditNote</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getCreditNotesList(java.lang.String, java.lang.String)">getCreditNotesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getCreditNotesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getCurrenciesList(java.lang.String, java.lang.String)">getCurrenciesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getCurrenciesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getEmployee(java.lang.String)">getEmployee</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> employeeId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getEmployee</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getEmployeesList(java.lang.String, java.lang.String)">getEmployeesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getEmployeesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getExpenseClaim(java.lang.String)">getExpenseClaim</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expenseClaimId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getExpenseClaim</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getExpenseClaimsList(java.lang.String, java.lang.String)">getExpenseClaimsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getExpenseClaimsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getInvoice(java.lang.String)">getInvoice</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> invoiceId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getInvoice</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getInvoicesList(java.lang.String, java.lang.String)">getInvoicesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
         
         <div class="jd-descrdiv">
  
  getInvoicesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getItem(java.lang.String)">getItem</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> itemId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getItem</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getItemsList(java.lang.String, java.lang.String)">getItemsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getItemsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getJournal(java.lang.String)">getJournal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> journalId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getJournal</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getJournalsList(java.lang.String, java.lang.String)">getJournalsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getJournalsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getManualJournal(java.lang.String)">getManualJournal</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> manualJournalId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getManualJournal</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getManualJournalsList(java.lang.String, java.lang.String)">getManualJournalsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getManualJournalsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getOrganisation()">getOrganisation</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getOrganisation</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getPayment(java.lang.String)">getPayment</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> paymentId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getPayment</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getPaymentsList(java.lang.String, java.lang.String)">getPaymentsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getPaymentsList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getReceipt(java.lang.String)">getReceipt</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> receiptId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getReceipt</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getReceiptsList(java.lang.String, java.lang.String)">getReceiptsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getReceiptsList</div>
   
   </td></tr>
 
@@ -772,6 +1250,106 @@ Summary:
             
             
             
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getTaxRates()">getTaxRates</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getTaxRates</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getTrackingCategoriesList(java.lang.String, java.lang.String)">getTrackingCategoriesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getTrackingCategoriesList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getTrackingCategory(java.lang.String)">getTrackingCategory</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> trackingCategoryId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getTrackingCategory</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getUser(java.lang.String)">getUser</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> userId)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getUser</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#getUsersList(java.lang.String, java.lang.String)">getUsersList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ getUsersList</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -781,7 +1359,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -799,7 +1377,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -817,7 +1395,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -827,7 +1405,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyPath(java.lang.String)">setPrivateKeyPath</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setPrivateKeyFile(java.lang.String)">setPrivateKeyFile</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyFile)</nobr>
         
         <div class="jd-descrdiv">The location of the private key file  </div>
   
@@ -835,7 +1413,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -848,6 +1426,26 @@ Summary:
         <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#setXeroApiUrl(java.lang.String)">setXeroApiUrl</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl)</nobr>
         
         <div class="jd-descrdiv">The Xero API URL - defaults to https://api.xero.com/api.xro/2.0/</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnector.html#update(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">update</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
+        
+        <div class="jd-descrdiv">
+ 
+ update</div>
   
   </td></tr>
 
@@ -1208,7 +1806,7 @@ From class
 
 
 
-<A NAME="privateKeyPath"></A>
+<A NAME="privateKeyFile"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1218,7 +1816,7 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-        privateKeyPath
+        privateKeyFile
     </h4>
       <div class="api-level">
         
@@ -1261,7 +1859,7 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Xero API Endpoint
+  <div class="jd-tagdata jd-tagdescr"><p>The base Xero API URI. Defaults to https://api.xero.com/api.xro/2.0/ if left blank
 </p></div>
 
     
@@ -1495,7 +2093,7 @@ From class
 </div>
 
 
-<A NAME="getAccountsList(java.lang.String)"></A>
+<A NAME="getAccountsList(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1508,7 +2106,7 @@ From class
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
       <span class="sympad">getAccountsList</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1527,14 +2125,644 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>filterString</td>
+          <th>whereClause</td>
           <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>- returns all accounts listed for the Xero domain.
+      <ul class="nolist"><li>- returns a list of accounts for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getBankTransaction(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getBankTransaction</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> bankTransactionId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getBankTransaction</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>bankTransactionId</td>
+          <td>A unique Xero bank transaction id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual bank transaction
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getBankTransactionsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getBankTransactionsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getBankTransactionsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of bank transactions for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getBrandingTheme(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getBrandingTheme</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> brandingThemeId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getBrandingTheme</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>brandingThemeId</td>
+          <td>A unique Xero branding theme id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual branding theme
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getBrandingThemesList()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getBrandingThemesList</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getBrandingThemesList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of branding themes for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getContact(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getContact</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> contactId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getContact</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>contactId</td>
+          <td>A unique Xero contact id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual contact
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getContactsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getContactsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getContactsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of contacts for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getCreditNote(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getCreditNote</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> creditNoteId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getCreditNote</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>creditNoteId</td>
+          <td>A unique Xero credit note id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual credit note
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getCreditNotesList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getCreditNotesList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getCreditNotesList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of credit notes for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getCurrenciesList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getCurrenciesList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getCurrenciesList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of currencies for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getEmployee(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getEmployee</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> employeeId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getEmployee</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>employeeId</td>
+          <td>A unique Xero employee id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual employee
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getEmployeesList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getEmployeesList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getEmployeesList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of employees for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getExpenseClaim(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getExpenseClaim</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> expenseClaimId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getExpenseClaim</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>expenseClaimId</td>
+          <td>A unique Xero expense claim id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual expense claim
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getExpenseClaimsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getExpenseClaimsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getExpenseClaimsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of expense claims for the Xero domain.
 </li></ul>
   </div>
 
@@ -1589,7 +2817,7 @@ From class
 </div>
 
 
-<A NAME="getInvoicesList(java.lang.String)"></A>
+<A NAME="getInvoicesList(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1602,7 +2830,7 @@ From class
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
       <span class="sympad">getInvoicesList</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1621,14 +2849,546 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>filterString</td>
+          <th>whereClause</td>
           <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>- returns all invoices listed for the Xero domain.
+      <ul class="nolist"><li>- returns a list of invoices for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getItem(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getItem</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> itemId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getItem</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>itemId</td>
+          <td>A unique Xero item id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an individual item
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getItemsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getItemsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getItemsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of items for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getJournal(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getJournal</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> journalId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getJournal</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>journalId</td>
+          <td>A unique Xero journal id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of an journal item
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getJournalsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getJournalsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getJournalsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of journals for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getManualJournal(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getManualJournal</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> manualJournalId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getManualJournal</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>manualJournalId</td>
+          <td>A unique Xero manual journal id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a manual journal
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getManualJournalsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getManualJournalsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getManualJournalsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of manual journals for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getOrganisation()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getOrganisation</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getOrganisation</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero organisation
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getPayment(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getPayment</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> paymentId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getPayment</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>paymentId</td>
+          <td>A unique Xero payment id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero payment
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getPaymentsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getPaymentsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getPaymentsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of payments for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getReceipt(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getReceipt</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> receiptId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getReceipt</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>receiptId</td>
+          <td>A unique Xero payment id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero receipt
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getReceiptsList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getReceiptsList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getReceiptsList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of receipts for the Xero domain.
 </li></ul>
   </div>
 
@@ -1662,6 +3422,240 @@ From class
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="getTaxRates()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getTaxRates</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getTaxRates</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero organisations tax rates
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getTrackingCategoriesList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getTrackingCategoriesList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getTrackingCategoriesList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of tracking categories for the Xero domain.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getTrackingCategory(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getTrackingCategory</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> trackingCategoryId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getTrackingCategory</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>trackingCategoryId</td>
+          <td>A unique Xero tracking category id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero tracking category
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getUser(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getUser</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> userId)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getUser</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>userId</td>
+          <td>A unique Xero tracking category id</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns details of a Xero user
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getUsersList(java.lang.String, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getUsersList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderBy)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ getUsersList</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>whereClause</td>
+          <td>Filter string used to filter query results from Xero</td>
+        </tr>
+        <tr>
+          <th>orderBy</td>
+          <td>Filter string used to order results returned from Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns a list of users for the Xero domain.
+</li></ul>
+  </div>
 
     </div>
 </div>
@@ -1780,7 +3774,7 @@ From class
 </div>
 
 
-<A NAME="setPrivateKeyPath(java.lang.String)"></A>
+<A NAME="setPrivateKeyFile(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1792,8 +3786,8 @@ From class
          
         void
       </span>
-      <span class="sympad">setPrivateKeyPath</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</span>
+      <span class="sympad">setPrivateKeyFile</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyFile)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1810,8 +3804,9 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>privateKeyPath</td>
-          <td></td>
+          <th>privateKeyFile</td>
+          <td>Private Key File
+ </td>
         </tr>
       </table>
   </div>
@@ -1855,6 +3850,57 @@ From class
 </td>
         </tr>
       </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="update(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">update</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>
+ 
+ update</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objectType</td>
+          <td>The type of object to be updated in Xero</td>
+        </tr>
+        <tr>
+          <th>payload</td>
+          <td>The content of the object to be updated in Xero</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>- returns the status of the update request
+</li></ul>
   </div>
 
     </div>

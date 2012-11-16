@@ -3,6 +3,14 @@
  */
 package org.mule.module.xero;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
+import java.util.Random;
+
 import net.oauth.OAuthProblemException;
 
 import org.mule.api.MuleEvent;
@@ -28,40 +36,42 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Test
     public void testGetAccountsListSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetAccountsList");
-        MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetAccountsList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetInvoicesListSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetInvoicesList");
-        MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoicesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetBankTransactionsListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetBankTransactionsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetBrandingThemesListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetBrandingThemesList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetAccountSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetAccount");
-        MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetAccount");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetInvoiceSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testGetInvoice");
-        MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoice");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
@@ -69,9 +79,8 @@ public class XeroConnectorTest extends FunctionalTestCase
     public void testGetInvoiceInvalidId() 
     {
         try {
-        	Flow flow = lookupFlowConstruct("testGetInvoiceInvalidId");
-            MuleEvent event = getTestEvent(null); 
-			MuleEvent responseEvent = flow.process(event);
+        	@SuppressWarnings("unused")
+			MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoiceInvalidId");
 		} catch (MuleException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -84,60 +93,43 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Test
     public void testCreateInvoiceSuccess() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testCreateInvoice");
-    	String payload = "<Invoice><Type>ACCREC</Type><Contact>    <Name>ABC Limited</Name>  </Contact>  <Date>2009-08-30</Date>  <DueDate>2009-09-20</DueDate>  <LineAmountTypes>Exclusive</LineAmountTypes>  <LineItems>    <LineItem>      <Description>Consulting services as agreed</Description>      <Quantity>5.0000</Quantity>      <UnitAmount>120.00</UnitAmount>      <AccountCode>200</AccountCode></LineItem>  </LineItems></Invoice>";
-    	//TODO - look this xml request up from a file
-    	MuleEvent event = getTestEvent(payload);    	
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	String payload = readFile("src/test/resources/create_invoice_success.xml");
+    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceSuccess", payload);        
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testCreateInvoiceWithInvoiceNumberSuccess() throws Exception
+    {
+    	String invoiceNumberAnchor = "#InvoiceNumber#";
+
+    	//Generate random number to ensure InvoiceNumber is unique
+    	String invoiceNumberString = generateRandomString();
+    	
+    	String payload = readFile("src/test/resources/create_invoice_success_with_invoice_number.xml");
+    	payload = payload.replace(invoiceNumberAnchor, invoiceNumberString);
+    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceWithInvoiceNumberSuccess", payload);        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testCreateInvoiceFailure() throws Exception
     {
-    	Flow flow = lookupFlowConstruct("testCreateInvoiceFailure");
     	String responseError = "<ErrorNumber>10</ErrorNumber>";
-    	String payload = "<Invoice><Type>ACCREC</Type><Contact>      </Contact>  <Date>2009-08-30</Date>  <DueDate>2009-09-20</DueDate>  <LineAmountTypes>Exclusive</LineAmountTypes>  <LineItems>    <LineItem>      <Description>Consulting services as agreed</Description>      <Quantity>5.0000</Quantity>      <UnitAmount>120.00</UnitAmount>      <AccountCode>200</AccountCode></LineItem>  </LineItems></Invoice>";
-    	//TODO - look this xml request up from a file
-    	MuleEvent event = getTestEvent(payload);    	
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+    	String payload = readFile("src/test/resources/create_invoice_failure.xml");
+    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceFailure", payload);       
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseError));
     }
     
-    /**
-    * Run the flow specified by name and assert equality on the expected output
-    *
-    * @param flowName The name of the flow to run
-    * @param expect The expected output
-    */
-    protected <T> void runFlowAndExpect(String flowName, T expect) throws Exception
+    @Test
+    public void testUpdateInvoiceSuccess() throws Exception
     {
-        Flow flow = lookupFlowConstruct(flowName);
-        MuleEvent event = AbstractMuleTestCase.getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-
-        assertEquals(expect, responseEvent.getMessage().getPayload());
+    	String payload = readFile("src/test/resources/update_invoice_success.xml");
+    	MuleEvent responseEvent = setupGenericUpdateObjectTest("testUpdateInvoiceSuccess", payload);        
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
-
-    /**
-    * Run the flow specified by name using the specified payload and assert
-    * equality on the expected output
-    *
-    * @param flowName The name of the flow to run
-    * @param expect The expected output
-    * @param payload The payload of the input event
-    */
-    protected <T, U> void runFlowWithPayloadAndExpect(String flowName, T expect, U payload) throws Exception
-    {
-        Flow flow = lookupFlowConstruct(flowName);
-        MuleEvent event = AbstractMuleTestCase.getTestEvent(payload);
-        MuleEvent responseEvent = flow.process(event);
-
-        assertEquals(expect, responseEvent.getMessage().getPayload());
-    }
-
+    
+ 
     /**
      * Retrieve a flow by name from the registry
      *
@@ -146,5 +138,57 @@ public class XeroConnectorTest extends FunctionalTestCase
     protected Flow lookupFlowConstruct(String name)
     {
         return (Flow) AbstractMuleTestCase.muleContext.getRegistry().lookupFlowConstruct(name);
+    }
+    
+    private MuleEvent setupGenericGetObjectTest(String testConstructName) throws Exception
+    {
+    	Flow flow = lookupFlowConstruct(testConstructName);
+    	MuleEvent event = getTestEvent(null);
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+                
+        return responseEvent;
+    }
+    
+    private MuleEvent setupGenericCreateObjectTest(String testConstructName, String payload) throws Exception
+    {
+    	Flow flow = lookupFlowConstruct(testConstructName);
+    	MuleEvent event = getTestEvent(payload);
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+                
+        return responseEvent;
+    }
+    
+    private MuleEvent setupGenericUpdateObjectTest(String testConstructName, String payload) throws Exception
+    {
+    	Flow flow = lookupFlowConstruct(testConstructName);
+    	MuleEvent event = getTestEvent(payload);
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+                
+        return responseEvent;
+    }
+    
+    private static String readFile(String path) throws IOException {
+    	FileInputStream stream = new FileInputStream(new File(path));
+    	try {
+    		FileChannel fc = stream.getChannel();
+    		MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
+    		/* Instead of using default, pass in a decoder. */
+    		return Charset.defaultCharset().decode(bb).toString();
+    	}
+    	finally {
+    		stream.close();
+    	}
+    }
+    
+    private String generateRandomString(){
+    	long currentTime = System.currentTimeMillis();
+    	Random randGenerator = new Random(currentTime);
+    	int randomNumberInt = randGenerator.nextInt(99999999) + 10000000;
+    	String randomNumberString = Integer.toString(randomNumberInt);
+    	
+    	return randomNumberString;
     }
 }

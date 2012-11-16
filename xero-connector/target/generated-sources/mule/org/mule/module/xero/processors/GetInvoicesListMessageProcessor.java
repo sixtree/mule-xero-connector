@@ -43,15 +43,17 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * GetInvoicesListMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getInvoicesList(java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * GetInvoicesListMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#getInvoicesList(java.lang.String, java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
 public class GetInvoicesListMessageProcessor
     implements FlowConstructAware, MuleContextAware, Disposable, Initialisable, Startable, Stoppable, MessageProcessor
 {
 
-    private Object filterString;
-    private String _filterStringType;
+    private Object whereClause;
+    private String _whereClauseType;
+    private Object orderBy;
+    private String _orderByType;
     private static Logger logger = LoggerFactory.getLogger(GetInvoicesListMessageProcessor.class);
     /**
      * Module object
@@ -168,12 +170,21 @@ public class GetInvoicesListMessageProcessor
     }
 
     /**
-     * Sets filterString
+     * Sets whereClause
      * 
      * @param value Value to set
      */
-    public void setFilterString(Object value) {
-        this.filterString = value;
+    public void setWhereClause(Object value) {
+        this.whereClause = value;
+    }
+
+    /**
+     * Sets orderBy
+     * 
+     * @param value Value to set
+     */
+    public void setOrderBy(Object value) {
+        this.orderBy = value;
     }
 
     /**
@@ -385,7 +396,8 @@ public class GetInvoicesListMessageProcessor
         }
         XeroConnectorLifecycleAdapter connection = null;
         try {
-            String _transformedFilterString = ((String) evaluateAndTransform(_muleMessage, GetInvoicesListMessageProcessor.class.getDeclaredField("_filterStringType").getGenericType(), null, filterString));
+            String _transformedWhereClause = ((String) evaluateAndTransform(_muleMessage, GetInvoicesListMessageProcessor.class.getDeclaredField("_whereClauseType").getGenericType(), null, whereClause));
+            String _transformedOrderBy = ((String) evaluateAndTransform(_muleMessage, GetInvoicesListMessageProcessor.class.getDeclaredField("_orderByType").getGenericType(), null, orderBy));
             if (logger.isDebugEnabled()) {
                 StringBuilder _messageStringBuilder = new StringBuilder();
                 _messageStringBuilder.append("Attempting to acquire a connection using ");
@@ -406,7 +418,7 @@ public class GetInvoicesListMessageProcessor
             }
             retryCount.getAndIncrement();
             Object resultPayload;
-            resultPayload = connection.getInvoicesList(_transformedFilterString);
+            resultPayload = connection.getInvoicesList(_transformedWhereClause, _transformedOrderBy);
             TransformerTemplate.OverwitePayloadCallback overwritePayloadCallback = null;
             if (resultPayload == null) {
                 overwritePayloadCallback = new TransformerTemplate.OverwitePayloadCallback(NullPayload.getInstance());

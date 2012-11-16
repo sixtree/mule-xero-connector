@@ -224,7 +224,6 @@
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnector.html">XeroConnector</a></li>
           <li class="selected api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroConnectorClient.html">XeroConnectorClient</a></li>
           <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.html">XeroObjectTypes</a></li>
-          <li class="api apilevel-"><a href="../../../../../java/org/mule/module/xero/XeroXmlHandler.html">XeroXmlHandler</a></li>
       </ul>
     </li>
               
@@ -464,7 +463,7 @@ Summary:
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#privateKeyPath">privateKeyPath</a></td>
+          <td class="jd-linkcol"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#privateKeyFile">privateKeyFile</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -505,7 +504,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#XeroConnectorClient(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">XeroConnectorClient</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerKey, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerSecret, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#XeroConnectorClient(java.lang.String, java.lang.String, java.lang.String, java.lang.String)">XeroConnectorClient</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerKey, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerSecret, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyFile)</nobr>
         
   </td></tr>
 
@@ -534,8 +533,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;OAuth.Parameter&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#addFilterParam(java.lang.String)">addFilterParam</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#addRequestParams(java.lang.String, java.lang.String)">addRequestParams</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderClause)</nobr>
         
+        <div class="jd-descrdiv">addRequestParams adds additional parmeters to the API request</div>
+  
   </td></tr>
 
 
@@ -550,8 +551,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#create(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">create</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#buildRequestUri(java.lang.String)">buildRequestUri</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</nobr>
         
+        <div class="jd-descrdiv">buildRequestUri builds the full target URI for the Xero request to be directed to</div>
+  
   </td></tr>
 
 
@@ -568,6 +571,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#createOAuthAccessor()">createOAuthAccessor</a></span>()</nobr>
         
+        <div class="jd-descrdiv">createOAuthAccessor sets up the OAuth accessor credentials to be passed in all requests to the Xero API</div>
+  
   </td></tr>
 
 
@@ -582,8 +587,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#createRequestUri(java.lang.String)">createRequestUri</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#createXeroObject(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">createXeroObject</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
         
+        <div class="jd-descrdiv">createXeroObject method creates a xero object based on the given 'objectType' and 'payload' parameters.</div>
+  
   </td></tr>
 
 
@@ -598,8 +605,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getAccount(java.lang.String)">getAccount</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> accountId)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getXeroObject(java.lang.String)">getXeroObject</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</nobr>
         
+        <div class="jd-descrdiv">getXeroObject method retrieves an individual xero object based on the given 'objectType' parameter</div>
+  
   </td></tr>
 
 
@@ -614,8 +623,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getAccountsList(java.lang.String)">getAccountsList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getXeroObject(java.lang.String, java.lang.String)">getXeroObject</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectId)</nobr>
         
+        <div class="jd-descrdiv">getXeroObject method retrieves an individual xero object based on the given 'objectType' parameter.</div>
+  
   </td></tr>
 
 
@@ -630,8 +641,10 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getInvoice(java.lang.String)">getInvoice</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> invoiceId)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getXeroObjectList(java.lang.String, java.lang.String, java.lang.String)">getXeroObjectList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderClause)</nobr>
         
+        <div class="jd-descrdiv">getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter.</div>
+  
   </td></tr>
 
 
@@ -646,8 +659,46 @@ Summary:
             <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getInvoicesList(java.lang.String)">getInvoicesList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getXeroObjectList(java.lang.String, java.lang.String)">getXeroObjectList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause)</nobr>
         
+        <div class="jd-descrdiv">getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#getXeroObjectList(java.lang.String)">getXeroObjectList</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</nobr>
+        
+        <div class="jd-descrdiv">getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../org/mule/module/xero/XeroConnectorClient.html#updateXeroObject(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">updateXeroObject</a></span>(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</nobr>
+        
+        <div class="jd-descrdiv">updateXeroObject method updates a xero object based on the given 'objectType' and 'payload' parameters.</div>
+  
   </td></tr>
 
 
@@ -959,7 +1010,7 @@ From class
 
 
 
-<A NAME="privateKeyPath"></A>
+<A NAME="privateKeyFile"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -969,7 +1020,7 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-        privateKeyPath
+        privateKeyFile
     </h4>
       <div class="api-level">
         
@@ -1041,7 +1092,7 @@ From class
         
       </span>
       <span class="sympad">XeroConnectorClient</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerKey, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerSecret, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyPath)</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> xeroApiUrl, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerKey, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> consumerSecret, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> privateKeyFile)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1070,7 +1121,7 @@ From class
           <td></td>
         </tr>
         <tr>
-          <th>privateKeyPath</td>
+          <th>privateKeyFile</td>
           <td></td>
         </tr>
       </table>
@@ -1095,7 +1146,7 @@ From class
 
 
 
-<A NAME="addFilterParam(java.lang.String)"></A>
+<A NAME="addRequestParams(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1107,8 +1158,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Collection.html">Collection</a>&lt;OAuth.Parameter&gt;
       </span>
-      <span class="sympad">addFilterParam</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+      <span class="sympad">addRequestParams</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderClause)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1120,22 +1171,31 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>addRequestParams adds additional parmeters to the API request</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>filterString</td>
-          <td></td>
+          <th>whereClause</td>
+          <td>Value of the 'where' parameter to be added to the request URI</td>
+        </tr>
+        <tr>
+          <th>orderClause</td>
+          <td>Value of the 'order' parameter to be added to the request URI</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>parameters list
+</li></ul>
   </div>
 
     </div>
 </div>
 
 
-<A NAME="create(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)"></A>
+<A NAME="buildRequestUri(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1147,8 +1207,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">create</span>
-      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
+      <span class="sympad">buildRequestUri</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1160,32 +1220,20 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>buildRequestUri builds the full target URI for the Xero request to be directed to</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>objectType</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th>payload</td>
-          <td></td>
+          <td>To be appended to the base Xero API URI</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Throws</h5>
-      <table class="jd-tagtable">  
-        <tr>
-            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
-            <td></td>
-        </tr>  
-        <tr>
-            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
-            <td></td>
-        </tr>
-      </table>
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>full Xero API URI
+</li></ul>
   </div>
 
     </div>
@@ -1217,13 +1265,27 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>createOAuthAccessor sets up the OAuth accessor credentials to be passed in all requests to the Xero API</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>an OAuth accessor with required Xero access credentials set</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
+            <td>if an unexpected exception occurs
+</td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
 
 
-<A NAME="createRequestUri(java.lang.String)"></A>
+<A NAME="createXeroObject(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1235,7 +1297,69 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">createRequestUri</span>
+      <span class="sympad">createXeroObject</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>createXeroObject method creates a xero object based on the given 'objectType' and 'payload' parameters. </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objectType</td>
+          <td>The Xero object type</td>
+        </tr>
+        <tr>
+          <th>payload</td>
+          <td>Xml string request payload</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
+            <td>if an error is returned from the Xero API</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
+            <td>if an unexpected exception occurs
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getXeroObject(java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">getXeroObject</span>
       <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</span>
     </h4>
       <div class="api-level">
@@ -1248,13 +1372,31 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>getXeroObject method retrieves an individual xero object based on the given 'objectType' parameter</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
           <th>objectType</td>
-          <td></td>
+          <td>The Xero object type</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
+            <td>if an error is returned from the Xero API</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
+            <td>if an unexpected exception occurs
+</td>
         </tr>
       </table>
   </div>
@@ -1263,7 +1405,7 @@ From class
 </div>
 
 
-<A NAME="getAccount(java.lang.String)"></A>
+<A NAME="getXeroObject(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1275,8 +1417,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">getAccount</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> accountId)</span>
+      <span class="sympad">getXeroObject</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectId)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1288,26 +1430,36 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>getXeroObject method retrieves an individual xero object based on the given 'objectType' parameter. Method overloaded to allow:
+ 	- an optional 'objectId' field to identify a unique Xero object</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>accountId</td>
-          <td></td>
+          <th>objectType</td>
+          <td>The Xero object type</td>
+        </tr>
+        <tr>
+          <th>objectId</td>
+          <td>Unique Xero object identifier</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
-            <td></td>
+            <td>if an error is returned from the Xero API</td>
         </tr>  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
-            <td></td>
+            <td>if an unexpected exception occurs
+</td>
         </tr>
       </table>
   </div>
@@ -1316,7 +1468,7 @@ From class
 </div>
 
 
-<A NAME="getAccountsList(java.lang.String)"></A>
+<A NAME="getXeroObjectList(java.lang.String, java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1328,8 +1480,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">getAccountsList</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+      <span class="sympad">getXeroObjectList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> orderClause)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1341,26 +1493,41 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter. Method overloaded to allow: 
+ 	- an optional 'where' clause to be passed for filtering of the response list
+ 	- an optional 'order' clause for ordering the response list</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>filterString</td>
-          <td></td>
+          <th>objectType</td>
+          <td>The Xero object type</td>
+        </tr>
+        <tr>
+          <th>whereClause</td>
+          <td>A 'where' clause passed for filtering of the response list </td>
+        </tr>
+        <tr>
+          <th>orderClause</td>
+          <td>An 'order' clause for ordering the response list</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
-            <td></td>
+            <td>if an error is returned from the Xero API</td>
         </tr>  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
-            <td></td>
+            <td>if an unexpected exception occurs
+</td>
         </tr>
       </table>
   </div>
@@ -1369,7 +1536,7 @@ From class
 </div>
 
 
-<A NAME="getInvoice(java.lang.String)"></A>
+<A NAME="getXeroObjectList(java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1381,8 +1548,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">getInvoice</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> invoiceId)</span>
+      <span class="sympad">getXeroObjectList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> whereClause)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1394,26 +1561,36 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter. Method overloaded to allow: 
+ 	- an optional 'where' clause to be passed for filtering of the response list</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>invoiceId</td>
-          <td></td>
+          <th>objectType</td>
+          <td>The Xero object type</td>
+        </tr>
+        <tr>
+          <th>whereClause</td>
+          <td>A 'where' clause passed for filtering of the response list </td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
-            <td></td>
+            <td>if an error is returned from the Xero API</td>
         </tr>  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
-            <td></td>
+            <td>if an unexpected exception occurs
+</td>
         </tr>
       </table>
   </div>
@@ -1422,7 +1599,7 @@ From class
 </div>
 
 
-<A NAME="getInvoicesList(java.lang.String)"></A>
+<A NAME="getXeroObjectList(java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1434,8 +1611,8 @@ From class
          
         <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">getInvoicesList</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> filterString)</span>
+      <span class="sympad">getXeroObjectList</span>
+      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> objectType)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1447,26 +1624,93 @@ From class
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>getXeroObjectList retrieves a list of xero objects based on the 'objectType' parameter</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>filterString</td>
-          <td></td>
+          <th>objectType</td>
+          <td>The Xero object type</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
-            <td></td>
+            <td>if an error is returned from the Xero API</td>
         </tr>  
         <tr>
             <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
-            <td></td>
+            <td>if an unexpected exception occurs
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="updateXeroObject(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">updateXeroObject</span>
+      <span class="normal">(<a href="../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a> objectType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> payload)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>updateXeroObject method updates a xero object based on the given 'objectType' and 'payload' parameters. </p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>objectType</td>
+          <td>The Xero object type</td>
+        </tr>
+        <tr>
+          <th>payload</td>
+          <td>Xml string request payload</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>a Xero xml response string</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientException.html">XeroConnectorClientException</a></td>
+            <td>if an error is returned from the Xero API</td>
+        </tr>  
+        <tr>
+            <th><a href="../../../../../java/org/mule/module/xero/XeroConnectorClientUnexpectedException.html">XeroConnectorClientUnexpectedException</a></td>
+            <td>if an unexpected exception occurs
+</td>
         </tr>
       </table>
   </div>

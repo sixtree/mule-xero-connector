@@ -36,8 +36,11 @@ public class GetAccountsListDefinitionParser
         if ((configRef!= null)&&(!StringUtils.isBlank(configRef))) {
             builder.addPropertyValue("moduleObject", configRef);
         }
-        if ((element.getAttribute("filterString")!= null)&&(!StringUtils.isBlank(element.getAttribute("filterString")))) {
-            builder.addPropertyValue("filterString", element.getAttribute("filterString"));
+        if ((element.getAttribute("whereClause")!= null)&&(!StringUtils.isBlank(element.getAttribute("whereClause")))) {
+            builder.addPropertyValue("whereClause", element.getAttribute("whereClause"));
+        }
+        if ((element.getAttribute("orderBy")!= null)&&(!StringUtils.isBlank(element.getAttribute("orderBy")))) {
+            builder.addPropertyValue("orderBy", element.getAttribute("orderBy"));
         }
         if ((element.getAttribute("retryMax")!= null)&&(!StringUtils.isBlank(element.getAttribute("retryMax")))) {
             builder.addPropertyValue("retryMax", element.getAttribute("retryMax"));

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:spring="http://www.springframework.org/schema/beans"
+      xmlns:xero="http://www.mulesoft.org/schema/mule/xero"
+      xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/xero http://www.mulesoft.org/schema/mule/xero/1.0/mule-xero.xsd">
+
+    <xero:config name="Xero" consumerKey="BSTGZO7PWHTUKRX4O2IZQLLEXDZLVB" consumerSecret="GULPOIEWW2L27NAESNFZE4WOAG3O7O" privateKeyFile="privatekey.pem" xeroApiUrl="https://api.xero.com/api.xro/2.0/" />
+    
+    <flow name="testGetAccountsList">
+        <xero:get-accounts-list/>
+    </flow>
+    
+    <flow name="testGetBankTransactionsList">
+        <xero:get-bank-transactions-list/>
+    </flow>
+    
+    <flow name="testGetBrandingThemesList">
+        <xero:get-branding-themes-list/>
+    </flow>
+    
+    <flow name="testGetContactsList">
+        <xero:get-contacts-list/>
+    </flow> 
+    
+    <flow name="testGetCreditNotesList">
+        <xero:get-credit-notes-list/>
+    </flow>  
+    
+    <flow name="testGetCurrenciesList">
+        <xero:get-currencies-list/>
+    </flow>   
+    
+    <flow name="testGetEmployeesList">
+        <xero:get-employees-list/>
+    </flow> 
+    
+    <flow name="testGetExpenseClaimsList">
+        <xero:get-expense-claims-list/>
+    </flow>     
+    
+    <flow name="testGetInvoicesList">
+        <xero:get-invoices-list/>
+    </flow>
+    
+    <flow name="testGetItemsList">
+        <xero:get-items-list/>
+    </flow> 
+    
+    <flow name="testGetJournalsList">
+        <xero:get-journals-list/>
+    </flow> 
+    
+    <flow name="testGetManualJournalsList">
+        <xero:get-manual-journals-list/>
+    </flow>   
+    
+    <flow name="testGetPaymentsList">
+        <xero:get-payments-list/>
+    </flow>  
+    
+    <flow name="testGetReceiptsList">
+        <xero:get-receipts-list/>
+    </flow> 
+    
+    <flow name="testGetTrackingCategoriesList">
+        <xero:get-tracking-categories-list/>
+    </flow>  
+    
+    <flow name="testGetUsersList">
+        <xero:get-users-list/>
+    </flow>     
+    
+    <flow name="testGetAccount">
+        <xero:get-account accountId="74f0de47-0206-49d4-9a19-5b5338232ce9"/>
+    </flow>
+
+    <flow name="testGetBankTransaction">
+        <xero:get-bank-transaction bankTransactionId="99999999"/>
+    </flow>
+    
+	<flow name="testGetBrandingTheme">
+        <xero:get-branding-theme brandingThemeId="99999999"/>
+    </flow>   
+    
+    <flow name="testGetContact">
+        <xero:get-contact contactId="99999999999"/>
+    </flow>
+    
+    <flow name="testGetCreditNote">
+        <xero:get-credit-note creditNoteId="99999999999"/>
+    </flow>   
+    
+    <flow name="testGetEmployee">
+        <xero:get-employee employeeId="99999999999"/>
+    </flow>  
+    
+    <flow name="testGetExpenseClaim">
+        <xero:get-expense-claim expenseClaimId="99999999999"/>
+    </flow>      
+    
+    <flow name="testGetInvoice">
+        <xero:get-invoice invoiceId="f7701dda-baf7-4974-872a-37bd57803701"/>
+    </flow>
+    
+    <flow name="testGetInvoiceInvalidId">
+        <xero:get-invoice invoiceId="99999999"/>
+    </flow>
+    
+    <flow name="testGetItem">
+        <xero:get-item itemId="999999999"/>
+    </flow>
+    
+    <flow name="testGetJournal">
+        <xero:get-journal journalId="9999999999"/>
+    </flow>
+    
+    <flow name="testGetManualJournal">
+        <xero:get-manual-journal manualJournalId="9999999999"/>
+    </flow>  
+    
+    <flow name="testGetOrganisation">
+        <xero:get-organisation/>
+    </flow>
+    
+    <flow name="testGetPayment">
+        <xero:get-payment paymentId="999999999"/>
+    </flow>   
+    
+    <flow name="testGetReceipt">
+        <xero:get-receipt receiptId="9999999999"/>
+    </flow> 
+    
+    <flow name="testGetTaxRates">
+        <xero:get-tax-rates/>
+    </flow> 
+    
+    <flow name="testGetTrackingCategory">
+        <xero:get-tracking-category/>
+    </flow> 
+    
+    <flow name="testGetUser">
+        <xero:get-user/>
+    </flow>                          
+    
+    <flow name="testCreateInvoiceSuccess">
+        <xero:create objectType="Invoices" payload="#[message.payload]"/>
+    </flow>
+    
+    <flow name="testCreateInvoiceWithInvoiceNumberSuccess">
+        <xero:create objectType="Invoices" payload="#[message.payload]"/>
+    </flow>
+    
+    <flow name="testCreateInvoiceFailure">
+        <xero:create objectType="Invoices" payload="#[message.payload]"/>
+    </flow>
+    
+    <flow name="testUpdateInvoiceSuccess">
+        <xero:update objectType="Invoices" payload="#[message.payload]"/>
+    </flow>
+
+</mule>

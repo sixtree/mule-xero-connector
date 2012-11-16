@@ -10,20 +10,50 @@
       <group caption="General" id="general">
         <string javaType="java.lang.String" required="true" description="Xero Account Consumer Key." caption="Consumer Key" name="consumerKey"></string>
         <string javaType="java.lang.String" required="true" description="Xero Account Consumer Secret." caption="Consumer Secret" name="consumerSecret"></string>
-        <string javaType="java.lang.String" required="true" description="Local path to Xero account private key file." caption="Private Key Path" name="privateKeyPath"></string>
-        <string defaultValue="https://api.xero.com/api.xro/2.0/" javaType="java.lang.String" required="false" description="Xero API Endpoint." caption="Xero Api Url" name="xeroApiUrl"></string>
+        <string javaType="java.lang.String" required="true" description="Local path to Xero account private key file." caption="Private Key File" name="privateKeyFile"></string>
+        <string defaultValue="https://api.xero.com/api.xro/2.0/" javaType="java.lang.String" required="false" description="The base Xero API URI. Defaults to https://api.xero.com/api.xro/2.0/ if left blank." caption="Xero Api Url" name="xeroApiUrl"></string>
       </group>
     </attribute-category>
   </global-cloud-connector>
-  <cloud-connector extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" image="icons/large/xero-connector-48x32.png" localId="xero-connector" icon="icons/small/xero-connector-24x16.png" description="Cloud Connector." caption="Xero" aliasId="org.mule.tooling.ui.modules.core.pattern.xero">
+  <cloud-connector extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" image="icons/large/xero-connector-48x32.png" localId="xero-connector" icon="icons/small/xero-connector-24x16.png" description="Xero Cloud Connector for Mule." caption="Xero" aliasId="org.mule.tooling.ui.modules.core.pattern.xero">
     <attribute-category description="General." caption="General">
       <group caption="Generic" id="xeroConnectorGeneric">
         <modeSwitch description="Operation." caption="Operation" name="Xero operations to execute">
           <mode modeLabel="Create" modeId="http://www.mulesoft.org/schema/mule/xero/create"></mode>
           <mode modeLabel="Get account" modeId="http://www.mulesoft.org/schema/mule/xero/get-account"></mode>
           <mode modeLabel="Get accounts list" modeId="http://www.mulesoft.org/schema/mule/xero/get-accounts-list"></mode>
+          <mode modeLabel="Get bank transaction" modeId="http://www.mulesoft.org/schema/mule/xero/get-bank-transaction"></mode>
+          <mode modeLabel="Get bank transactions list" modeId="http://www.mulesoft.org/schema/mule/xero/get-bank-transactions-list"></mode>
+          <mode modeLabel="Get branding theme" modeId="http://www.mulesoft.org/schema/mule/xero/get-branding-theme"></mode>
+          <mode modeLabel="Get branding themes list" modeId="http://www.mulesoft.org/schema/mule/xero/get-branding-themes-list"></mode>
+          <mode modeLabel="Get contact" modeId="http://www.mulesoft.org/schema/mule/xero/get-contact"></mode>
+          <mode modeLabel="Get contacts list" modeId="http://www.mulesoft.org/schema/mule/xero/get-contacts-list"></mode>
+          <mode modeLabel="Get credit note" modeId="http://www.mulesoft.org/schema/mule/xero/get-credit-note"></mode>
+          <mode modeLabel="Get credit notes list" modeId="http://www.mulesoft.org/schema/mule/xero/get-credit-notes-list"></mode>
+          <mode modeLabel="Get currencies list" modeId="http://www.mulesoft.org/schema/mule/xero/get-currencies-list"></mode>
+          <mode modeLabel="Get employee" modeId="http://www.mulesoft.org/schema/mule/xero/get-employee"></mode>
+          <mode modeLabel="Get employees list" modeId="http://www.mulesoft.org/schema/mule/xero/get-employees-list"></mode>
+          <mode modeLabel="Get expense claim" modeId="http://www.mulesoft.org/schema/mule/xero/get-expense-claim"></mode>
+          <mode modeLabel="Get expense claims list" modeId="http://www.mulesoft.org/schema/mule/xero/get-expense-claims-list"></mode>
           <mode modeLabel="Get invoice" modeId="http://www.mulesoft.org/schema/mule/xero/get-invoice"></mode>
           <mode modeLabel="Get invoices list" modeId="http://www.mulesoft.org/schema/mule/xero/get-invoices-list"></mode>
+          <mode modeLabel="Get item" modeId="http://www.mulesoft.org/schema/mule/xero/get-item"></mode>
+          <mode modeLabel="Get items list" modeId="http://www.mulesoft.org/schema/mule/xero/get-items-list"></mode>
+          <mode modeLabel="Get journal" modeId="http://www.mulesoft.org/schema/mule/xero/get-journal"></mode>
+          <mode modeLabel="Get journals list" modeId="http://www.mulesoft.org/schema/mule/xero/get-journals-list"></mode>
+          <mode modeLabel="Get manual journal" modeId="http://www.mulesoft.org/schema/mule/xero/get-manual-journal"></mode>
+          <mode modeLabel="Get manual journals list" modeId="http://www.mulesoft.org/schema/mule/xero/get-manual-journals-list"></mode>
+          <mode modeLabel="Get organisation" modeId="http://www.mulesoft.org/schema/mule/xero/get-organisation"></mode>
+          <mode modeLabel="Get payment" modeId="http://www.mulesoft.org/schema/mule/xero/get-payment"></mode>
+          <mode modeLabel="Get payments list" modeId="http://www.mulesoft.org/schema/mule/xero/get-payments-list"></mode>
+          <mode modeLabel="Get receipt" modeId="http://www.mulesoft.org/schema/mule/xero/get-receipt"></mode>
+          <mode modeLabel="Get receipts list" modeId="http://www.mulesoft.org/schema/mule/xero/get-receipts-list"></mode>
+          <mode modeLabel="Get tax rates" modeId="http://www.mulesoft.org/schema/mule/xero/get-tax-rates"></mode>
+          <mode modeLabel="Get tracking categories list" modeId="http://www.mulesoft.org/schema/mule/xero/get-tracking-categories-list"></mode>
+          <mode modeLabel="Get tracking category" modeId="http://www.mulesoft.org/schema/mule/xero/get-tracking-category"></mode>
+          <mode modeLabel="Get user" modeId="http://www.mulesoft.org/schema/mule/xero/get-user"></mode>
+          <mode modeLabel="Get users list" modeId="http://www.mulesoft.org/schema/mule/xero/get-users-list"></mode>
+          <mode modeLabel="Update" modeId="http://www.mulesoft.org/schema/mule/xero/update"></mode>
         </modeSwitch>
       </group>
     </attribute-category>
@@ -38,7 +68,213 @@
   <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-accounts-list" icon="icons/small/xero-connector-24x16.png" caption="Get Accounts List">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Filter String" name="filterString"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-bank-transactions-list" icon="icons/small/xero-connector-24x16.png" caption="Get Bank Transactions List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-branding-themes-list" icon="icons/small/xero-connector-24x16.png" caption="Get Branding Themes List">
+    <attribute-category description="General." caption="General"></attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-contacts-list" icon="icons/small/xero-connector-24x16.png" caption="Get Contacts List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-credit-notes-list" icon="icons/small/xero-connector-24x16.png" caption="Get Credit Notes List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-currencies-list" icon="icons/small/xero-connector-24x16.png" caption="Get Currencies List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-employees-list" icon="icons/small/xero-connector-24x16.png" caption="Get Employees List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-expense-claims-list" icon="icons/small/xero-connector-24x16.png" caption="Get Expense Claims List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-invoices-list" icon="icons/small/xero-connector-24x16.png" caption="Get Invoices List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-items-list" icon="icons/small/xero-connector-24x16.png" caption="Get Items List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-journals-list" icon="icons/small/xero-connector-24x16.png" caption="Get Journals List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-manual-journals-list" icon="icons/small/xero-connector-24x16.png" caption="Get Manual Journals List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-payments-list" icon="icons/small/xero-connector-24x16.png" caption="Get Payments List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-receipts-list" icon="icons/small/xero-connector-24x16.png" caption="Get Receipts List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-tracking-categories-list" icon="icons/small/xero-connector-24x16.png" caption="Get Tracking Categories List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-users-list" icon="icons/small/xero-connector-24x16.png" caption="Get Users List">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string javaType="java.lang.String" required="false" description="Filter string used to order results returned from Xero." caption="Order By" name="orderBy"></string>
+        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Where Clause" name="whereClause"></string>
       </group>
     </attribute-category>
     <attribute-category description="Connection." caption="Connection">
@@ -61,10 +297,75 @@
       </group>
     </attribute-category>
   </cloud-connector>
-  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-invoices-list" icon="icons/small/xero-connector-24x16.png" caption="Get Invoices List">
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-bank-transaction" icon="icons/small/xero-connector-24x16.png" caption="Get Bank Transaction">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string javaType="java.lang.String" required="false" description="Filter string used to filter query results from Xero." caption="Filter String" name="filterString"></string>
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero bank transaction id." caption="Bank Transaction Id" name="bankTransactionId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-branding-theme" icon="icons/small/xero-connector-24x16.png" caption="Get Branding Theme">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero branding theme id." caption="Branding Theme Id" name="brandingThemeId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-contact" icon="icons/small/xero-connector-24x16.png" caption="Get Contact">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero contact id." caption="Contact Id" name="contactId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-credit-note" icon="icons/small/xero-connector-24x16.png" caption="Get Credit Note">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero credit note id." caption="Credit Note Id" name="creditNoteId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-employee" icon="icons/small/xero-connector-24x16.png" caption="Get Employee">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero employee id." caption="Employee Id" name="employeeId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-expense-claim" icon="icons/small/xero-connector-24x16.png" caption="Get Expense Claim">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero expense claim id." caption="Expense Claim Id" name="expenseClaimId"></string>
       </group>
     </attribute-category>
     <attribute-category description="Connection." caption="Connection">
@@ -87,11 +388,144 @@
       </group>
     </attribute-category>
   </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-item" icon="icons/small/xero-connector-24x16.png" caption="Get Item">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero item id." caption="Item Id" name="itemId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-journal" icon="icons/small/xero-connector-24x16.png" caption="Get Journal">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero journal id." caption="Journal Id" name="journalId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-manual-journal" icon="icons/small/xero-connector-24x16.png" caption="Get Manual Journal">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero manual journal id." caption="Manual Journal Id" name="manualJournalId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-organisation" icon="icons/small/xero-connector-24x16.png" caption="Get Organisation">
+    <attribute-category description="General." caption="General"></attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-payment" icon="icons/small/xero-connector-24x16.png" caption="Get Payment">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero payment id." caption="Payment Id" name="paymentId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-receipt" icon="icons/small/xero-connector-24x16.png" caption="Get Receipt">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero payment id." caption="Receipt Id" name="receiptId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-tax-rates" icon="icons/small/xero-connector-24x16.png" caption="Get Tax Rates">
+    <attribute-category description="General." caption="General"></attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-tracking-category" icon="icons/small/xero-connector-24x16.png" caption="Get Tracking Category">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero tracking category id." caption="Tracking Category Id" name="trackingCategoryId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="get-user" icon="icons/small/xero-connector-24x16.png" caption="Get User">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="A unique Xero tracking category id." caption="User Id" name="userId"></string>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
   <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="create" icon="icons/small/xero-connector-24x16.png" caption="Create">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
         <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be created in Xero." caption="Payload" name="payload"></string>
         <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
+          <option value="BankTransactions"></option>
+          <option value="Contacts"></option>
+          <option value="CreditNotes"></option>
+          <option value="Employees"></option>
+          <option value="ExpenseClaims"></option>
+          <option value="Invoices"></option>
+          <option value="Items"></option>
+          <option value="ManualJournals"></option>
+          <option value="Receipts"></option>
+        </enum>
+      </group>
+    </attribute-category>
+    <attribute-category description="Connection." caption="Connection">
+      <group caption="Connection" id="connection">
+        <label caption="Use these fields to override the credentials defined in the Xero connector."></label>
+        <label caption=""></label>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="update" icon="icons/small/xero-connector-24x16.png" caption="Update">
+    <attribute-category description="General." caption="General">
+      <group caption="General" id="general">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be updated in Xero." caption="Payload" name="payload"></string>
+        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be updated in Xero." caption="Object Type" name="objectType">
           <option value="BankTransactions"></option>
           <option value="Contacts"></option>
           <option value="CreditNotes"></option>

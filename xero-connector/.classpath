@@ -50,7 +50,7 @@
 	<classpathentry kind="var" path="M2_REPO/org/mockito/mockito-all/1.8.2/mockito-all-1.8.2.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/mule/tests/mule-tests-functional/3.3.0/mule-tests-functional-3.3.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/mule/mule-core/3.3.0/mule-core-3.3.0-tests.jar"/>
-	<classpathentry kind="var" path="M2_REPO/net/oauth/core/oauth-consumer/20100527/oauth-consumer-20100527.jar"/>
+	<classpathentry kind="var" path="M2_REPO/net/oauth/core/oauth-consumer/20100527/oauth-consumer-20100527.jar" sourcepath="/M2_REPO/net/oauth/core/oauth-consumer/20100527/oauth-consumer-20100527-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/oauth/core/oauth-httpclient3/20100601/oauth-httpclient3-20100601.jar"/>
 	<classpathentry kind="var" path="M2_REPO/net/oauth/core/oauth/20100527/oauth-20100527.jar"/>
 	<classpathentry kind="var" path="M2_REPO/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1.jar"/>

@@ -2,25 +2,25 @@
 <?metadataRepository version='1.1.0'?>
 <repository name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
-    <property name='p2.timestamp' value='1352240381113'/>
+    <property name='p2.timestamp' value='1353027194333'/>
     <property name='p2.compressed' value='false'/>
   </properties>
-  <units size='16'>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211070854'>
+  <units size='136'>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141358'>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
         <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
       </properties>
       <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211070854'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141358'/>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070854'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'/>
       </provides>
       <filter>
         (org.eclipse.update.install.features=true)
       </filter>
       <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070854'/>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
@@ -36,53 +36,15 @@
         </license>
       </licenses>
     </unit>
-    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E5GAC'>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E5GAC'/>
-      </provides>
-      <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211061745,1.0.0.201211061745]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-    </unit>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211070854' singleton='false'>
-      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211070854)' severity='0'/>
-      <properties size='3'>
-        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
-        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211070854'/>
-      </provides>
-      <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211070854,1.0.0.201211070854]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211070854,1.0.0.201211070854]'>
-          <filter>
-            (org.eclipse.update.install.features=true)
-          </filter>
-        </required>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-      <licenses size='1'>
-        <license>
-
-        </license>
-      </licenses>
-    </unit>
-    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'>
-      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211061745)' severity='0'/>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141358)' severity='0'/>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='Xero'/>
         <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
       </properties>
       <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
-        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'/>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
       </provides>
       <requires size='3'>
@@ -91,13 +53,13 @@
         <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
       </requires>
       <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141358'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='2'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211061745
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141358
           </instruction>
           <instruction key='zipped'>
             true
@@ -105,19 +67,32 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211062119' singleton='false'>
-      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211062119)' severity='0'/>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G59C7'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G59C7'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211071352,1.0.0.201211071352]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211131339' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211131339)' severity='0'/>
       <properties size='3'>
         <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
         <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
         <property name='org.eclipse.equinox.p2.type.group' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211131339'/>
       </provides>
       <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211062119,1.0.0.201211062119]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211062119,1.0.0.201211062119]'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211131339,1.0.0.201211131339]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211131339,1.0.0.201211131339]'>
           <filter>
             (org.eclipse.update.install.features=true)
           </filter>
@@ -130,41 +105,45 @@
         </license>
       </licenses>
     </unit>
-    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3ICA'>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151350'>
       <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
       </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3ICA'/>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151350'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'/>
       </provides>
-      <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211070854,1.0.0.201211070854]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
     </unit>
-    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E755K'>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
-      </properties>
-      <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E755K'/>
-      </provides>
-      <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211062119,1.0.0.201211062119]'/>
-      </requires>
-      <touchpoint id='null' version='0.0.0'/>
-    </unit>
-    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'>
-      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211062119)' severity='0'/>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211071352)' severity='0'/>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='Xero'/>
         <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
       </properties>
       <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
-        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'/>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
       </provides>
       <requires size='3'>
@@ -173,13 +152,13 @@
         <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
       </requires>
       <artifacts size='1'>
-        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
         <instructions size='2'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211062119
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211071352
           </instruction>
           <instruction key='zipped'>
             true
@@ -187,49 +166,19 @@
         </instructions>
       </touchpointData>
     </unit>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211061745'>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
-        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
-      </properties>
-      <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211061745'/>
-        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
-      </provides>
-      <filter>
-        (org.eclipse.update.install.features=true)
-      </filter>
-      <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
-      </artifacts>
-      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
-      <touchpointData size='1'>
-        <instructions size='1'>
-          <instruction key='zipped'>
-            true
-          </instruction>
-        </instructions>
-      </touchpointData>
-      <licenses size='1'>
-        <license>
-
-        </license>
-      </licenses>
-    </unit>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211061745' singleton='false'>
-      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211061745)' severity='0'/>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081256' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211081256)' severity='0'/>
       <properties size='3'>
         <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
         <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
         <property name='org.eclipse.equinox.p2.type.group' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211061745'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081256'/>
       </provides>
       <requires size='2'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211061745,1.0.0.201211061745]'/>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211061745,1.0.0.201211061745]'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211081256,1.0.0.201211081256]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211081256,1.0.0.201211081256]'>
           <filter>
             (org.eclipse.update.install.features=true)
           </filter>
@@ -242,34 +191,46 @@
         </license>
       </licenses>
     </unit>
-    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3K5K'>
-      <properties size='2'>
-        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
-        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151003' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211151003)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
       </properties>
       <provides size='1'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3K5K'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151003'/>
       </provides>
-      <requires size='1'>
-        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211070919,1.0.0.201211070919]'/>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211151003,1.0.0.201211151003]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211151003,1.0.0.201211151003]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
       </requires>
       <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
     </unit>
-    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211062119'>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151153'>
       <properties size='2'>
         <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
         <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
       </properties>
       <provides size='3'>
-        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151153'/>
         <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
-        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'/>
       </provides>
       <filter>
         (org.eclipse.update.install.features=true)
       </filter>
       <artifacts size='1'>
-        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'/>
       </artifacts>
       <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
       <touchpointData size='1'>
@@ -284,6 +245,603 @@
 
         </license>
       </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071041'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071041'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141348' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141348)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141348'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141348,1.0.0.201211141348]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141348,1.0.0.201211141348]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121027'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121027'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141348)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141348
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211120933' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211120933)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211120933'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211120933,1.0.0.201211120933]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211120933,1.0.0.201211120933]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G553C'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G553C'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211071105,1.0.0.201211071105]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211161152' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211161152)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211161152'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211161152,1.0.0.201211161152]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211161152,1.0.0.201211161152]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5A97'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5A97'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141432,1.0.0.201211141432]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141345'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141345'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141345' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141345)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141345'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141345,1.0.0.201211141345]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141345,1.0.0.201211141345]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141345)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141345'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141345
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071105'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071105'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141348'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141348'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141348'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121027' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211121027)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121027'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211121027,1.0.0.201211121027]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211121027,1.0.0.201211121027]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211151350)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151350'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211151350
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141034)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141034
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59AI'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59AI'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141348,1.0.0.201211141348]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071033'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071033'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071105' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211071105)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071105'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211071105,1.0.0.201211071105]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211071105,1.0.0.201211071105]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211161152'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211161152'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211150957'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211150957'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211131339)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211131339
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I53A5'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I53A5'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211081041,1.0.0.201211081041]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
     </unit>
     <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211070919'>
       <properties size='2'>
@@ -340,6 +898,780 @@
         </license>
       </licenses>
     </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59AC'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59AC'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141345,1.0.0.201211141345]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151047'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151047'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141358' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141358)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141358'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141358,1.0.0.201211141358]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141358,1.0.0.201211141358]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211070854' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211070854)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211070854'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211070854,1.0.0.201211070854]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211070854,1.0.0.201211070854]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211150948'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211150948'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211061745)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211061745
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I57CE'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I57CE'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211081256,1.0.0.201211081256]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E755K'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E755K'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211062119,1.0.0.201211062119]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211161152)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Andy Evans on behalf of Sixtree.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211161152'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211161152&#xA;
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141432'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141432'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211071041)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211071041
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141614)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141614
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA2773575559599K'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA2773575559599K'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211131339,1.0.0.201211131339]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141048)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141048
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211121148)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211121148
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211151153)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151153'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211151153
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141600' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141600)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141600'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141600,1.0.0.201211141600]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141600,1.0.0.201211141600]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211120933)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211120933
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211121001)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211121001
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081041' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211081041)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081041'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211081041,1.0.0.201211081041]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211081041,1.0.0.201211081041]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I5E7I'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553I5E7I'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211081628,1.0.0.201211081628]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211061745'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211061745'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211061745'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141421'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141421'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211151003)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211151003
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141050)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141050
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA2773575557537G'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA2773575557537G'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211121027,1.0.0.201211121027]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141600)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141600
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071352'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211071352'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071352'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211071033)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071033'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211071033
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59CI'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A59CI'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141358,1.0.0.201211141358]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
     <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070854'>
       <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211070854)' severity='0'/>
       <properties size='2'>
@@ -371,6 +1703,1644 @@
         </instructions>
       </touchpointData>
     </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C53AG'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C53AG'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211151047,1.0.0.201211151047]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141048' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141048)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141048'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141048,1.0.0.201211141048]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141048,1.0.0.201211141048]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081041'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081041'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E5GAC'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553E5GAC'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211061745,1.0.0.201211061745]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151047' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211151047)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151047'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211151047,1.0.0.201211151047]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211151047,1.0.0.201211151047]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071352' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211071352)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071352'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211071352,1.0.0.201211071352]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211071352,1.0.0.201211071352]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA27735755573K99'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA27735755573K99'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211120933,1.0.0.201211120933]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211151139)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211151139
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141432' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141432)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141432'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141432,1.0.0.201211141432]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141432,1.0.0.201211141432]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5E33'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5E33'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141600,1.0.0.201211141600]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C3KCG'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C3KCG'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211150957,1.0.0.201211150957]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G53A5'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G53A5'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211071041,1.0.0.201211071041]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G5399'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G5399'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211071033,1.0.0.201211071033]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141600'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141600'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141600'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211061745' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211061745)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211061745'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211061745,1.0.0.201211061745]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211061745,1.0.0.201211061745]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141050' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141050)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141050'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141050,1.0.0.201211141050]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141050,1.0.0.201211141050]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081628'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081628'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211081041)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081041'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211081041
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211150957)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150957'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211150957
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211070854'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211070854'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070854'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070854'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211121027)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121027'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211121027
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211071105)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211071105'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211071105
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C55C9'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C55C9'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211151153,1.0.0.201211151153]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3ICA'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3ICA'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211070854,1.0.0.201211070854]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141048'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141048'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141048'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A53C3'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A53C3'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141050,1.0.0.201211141050]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211062119)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211062119
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211120933'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211120933'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211120933'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C559K'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C559K'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211151139,1.0.0.201211151139]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081628' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211081628)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211081628'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211081628,1.0.0.201211081628]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211081628,1.0.0.201211081628]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151003'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151003'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151003'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141050'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141050'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141050'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141614'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141614'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141614'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C59C3'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C59C3'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211151350,1.0.0.201211151350]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211150948)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211150948'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211150948
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3K5K'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357553G3K5K'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211070919,1.0.0.201211070919]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211081628)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081628'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211081628
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555E55C7'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555E55C7'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211161152,1.0.0.201211161152]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121001' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211121001)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121001'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211121001,1.0.0.201211121001]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211121001,1.0.0.201211121001]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071041' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211071041)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071041'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211071041,1.0.0.201211071041]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211071041,1.0.0.201211071041]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141614' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141614)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141614'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141614,1.0.0.201211141614]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141614,1.0.0.201211141614]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141034'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211141034'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141034'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151139'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211151139'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151139'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211150957' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211150957)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211150957'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211150957,1.0.0.201211150957]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211150957,1.0.0.201211150957]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C3KAI'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C3KAI'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211150948,1.0.0.201211150948]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555755AI'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555755AI'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211121148,1.0.0.201211121148]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141432)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141432'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141432
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071033' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211071033)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211071033'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211071033,1.0.0.201211071033]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211071033,1.0.0.201211071033]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121148'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121148'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121148'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5E5A'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5E5A'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141614,1.0.0.201211141614]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141034' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141034)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141034'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141034,1.0.0.201211141034]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141034,1.0.0.201211141034]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151139' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211151139)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151139'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211151139,1.0.0.201211151139]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211151139,1.0.0.201211151139]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211062119'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211062119'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211062119'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A539A'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A539A'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141034,1.0.0.201211141034]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C5339'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555C5339'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211151003,1.0.0.201211151003]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151153' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211151153)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151153'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211151153,1.0.0.201211151153]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211151153,1.0.0.201211151153]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211062119' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211062119)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211062119'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211062119,1.0.0.201211062119]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211062119,1.0.0.201211062119]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151350' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211151350)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211151350'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211151350,1.0.0.201211151350]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211151350,1.0.0.201211151350]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121148' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211121148)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211121148'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211121148,1.0.0.201211121148]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211121148,1.0.0.201211121148]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211151047)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211151047'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211151047
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211131339'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211131339'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211131339'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A53AI'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A53AI'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141048,1.0.0.201211141048]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211150948' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211150948)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211150948'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211150948,1.0.0.201211150948]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211150948,1.0.0.201211150948]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211081256)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211081256
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081256'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211081256'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211081256'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141421' singleton='false'>
+      <update id='org.mule.tooling.ui.extension.xero.feature.group' range='[0.0.0,1.0.0.201211141421)' severity='0'/>
+      <properties size='3'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' version='1.0.0.201211141421'/>
+      </provides>
+      <requires size='2'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' range='[1.0.0.201211141421,1.0.0.201211141421]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' range='[1.0.0.201211141421,1.0.0.201211141421]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'>
+      <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211141421)' severity='0'/>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero'/>
+        <property name='org.eclipse.equinox.p2.provider' value='MuleSoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'/>
+        <provided namespace='osgi.bundle' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='osgi.bundle' name='org.eclipse.ui' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.eclipse.core.runtime' range='0.0.0'/>
+        <required namespace='osgi.bundle' name='org.mule.tooling.core' range='1.0.0'/>
+      </requires>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211141421'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='2'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211141421
+          </instruction>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121001'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Xero Mule Studio Extension'/>
+        <property name='org.eclipse.equinox.p2.provider' value='Mulesoft, Inc.'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.jar' version='1.0.0.201211121001'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211121001'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license>
+
+        </license>
+      </licenses>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5A75'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA277357555A5A75'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211141421,1.0.0.201211141421]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA27735755575335'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='Connectors'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='file:/C:/Users/Andy/Documents/GitHub/mule-xero-connector/xero-connector/target/update-site/site.xml.Connectors' version='1.0.0.2--cKMyA27735755575335'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='org.mule.tooling.ui.extension.xero.feature.group' range='[1.0.0.201211121001,1.0.0.201211121001]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
     <unit id='org.mule.tooling.ui.extension.xero' version='1.0.0.201211070919'>
       <update id='org.mule.tooling.ui.extension.xero' range='[0.0.0,1.0.0.201211070919)' severity='0'/>
       <properties size='2'>
@@ -394,7 +3364,7 @@
       <touchpointData size='1'>
         <instructions size='2'>
           <instruction key='manifest'>
-            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211070919&#xA;
+            Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true&#xA;Bundle-Version: 1.0.0.201211070919
           </instruction>
           <instruction key='zipped'>
             true

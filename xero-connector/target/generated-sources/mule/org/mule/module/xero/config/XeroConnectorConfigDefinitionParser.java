@@ -48,8 +48,8 @@ public class XeroConnectorConfigDefinitionParser
         if ((element.getAttribute("consumerSecret")!= null)&&(!StringUtils.isBlank(element.getAttribute("consumerSecret")))) {
             builder.addPropertyValue("consumerSecret", element.getAttribute("consumerSecret"));
         }
-        if ((element.getAttribute("privateKeyPath")!= null)&&(!StringUtils.isBlank(element.getAttribute("privateKeyPath")))) {
-            builder.addPropertyValue("privateKeyPath", element.getAttribute("privateKeyPath"));
+        if ((element.getAttribute("privateKeyFile")!= null)&&(!StringUtils.isBlank(element.getAttribute("privateKeyFile")))) {
+            builder.addPropertyValue("privateKeyFile", element.getAttribute("privateKeyFile"));
         }
         if ((element.getAttribute("xeroApiUrl")!= null)&&(!StringUtils.isBlank(element.getAttribute("xeroApiUrl")))) {
             builder.addPropertyValue("xeroApiUrl", element.getAttribute("xeroApiUrl"));

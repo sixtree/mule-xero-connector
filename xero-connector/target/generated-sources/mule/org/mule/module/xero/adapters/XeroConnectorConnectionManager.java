@@ -29,7 +29,7 @@ public class XeroConnectorConnectionManager
 
     private String consumerKey;
     private String consumerSecret;
-    private String privateKeyPath;
+    private String privateKeyFile;
     private String xeroApiUrl;
     private static Logger logger = LoggerFactory.getLogger(XeroConnectorConnectionManager.class);
     /**
@@ -84,20 +84,20 @@ public class XeroConnectorConnectionManager
     }
 
     /**
-     * Sets privateKeyPath
+     * Sets privateKeyFile
      * 
      * @param value Value to set
      */
-    public void setPrivateKeyPath(String value) {
-        this.privateKeyPath = value;
+    public void setPrivateKeyFile(String value) {
+        this.privateKeyFile = value;
     }
 
     /**
-     * Retrieves privateKeyPath
+     * Retrieves privateKeyFile
      * 
      */
-    public String getPrivateKeyPath() {
-        return this.privateKeyPath;
+    public String getPrivateKeyFile() {
+        return this.privateKeyFile;
     }
 
     /**
@@ -214,7 +214,7 @@ public class XeroConnectorConnectionManager
             XeroConnectorLifecycleAdapter connector = new XeroConnectorLifecycleAdapter();
             connector.setConsumerKey(connectionManager.getConsumerKey());
             connector.setConsumerSecret(connectionManager.getConsumerSecret());
-            connector.setPrivateKeyPath(connectionManager.getPrivateKeyPath());
+            connector.setPrivateKeyFile(connectionManager.getPrivateKeyFile());
             connector.setXeroApiUrl(connectionManager.getXeroApiUrl());
             if (connector instanceof Initialisable) {
                 connector.initialise();

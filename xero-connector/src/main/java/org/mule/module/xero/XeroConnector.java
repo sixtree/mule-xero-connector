@@ -18,16 +18,17 @@ import org.mule.api.annotations.Processor;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * Cloud Connector
+ * Xero Cloud Connector for Mule
+ * 
+ * @author Andy Evans on behalf of Sixtree.
  *
- * @author MuleSoft, Inc.
  */
 
 @Connector(name="xero", schemaVersion="1.0")
 public class XeroConnector
 {
 	private static final String XERO_BASE_ENDPOINT = "https://api.xero.com/api.xro/2.0/";
-	
+
 	/**
      * Xero Account Consumer Key
      */
@@ -42,10 +43,10 @@ public class XeroConnector
      * Local path to Xero account private key file
      */
     @Configurable
-    private String privateKeyPath;
+    private String privateKeyFile;
     
     /**
-     * Xero API Endpoint
+     * The base Xero API URI. Defaults to https://api.xero.com/api.xro/2.0/ if left blank
      */
     @Configurable
     @Optional
@@ -72,11 +73,11 @@ public class XeroConnector
     
     /** 
 	 * The location of the private key file  
-	 * @param privateKeyLoc Private Key File
+	 * @param privateKeyFile Private Key File
 	 * */
-    public void setPrivateKeyPath(String privateKeyPath)
+    public void setPrivateKeyFile(String privateKeyFile)
     {
-        this.privateKeyPath = privateKeyPath;
+        this.privateKeyFile = privateKeyFile;
     }
     
     /**
@@ -92,16 +93,393 @@ public class XeroConnector
      *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-accounts-list}
      * 
      * getAccountsList
-     * @param filterString filter string used to filter query results from Xero
-     * @return - returns all accounts listed for the Xero domain.
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of accounts for the Xero domain.
      */    
     @Processor
-    public String getAccountsList(@Optional String filterString)
+    public String getAccountsList(@Optional String whereClause, @Optional String orderBy)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
+    	String objectType = "Accounts";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
     	try {
-    		response = xeroClient.getAccountsList(filterString);
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-bank-transactions-list}
+     * 
+     * getBankTransactionsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of bank transactions for the Xero domain.
+     */    
+    @Processor
+    public String getBankTransactionsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "BankTransactions";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-branding-themes-list}
+     * 
+     * getBrandingThemesList
+     * @return - returns a list of branding themes for the Xero domain.
+     */    
+    @Processor
+    public String getBrandingThemesList()
+    {
+    	String response = null;
+    	String objectType = "BankTransactions";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-contacts-list}
+     * 
+     * getContactsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of contacts for the Xero domain.
+     */    
+    @Processor
+    public String getContactsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Contacts";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-credit-notes-list}
+     * 
+     * getCreditNotesList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of credit notes for the Xero domain.
+     */    
+    @Processor
+    public String getCreditNotesList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "CreditNotes";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-currencies-list}
+     * 
+     * getCurrenciesList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of currencies for the Xero domain.
+     */    
+    @Processor
+    public String getCurrenciesList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Currencies";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-employees-list}
+     * 
+     * getEmployeesList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of employees for the Xero domain.
+     */    
+    @Processor
+    public String getEmployeesList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Employees";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     *{@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-expense-claims-list}
+     * 
+     * getExpenseClaimsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of expense claims for the Xero domain.
+     */    
+    @Processor
+    public String getExpenseClaimsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "ExpenseClaims";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-invoices-list}
+     * 
+     * getInvoicesList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of invoices for the Xero domain.
+     */    
+    @Processor
+    public String getInvoicesList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Invoices";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-items-list}
+     * 
+     * getItemsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of items for the Xero domain.
+     */    
+    @Processor
+    public String getItemsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Items";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-journals-list}
+     * 
+     * getJournalsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of journals for the Xero domain.
+     */    
+    @Processor
+    public String getJournalsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Journals";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-manual-journals-list}
+     * 
+     * getManualJournalsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of manual journals for the Xero domain.
+     */    
+    @Processor
+    public String getManualJournalsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "ManualJournals";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-payments-list}
+     * 
+     * getPaymentsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of payments for the Xero domain.
+     */    
+    @Processor
+    public String getPaymentsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Payments";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-receipts-list}
+     * 
+     * getReceiptsList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of receipts for the Xero domain.
+     */    
+    @Processor
+    public String getReceiptsList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Receipts";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    //TODO Add reports operation
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-receipts-list}
+     * 
+     * getTrackingCategoriesList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of tracking categories for the Xero domain.
+     */    
+    @Processor
+    public String getTrackingCategoriesList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "TrackingCategories";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-users-list}
+     * 
+     * getUsersList
+     * @param whereClause filter string used to filter query results from Xero
+     * @param orderBy filter string used to order results returned from Xero
+     * @return - returns a list of users for the Xero domain.
+     */    
+    @Processor
+    public String getUsersList(@Optional String whereClause, @Optional String orderBy)
+    {
+    	String response = null;
+    	String objectType = "Users";
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObjectList(objectType, whereClause, orderBy);
 		} catch (XeroConnectorClientException e) {
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
@@ -122,39 +500,161 @@ public class XeroConnector
     public String getAccount(@Optional @Default("#[message.payload]") String accountId)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
+    	String objectType = "Accounts";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
     	try {
-    		response = xeroClient.getAccount(accountId);
+    		response = xeroClient.getXeroObject(objectType, accountId);
 		} catch (XeroConnectorClientException e) {
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
-		}  
+		}   
         
     	return response;
     }
     
     /**
-     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-invoices-list}
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-bank-transaction}
      * 
-     * getInvoicesList
-     * @param filterString filter string used to filter query results from Xero
-     * @return - returns all invoices listed for the Xero domain.
-     */    
+     * getBankTransaction
+     * @param bankTransactionId a unique Xero bank transaction id
+     * @return - returns details of an individual bank transaction
+     */
     @Processor
-    public String getInvoicesList(@Optional String filterString)
+    public String getBankTransaction(@Optional @Default("#[message.payload]") String bankTransactionId)
     {
     	String response = null;
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
+    	String objectType = "BankTransactions";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
     	try {
-    		response = xeroClient.getInvoicesList(filterString);
+    		response = xeroClient.getXeroObject(objectType, bankTransactionId);
 		} catch (XeroConnectorClientException e) {
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
 			throw new RuntimeException(e);
-		}  
-
-        return response;
+		}   
+        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-branding-theme}
+     * 
+     * getBrandingTheme
+     * @param brandingThemeId a unique Xero branding theme id
+     * @return - returns details of an individual branding theme
+     */
+    @Processor
+    public String getBrandingTheme(@Optional @Default("#[message.payload]") String brandingThemeId)
+    {
+    	String response = null;
+    	String objectType = "BrandingThemes";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, brandingThemeId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}   
+        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-contact}
+     * 
+     * getContact
+     * @param contactId a unique Xero contact id
+     * @return - returns details of an individual contact
+     */
+    @Processor
+    public String getContact(@Optional @Default("#[message.payload]") String contactId)
+    {
+    	String response = null;
+    	String objectType = "Contacts";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, contactId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}   
+        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-credit-note}
+     * 
+     * getCreditNote
+     * @param creditNoteId a unique Xero credit note id
+     * @return - returns details of an individual credit note
+     */
+    @Processor
+    public String getCreditNote(@Optional @Default("#[message.payload]") String creditNoteId)
+    {
+    	String response = null;
+    	String objectType = "CreditNotes";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, creditNoteId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}   
+        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-employee}
+     * 
+     * getEmployee
+     * @param employeeId a unique Xero employee id
+     * @return - returns details of an individual employee
+     */
+    @Processor
+    public String getEmployee(@Optional @Default("#[message.payload]") String employeeId)
+    {
+    	String response = null;
+    	String objectType = "Employees";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, employeeId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}   
+        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-expense-claim}
+     * 
+     * getExpenseClaim
+     * @param expenseClaimId a unique Xero expense claim id
+     * @return - returns details of an individual expense claim
+     */
+    @Processor
+    public String getExpenseClaim(@Optional @Default("#[message.payload]") String expenseClaimId)
+    {
+    	String response = null;
+    	String objectType = "ExpenseClaims";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, expenseClaimId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}   
+        
+    	return response;
     }
     
     /**
@@ -168,9 +668,227 @@ public class XeroConnector
     public String getInvoice(@Optional @Default("#[message.payload]") String invoiceId)
     {
     	String response = null;
-        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
+    	String objectType = "Invoices";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
     	try {
-    		response = xeroClient.getInvoice(invoiceId);
+    		response = xeroClient.getXeroObject(objectType, invoiceId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-item}
+     * 
+     * getItem
+     * @param itemId a unique Xero item id
+     * @return - returns details of an individual item
+     */
+    @Processor
+    public String getItem(@Optional @Default("#[message.payload]") String itemId)
+    {
+    	String response = null;
+    	String objectType = "Items";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, itemId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-journal}
+     * 
+     * getJournal
+     * @param journalId a unique Xero journal id
+     * @return - returns details of an journal item
+     */
+    @Processor
+    public String getJournal(@Optional @Default("#[message.payload]") String journalId)
+    {
+    	String response = null;
+    	String objectType = "Journals";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, journalId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-manual-journal}
+     * 
+     * getManualJournal
+     * @param manualJournalId a unique Xero manual journal id
+     * @return - returns details of a manual journal
+     */
+    @Processor
+    public String getManualJournal(@Optional @Default("#[message.payload]") String manualJournalId)
+    {
+    	String response = null;
+    	String objectType = "ManualJournals";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, manualJournalId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-organisation}
+     * 
+     * getOrganisation
+     * @return - returns details of a Xero organisation
+     */
+    @Processor
+    public String getOrganisation()
+    {
+    	String response = null;
+    	String objectType = "Organisation";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-payment}
+     * 
+     * getPayment
+     * @param paymentId a unique Xero payment id
+     * @return - returns details of a Xero payment
+     */
+    @Processor
+    public String getPayment(@Optional @Default("#[message.payload]") String paymentId)
+    {
+    	String response = null;
+    	String objectType = "Payments";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, paymentId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-receipt}
+     * 
+     * getReceipt
+     * @param receiptId a unique Xero payment id
+     * @return - returns details of a Xero receipt
+     */
+    @Processor
+    public String getReceipt(@Optional @Default("#[message.payload]") String receiptId)
+    {
+    	String response = null;
+    	String objectType = "Receipts";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, receiptId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    
+    //TODO Add Reports Operation
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-tax-rates}
+     * 
+     * getTaxRates
+     * @return - returns details of a Xero organisations tax rates
+     */
+    @Processor
+    public String getTaxRates()
+    {
+    	String response = null;
+    	String objectType = "TaxRates";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-tracking-category}
+     * 
+     * getTrackingCategory
+     * @param trackingCategoryId a unique Xero tracking category id
+     * @return - returns details of a Xero tracking category
+     */
+    @Processor
+    public String getTrackingCategory(@Optional @Default("#[message.payload]") String trackingCategoryId)
+    {
+    	String response = null;
+    	String objectType = "TrackingCategories";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, trackingCategoryId);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}  
+
+        return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:get-user}
+     * 
+     * getUser
+     * @param userId a unique Xero tracking category id
+     * @return - returns details of a Xero user
+     */
+    @Processor
+    public String getUser(@Optional @Default("#[message.payload]") String userId)
+    {
+    	String response = null;
+    	String objectType = "Users";
+        XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	try {
+    		response = xeroClient.getXeroObject(objectType, userId);
 		} catch (XeroConnectorClientException e) {
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {
@@ -192,10 +910,35 @@ public class XeroConnector
     public String create(XeroObjectTypes.XeroPostTypes objectType, 
     					 @Optional @Default("#[message.payload]") String payload)
     {
-    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyPath);
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
     	String response = null;
 		try {
-			response = xeroClient.create(objectType, payload);
+			response = xeroClient.createXeroObject(objectType, payload);
+		} catch (XeroConnectorClientException e) {
+			return e.getXeroException();
+		} catch (XeroConnectorClientUnexpectedException e) {
+			throw new RuntimeException(e);
+		}    	
+    	        
+    	return response;
+    }
+    
+    /**
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:update}
+     * 
+     * update
+     * @param objectType The type of object to be updated in Xero
+     * @param payload The content of the object to be updated in Xero
+     * @return - returns the status of the update request
+     */
+    @Processor
+    public String update(XeroObjectTypes.XeroPostTypes objectType, 
+    					 @Optional @Default("#[message.payload]") String payload)
+    {
+    	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);
+    	String response = null;
+		try {
+			response = xeroClient.updateXeroObject(objectType, payload);
 		} catch (XeroConnectorClientException e) {
 			return e.getXeroException();
 		} catch (XeroConnectorClientUnexpectedException e) {

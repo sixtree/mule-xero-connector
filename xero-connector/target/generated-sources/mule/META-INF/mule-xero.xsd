@@ -143,7 +143,7 @@
       <xs:complexContent>
         <xs:extension base="mule:abstractExtensionType">
           <xs:annotation>
-            <xs:documentation>Cloud Connector</xs:documentation>
+            <xs:documentation>Xero Cloud Connector for Mule</xs:documentation>
           </xs:annotation>
           <xs:sequence>
             <xs:element name="connection-pooling-profile" minOccurs="0" type="mule:poolingProfileType">
@@ -167,14 +167,14 @@
               <xs:documentation>Xero Account Consumer Secret</xs:documentation>
             </xs:annotation>
           </xs:attribute>
-          <xs:attribute name="privateKeyPath" use="required" type="xs:string">
+          <xs:attribute name="privateKeyFile" use="required" type="xs:string">
             <xs:annotation>
               <xs:documentation>Local path to Xero account private key file</xs:documentation>
             </xs:annotation>
           </xs:attribute>
           <xs:attribute name="xeroApiUrl" default="https://api.xero.com/api.xro/2.0/" use="optional" type="xs:string">
             <xs:annotation>
-              <xs:documentation>Xero API Endpoint</xs:documentation>
+              <xs:documentation>The base Xero API URI. Defaults to https://api.xero.com/api.xro/2.0/ if left blank</xs:documentation>
             </xs:annotation>
           </xs:attribute>
         </xs:extension>
@@ -194,9 +194,469 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="filterString" use="optional" type="xs:string">
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-bank-transactions-list" substitutionGroup="mule:abstract-message-processor" type="GetBankTransactionsListType">
+    <xs:annotation>
+      <xs:documentation>getBankTransactionsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetBankTransactionsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-branding-themes-list" substitutionGroup="mule:abstract-message-processor" type="GetBrandingThemesListType">
+    <xs:annotation>
+      <xs:documentation>getBrandingThemesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetBrandingThemesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-contacts-list" substitutionGroup="mule:abstract-message-processor" type="GetContactsListType">
+    <xs:annotation>
+      <xs:documentation>getContactsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetContactsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-credit-notes-list" substitutionGroup="mule:abstract-message-processor" type="GetCreditNotesListType">
+    <xs:annotation>
+      <xs:documentation>getCreditNotesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetCreditNotesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-currencies-list" substitutionGroup="mule:abstract-message-processor" type="GetCurrenciesListType">
+    <xs:annotation>
+      <xs:documentation>getCurrenciesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetCurrenciesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-employees-list" substitutionGroup="mule:abstract-message-processor" type="GetEmployeesListType">
+    <xs:annotation>
+      <xs:documentation>getEmployeesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetEmployeesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-expense-claims-list" substitutionGroup="mule:abstract-message-processor" type="GetExpenseClaimsListType">
+    <xs:annotation>
+      <xs:documentation>getExpenseClaimsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetExpenseClaimsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-invoices-list" substitutionGroup="mule:abstract-message-processor" type="GetInvoicesListType">
+    <xs:annotation>
+      <xs:documentation>getInvoicesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetInvoicesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-items-list" substitutionGroup="mule:abstract-message-processor" type="GetItemsListType">
+    <xs:annotation>
+      <xs:documentation>getItemsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetItemsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-journals-list" substitutionGroup="mule:abstract-message-processor" type="GetJournalsListType">
+    <xs:annotation>
+      <xs:documentation>getJournalsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetJournalsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-manual-journals-list" substitutionGroup="mule:abstract-message-processor" type="GetManualJournalsListType">
+    <xs:annotation>
+      <xs:documentation>getManualJournalsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetManualJournalsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-payments-list" substitutionGroup="mule:abstract-message-processor" type="GetPaymentsListType">
+    <xs:annotation>
+      <xs:documentation>getPaymentsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetPaymentsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-receipts-list" substitutionGroup="mule:abstract-message-processor" type="GetReceiptsListType">
+    <xs:annotation>
+      <xs:documentation>getReceiptsList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetReceiptsListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-tracking-categories-list" substitutionGroup="mule:abstract-message-processor" type="GetTrackingCategoriesListType">
+    <xs:annotation>
+      <xs:documentation>getTrackingCategoriesList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetTrackingCategoriesListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-users-list" substitutionGroup="mule:abstract-message-processor" type="GetUsersListType">
+    <xs:annotation>
+      <xs:documentation>getUsersList</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetUsersListType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="whereClause" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="orderBy" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>filter string used to order results returned from Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
@@ -233,12 +693,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-invoices-list" substitutionGroup="mule:abstract-message-processor" type="GetInvoicesListType">
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-bank-transaction" substitutionGroup="mule:abstract-message-processor" type="GetBankTransactionType">
     <xs:annotation>
-      <xs:documentation>getInvoicesList</xs:documentation>
+      <xs:documentation>getBankTransaction</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="GetInvoicesListType">
+  <xs:complexType name="GetBankTransactionType">
     <xs:complexContent>
       <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
         <xs:attribute name="config-ref" use="optional" type="xs:string">
@@ -246,9 +706,139 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="filterString" use="optional" type="xs:string">
+        <xs:attribute name="bankTransactionId" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
-            <xs:documentation>filter string used to filter query results from Xero</xs:documentation>
+            <xs:documentation>a unique Xero bank transaction id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-branding-theme" substitutionGroup="mule:abstract-message-processor" type="GetBrandingThemeType">
+    <xs:annotation>
+      <xs:documentation>getBrandingTheme</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetBrandingThemeType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="brandingThemeId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero branding theme id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-contact" substitutionGroup="mule:abstract-message-processor" type="GetContactType">
+    <xs:annotation>
+      <xs:documentation>getContact</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetContactType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="contactId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero contact id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-credit-note" substitutionGroup="mule:abstract-message-processor" type="GetCreditNoteType">
+    <xs:annotation>
+      <xs:documentation>getCreditNote</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetCreditNoteType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="creditNoteId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero credit note id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-employee" substitutionGroup="mule:abstract-message-processor" type="GetEmployeeType">
+    <xs:annotation>
+      <xs:documentation>getEmployee</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetEmployeeType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="employeeId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero employee id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-expense-claim" substitutionGroup="mule:abstract-message-processor" type="GetExpenseClaimType">
+    <xs:annotation>
+      <xs:documentation>getExpenseClaim</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetExpenseClaimType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="expenseClaimId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero expense claim id</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
@@ -285,6 +875,230 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-item" substitutionGroup="mule:abstract-message-processor" type="GetItemType">
+    <xs:annotation>
+      <xs:documentation>getItem</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetItemType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="itemId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero item id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-journal" substitutionGroup="mule:abstract-message-processor" type="GetJournalType">
+    <xs:annotation>
+      <xs:documentation>getJournal</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetJournalType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="journalId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero journal id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-manual-journal" substitutionGroup="mule:abstract-message-processor" type="GetManualJournalType">
+    <xs:annotation>
+      <xs:documentation>getManualJournal</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetManualJournalType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="manualJournalId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero manual journal id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-organisation" substitutionGroup="mule:abstract-message-processor" type="GetOrganisationType">
+    <xs:annotation>
+      <xs:documentation>getOrganisation</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetOrganisationType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-payment" substitutionGroup="mule:abstract-message-processor" type="GetPaymentType">
+    <xs:annotation>
+      <xs:documentation>getPayment</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetPaymentType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="paymentId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero payment id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-receipt" substitutionGroup="mule:abstract-message-processor" type="GetReceiptType">
+    <xs:annotation>
+      <xs:documentation>getReceipt</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetReceiptType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="receiptId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero payment id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-tax-rates" substitutionGroup="mule:abstract-message-processor" type="GetTaxRatesType">
+    <xs:annotation>
+      <xs:documentation>getTaxRates</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetTaxRatesType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-tracking-category" substitutionGroup="mule:abstract-message-processor" type="GetTrackingCategoryType">
+    <xs:annotation>
+      <xs:documentation>getTrackingCategory</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetTrackingCategoryType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="trackingCategoryId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero tracking category id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="get-user" substitutionGroup="mule:abstract-message-processor" type="GetUserType">
+    <xs:annotation>
+      <xs:documentation>getUser</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="GetUserType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="userId" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>a unique Xero tracking category id</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="create" substitutionGroup="mule:abstract-message-processor" type="CreateType">
     <xs:annotation>
       <xs:documentation>create</xs:documentation>
@@ -306,6 +1120,37 @@
         <xs:attribute name="payload" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
             <xs:documentation>The content of the object to be created in Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify how many times this operation can be retried automatically.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="update" substitutionGroup="mule:abstract-message-processor" type="UpdateType">
+    <xs:annotation>
+      <xs:documentation>update</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="UpdateType">
+    <xs:complexContent>
+      <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
+        <xs:attribute name="config-ref" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroPostTypesEnumType">
+          <xs:annotation>
+            <xs:documentation>The type of object to be updated in Xero</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="payload" default="#[message.payload]" use="optional" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>The content of the object to be updated in Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">
