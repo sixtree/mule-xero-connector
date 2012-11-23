@@ -907,7 +907,7 @@ public class XeroConnector
      * @return - returns the status of the create request
      */
     @Processor
-    public String create(XeroObjectTypes.XeroPostTypes objectType, 
+    public String create(XeroObjectTypes.XeroPutTypes objectType, 
     					 @Optional @Default("#[message.payload]") String payload)
     {
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);

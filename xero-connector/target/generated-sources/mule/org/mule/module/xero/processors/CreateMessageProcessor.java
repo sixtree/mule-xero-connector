@@ -43,7 +43,7 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * CreateMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#create(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * CreateMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#create(org.mule.module.xero.XeroObjectTypes.XeroPutTypes, java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
 public class CreateMessageProcessor
@@ -51,7 +51,7 @@ public class CreateMessageProcessor
 {
 
     private Object objectType;
-    private org.mule.module.xero.XeroObjectTypes.XeroPostTypes _objectTypeType;
+    private org.mule.module.xero.XeroObjectTypes.XeroPutTypes _objectTypeType;
     private Object payload;
     private String _payloadType;
     private static Logger logger = LoggerFactory.getLogger(CreateMessageProcessor.class);
@@ -396,7 +396,7 @@ public class CreateMessageProcessor
         }
         XeroConnectorLifecycleAdapter connection = null;
         try {
-            org.mule.module.xero.XeroObjectTypes.XeroPostTypes _transformedObjectType = ((org.mule.module.xero.XeroObjectTypes.XeroPostTypes) evaluateAndTransform(_muleMessage, CreateMessageProcessor.class.getDeclaredField("_objectTypeType").getGenericType(), null, objectType));
+            org.mule.module.xero.XeroObjectTypes.XeroPutTypes _transformedObjectType = ((org.mule.module.xero.XeroObjectTypes.XeroPutTypes) evaluateAndTransform(_muleMessage, CreateMessageProcessor.class.getDeclaredField("_objectTypeType").getGenericType(), null, objectType));
             String _transformedPayload = ((String) evaluateAndTransform(_muleMessage, CreateMessageProcessor.class.getDeclaredField("_payloadType").getGenericType(), null, payload));
             if (logger.isDebugEnabled()) {
                 StringBuilder _messageStringBuilder = new StringBuilder();

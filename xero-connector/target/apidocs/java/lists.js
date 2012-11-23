@@ -124,6 +124,7 @@ var DATA = [
       { id:122, label:"org.mule.module.xero.processors.UpdateMessageProcessor", link:"java/org/mule/module/xero/processors/UpdateMessageProcessor.html", type:"class" },
       { id:123, label:"org.mule.module.xero.transformers", link:"java/org/mule/module/xero/transformers/package-summary.html", type:"package" },
       { id:124, label:"org.mule.module.xero.transformers.XeroPostTypesEnumTransformer", link:"java/org/mule/module/xero/transformers/XeroPostTypesEnumTransformer.html", type:"class" },
-      { id:125, label:"update", link:"mule/xero.html#update", type:"method" }
+      { id:125, label:"org.mule.module.xero.transformers.XeroPutTypesEnumTransformer", link:"java/org/mule/module/xero/transformers/XeroPutTypesEnumTransformer.html", type:"class" },
+      { id:126, label:"update", link:"mule/xero.html#update", type:"method" }
 
     ];

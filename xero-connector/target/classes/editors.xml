@@ -501,7 +501,7 @@
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
         <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be created in Xero." caption="Payload" name="payload"></string>
-        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
+        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPutTypes" required="true" supportsExpressions="true" description="The type of object to be created in Xero." caption="Object Type" name="objectType">
           <option value="BankTransactions"></option>
           <option value="Contacts"></option>
           <option value="CreditNotes"></option>
@@ -510,6 +510,7 @@
           <option value="Invoices"></option>
           <option value="Items"></option>
           <option value="ManualJournals"></option>
+          <option value="Payments"></option>
           <option value="Receipts"></option>
         </enum>
       </group>

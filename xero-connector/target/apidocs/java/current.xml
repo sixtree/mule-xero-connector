@@ -40,7 +40,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroPostTypes">
+<parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroPutTypes">
 </parameter>
 <parameter name="payload" type="java.lang.String">
 </parameter>
@@ -725,7 +725,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroPostTypes">
+<parameter name="objectType" type="org.mule.module.xero.XeroObjectTypes.XeroPutTypes">
 </parameter>
 <parameter name="payload" type="java.lang.String">
 </parameter>
@@ -3847,7 +3847,7 @@
 </exception>
 </method>
 <field name="_objectTypeType"
- type="org.mule.module.xero.XeroObjectTypes.XeroPostTypes"
+ type="org.mule.module.xero.XeroObjectTypes.XeroPutTypes"
  transient="false"
  volatile="false"
  static="false"
@@ -12943,6 +12943,84 @@
 >
 <constructor name="XeroPostTypesEnumTransformer"
  type="org.mule.module.xero.transformers.XeroPostTypesEnumTransformer"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="doTransform"
+ return="java.lang.Object"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="src" type="java.lang.Object">
+</parameter>
+<parameter name="encoding" type="java.lang.String">
+</parameter>
+<exception name="TransformerException" type="org.mule.api.transformer.TransformerException">
+</exception>
+</method>
+<method name="getPriorityWeighting"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="setPriorityWeighting"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="weighting" type="int">
+</parameter>
+</method>
+<field name="muleContext"
+ type="org.mule.api.MuleContext"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="private"
+>
+</field>
+<field name="weighting"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="private"
+>
+</field>
+</class>
+<class name="XeroPutTypesEnumTransformer"
+ extends="org.mule.transformer.AbstractTransformer"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="XeroPutTypesEnumTransformer"
+ type="org.mule.module.xero.transformers.XeroPutTypesEnumTransformer"
  static="false"
  final="false"
  deprecated="not deprecated"

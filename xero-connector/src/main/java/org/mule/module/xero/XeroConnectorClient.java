@@ -303,7 +303,7 @@ public class XeroConnectorClient {
 	 * @throws XeroConnectorClientException if an error is returned from the Xero API
 	 * @throws XeroConnectorClientUnexpectedException if an unexpected exception occurs
 	 */
-	public String createXeroObject(XeroObjectTypes.XeroPostTypes objectType,
+	public String createXeroObject(XeroObjectTypes.XeroPutTypes objectType,
 			 String payload) throws XeroConnectorClientException, XeroConnectorClientUnexpectedException
 	{
 		String responseString = null;

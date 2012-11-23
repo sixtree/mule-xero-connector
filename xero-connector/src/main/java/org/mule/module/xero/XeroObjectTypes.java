@@ -23,7 +23,7 @@ public class XeroObjectTypes {
 	    Organisation, 
 	    Payments,
 	    Receipts,
-	    Reports, 
+	    //Reports, 
 	    TaxRates, 
 	    TrackingCategories, 
 	    Users;	    
@@ -70,7 +70,7 @@ public class XeroObjectTypes {
 	    Organisation, 
 	    Payments,
 	    Receipts,
-	    Reports, 
+	    //Reports, 
 	    TaxRates, 
 	    TrackingCategories, 
 	    Users;

@@ -19,6 +19,7 @@ import org.mule.construct.Flow;
 import org.mule.tck.FunctionalTestCase;
 import org.mule.tck.AbstractMuleTestCase;
 
+import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -26,8 +27,11 @@ import org.junit.rules.ExpectedException;
 public class XeroConnectorTest extends FunctionalTestCase
 {
     public static String responseOK = "<Status>OK</Status>";
-	
-	@Override
+    public static String responseErrorTen = "<ErrorNumber>10</ErrorNumber>";
+    
+    XeroConnectorTestUtil testUtil = new XeroConnectorTestUtil();
+    
+    @Override
     protected String getConfigResources()
     {
         return "xero-connector-config.xml";
@@ -36,42 +40,119 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Test
     public void testGetAccountsListSuccess() throws Exception
     {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetAccountsList");
-        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
-    }
-    
-    @Test
-    public void testGetInvoicesListSuccess() throws Exception
-    {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoicesList");
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetAccountsList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetBankTransactionsListSuccess() throws Exception
     {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetBankTransactionsList");
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetBankTransactionsList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetBrandingThemesListSuccess() throws Exception
     {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetBrandingThemesList");
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetBrandingThemesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetContactsListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetContactsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetCreditNotesListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetCreditNotesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetEmployeesListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetEmployeesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetExpenseClaimsListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetExpenseClaimsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetInvoicesListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetInvoicesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetItemsSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetItemsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetJournalsSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetJournalsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetManualJournalsSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetManualJournalsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetPaymentsListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetPaymentsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetReceiptsListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetReceiptsList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetTrackingCategoriesListSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetTrackingCategoriesList");
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetUsersSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetUsersList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetAccountSuccess() throws Exception
     {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetAccount");
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetAccount");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testGetInvoiceSuccess() throws Exception
     {
-    	MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoice");
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetInvoice");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
@@ -80,12 +161,8 @@ public class XeroConnectorTest extends FunctionalTestCase
     {
         try {
         	@SuppressWarnings("unused")
-			MuleEvent responseEvent = setupGenericGetObjectTest("testGetInvoiceInvalidId");
-		} catch (MuleException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetInvoiceInvalidId");
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
     }
@@ -93,8 +170,8 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Test
     public void testCreateInvoiceSuccess() throws Exception
     {
-    	String payload = readFile("src/test/resources/create_invoice_success.xml");
-    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceSuccess", payload);        
+    	String payload = testUtil.readFile("src/test/resources/create_invoice_success.xml");
+    	MuleEvent responseEvent = testUtil.setupGenericCreateObjectTest("testCreateInvoiceSuccess", payload);        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
@@ -102,93 +179,27 @@ public class XeroConnectorTest extends FunctionalTestCase
     public void testCreateInvoiceWithInvoiceNumberSuccess() throws Exception
     {
     	String invoiceNumberAnchor = "#InvoiceNumber#";
-
-    	//Generate random number to ensure InvoiceNumber is unique
-    	String invoiceNumberString = generateRandomString();
+    	String invoiceNumberString = testUtil.generateRandomString();
     	
-    	String payload = readFile("src/test/resources/create_invoice_success_with_invoice_number.xml");
+    	String payload = testUtil.readFile("src/test/resources/create_invoice_success_with_invoice_number.xml");
     	payload = payload.replace(invoiceNumberAnchor, invoiceNumberString);
-    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceWithInvoiceNumberSuccess", payload);        
+    	MuleEvent responseEvent = testUtil.setupGenericCreateObjectTest("testCreateInvoiceWithInvoiceNumberSuccess", payload);        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     
     @Test
     public void testCreateInvoiceFailure() throws Exception
     {
-    	String responseError = "<ErrorNumber>10</ErrorNumber>";
-    	String payload = readFile("src/test/resources/create_invoice_failure.xml");
-    	MuleEvent responseEvent = setupGenericCreateObjectTest("testCreateInvoiceFailure", payload);       
-        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseError));
+    	String payload = testUtil.readFile("src/test/resources/create_invoice_failure.xml");
+    	MuleEvent responseEvent = testUtil.setupGenericCreateObjectTest("testCreateInvoiceFailure", payload);       
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseErrorTen));
     }
     
     @Test
     public void testUpdateInvoiceSuccess() throws Exception
     {
-    	String payload = readFile("src/test/resources/update_invoice_success.xml");
-    	MuleEvent responseEvent = setupGenericUpdateObjectTest("testUpdateInvoiceSuccess", payload);        
+    	String payload = testUtil.readFile("src/test/resources/update_invoice_success.xml");
+    	MuleEvent responseEvent = testUtil.setupGenericUpdateObjectTest("testUpdateInvoiceSuccess", payload);        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
-    }
-    
- 
-    /**
-     * Retrieve a flow by name from the registry
-     *
-     * @param name Name of the flow to retrieve
-     */
-    protected Flow lookupFlowConstruct(String name)
-    {
-        return (Flow) AbstractMuleTestCase.muleContext.getRegistry().lookupFlowConstruct(name);
-    }
-    
-    private MuleEvent setupGenericGetObjectTest(String testConstructName) throws Exception
-    {
-    	Flow flow = lookupFlowConstruct(testConstructName);
-    	MuleEvent event = getTestEvent(null);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
-                
-        return responseEvent;
-    }
-    
-    private MuleEvent setupGenericCreateObjectTest(String testConstructName, String payload) throws Exception
-    {
-    	Flow flow = lookupFlowConstruct(testConstructName);
-    	MuleEvent event = getTestEvent(payload);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
-                
-        return responseEvent;
-    }
-    
-    private MuleEvent setupGenericUpdateObjectTest(String testConstructName, String payload) throws Exception
-    {
-    	Flow flow = lookupFlowConstruct(testConstructName);
-    	MuleEvent event = getTestEvent(payload);
-        MuleEvent responseEvent = flow.process(event);
-        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
-                
-        return responseEvent;
-    }
-    
-    private static String readFile(String path) throws IOException {
-    	FileInputStream stream = new FileInputStream(new File(path));
-    	try {
-    		FileChannel fc = stream.getChannel();
-    		MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
-    		/* Instead of using default, pass in a decoder. */
-    		return Charset.defaultCharset().decode(bb).toString();
-    	}
-    	finally {
-    		stream.close();
-    	}
-    }
-    
-    private String generateRandomString(){
-    	long currentTime = System.currentTimeMillis();
-    	Random randGenerator = new Random(currentTime);
-    	int randomNumberInt = randGenerator.nextInt(99999999) + 10000000;
-    	String randomNumberString = Integer.toString(randomNumberInt);
-    	
-    	return randomNumberString;
     }
 }

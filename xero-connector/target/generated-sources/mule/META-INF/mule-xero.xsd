@@ -1112,7 +1112,7 @@
             <xs:documentation>Specify which configuration to use for this invocation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroPostTypesEnumType">
+        <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroPutTypesEnumType">
           <xs:annotation>
             <xs:documentation>The type of object to be created in Xero</xs:documentation>
           </xs:annotation>
@@ -1161,6 +1161,29 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  <xs:simpleType name="XeroPutTypesEnumType">
+    <xs:union>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="BankTransactions"></xs:enumeration>
+          <xs:enumeration value="Contacts"></xs:enumeration>
+          <xs:enumeration value="CreditNotes"></xs:enumeration>
+          <xs:enumeration value="Employees"></xs:enumeration>
+          <xs:enumeration value="ExpenseClaims"></xs:enumeration>
+          <xs:enumeration value="Invoices"></xs:enumeration>
+          <xs:enumeration value="Items"></xs:enumeration>
+          <xs:enumeration value="ManualJournals"></xs:enumeration>
+          <xs:enumeration value="Payments"></xs:enumeration>
+          <xs:enumeration value="Receipts"></xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:pattern value="\#\[[^\]]+\]"></xs:pattern>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:union>
+  </xs:simpleType>
   <xs:simpleType name="XeroPostTypesEnumType">
     <xs:union>
       <xs:simpleType>
