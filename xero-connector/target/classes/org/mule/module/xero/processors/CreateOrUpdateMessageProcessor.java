@@ -43,10 +43,10 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * UpdateMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#update(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+ * CreateOrUpdateMessageProcessor invokes the {@link org.mule.module.xero.XeroConnector#createOrUpdate(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)} method in {@link XeroConnector }. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  * 
  */
-public class UpdateMessageProcessor
+public class CreateOrUpdateMessageProcessor
     implements FlowConstructAware, MuleContextAware, Disposable, Initialisable, Startable, Stoppable, MessageProcessor
 {
 
@@ -54,7 +54,7 @@ public class UpdateMessageProcessor
     private org.mule.module.xero.XeroObjectTypes.XeroPostTypes _objectTypeType;
     private Object payload;
     private String _payloadType;
-    private static Logger logger = LoggerFactory.getLogger(UpdateMessageProcessor.class);
+    private static Logger logger = LoggerFactory.getLogger(CreateOrUpdateMessageProcessor.class);
     /**
      * Module object
      * 
@@ -389,15 +389,15 @@ public class UpdateMessageProcessor
         if (moduleObject instanceof String) {
             _castedModuleObject = ((XeroConnectorConnectionManager) muleContext.getRegistry().lookupObject(((String) moduleObject)));
             if (_castedModuleObject == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("update"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
+                throw new MessagingException(CoreMessages.failedToCreate("createOrUpdate"), event, new RuntimeException("Cannot find the configuration specified by the config-ref attribute."));
             }
         } else {
             _castedModuleObject = ((XeroConnectorConnectionManager) moduleObject);
         }
         XeroConnectorLifecycleAdapter connection = null;
         try {
-            org.mule.module.xero.XeroObjectTypes.XeroPostTypes _transformedObjectType = ((org.mule.module.xero.XeroObjectTypes.XeroPostTypes) evaluateAndTransform(_muleMessage, UpdateMessageProcessor.class.getDeclaredField("_objectTypeType").getGenericType(), null, objectType));
-            String _transformedPayload = ((String) evaluateAndTransform(_muleMessage, UpdateMessageProcessor.class.getDeclaredField("_payloadType").getGenericType(), null, payload));
+            org.mule.module.xero.XeroObjectTypes.XeroPostTypes _transformedObjectType = ((org.mule.module.xero.XeroObjectTypes.XeroPostTypes) evaluateAndTransform(_muleMessage, CreateOrUpdateMessageProcessor.class.getDeclaredField("_objectTypeType").getGenericType(), null, objectType));
+            String _transformedPayload = ((String) evaluateAndTransform(_muleMessage, CreateOrUpdateMessageProcessor.class.getDeclaredField("_payloadType").getGenericType(), null, payload));
             if (logger.isDebugEnabled()) {
                 StringBuilder _messageStringBuilder = new StringBuilder();
                 _messageStringBuilder.append("Attempting to acquire a connection using ");
@@ -405,7 +405,7 @@ public class UpdateMessageProcessor
             }
             connection = _castedModuleObject.acquireConnection(new XeroConnectorConnectionManager.ConnectionKey());
             if (connection == null) {
-                throw new MessagingException(CoreMessages.failedToCreate("update"), event, new RuntimeException("Cannot create connection"));
+                throw new MessagingException(CoreMessages.failedToCreate("createOrUpdate"), event, new RuntimeException("Cannot create connection"));
             } else {
                 if (logger.isDebugEnabled()) {
                     StringBuilder _messageStringBuilder = new StringBuilder();
@@ -418,7 +418,7 @@ public class UpdateMessageProcessor
             }
             retryCount.getAndIncrement();
             Object resultPayload;
-            resultPayload = connection.update(_transformedObjectType, _transformedPayload);
+            resultPayload = connection.createOrUpdate(_transformedObjectType, _transformedPayload);
             TransformerTemplate.OverwitePayloadCallback overwritePayloadCallback = null;
             if (resultPayload == null) {
                 overwritePayloadCallback = new TransformerTemplate.OverwitePayloadCallback(NullPayload.getInstance());
@@ -432,7 +432,7 @@ public class UpdateMessageProcessor
             retryCount.set(0);
             return event;
         } catch (Exception e) {
-            throw new MessagingException(CoreMessages.failedToInvoke("update"), event, e);
+            throw new MessagingException(CoreMessages.failedToInvoke("createOrUpdate"), event, e);
         } finally {
             try {
                 if (connection!= null) {
@@ -446,7 +446,7 @@ public class UpdateMessageProcessor
                     _castedModuleObject.releaseConnection(new XeroConnectorConnectionManager.ConnectionKey(), connection);
                 }
             } catch (Exception e) {
-                throw new MessagingException(CoreMessages.failedToInvoke("update"), event, e);
+                throw new MessagingException(CoreMessages.failedToInvoke("createOrUpdate"), event, e);
             }
         }
     }

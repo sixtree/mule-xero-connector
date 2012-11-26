@@ -138,6 +138,6 @@
     <xero:create objectType="Invoice" payload="<xml/>"/>
 <!-- END_INCLUDE(xero:create) -->
 
-<!-- BEGIN_INCLUDE(xero:update) -->
-    <xero:update objectType="Invoice" payload="<xml/>"/>
-<!-- END_INCLUDE(xero:update) -->
+<!-- BEGIN_INCLUDE(xero:create-or-update) -->
+    <xero:create-or-update objectType="Invoice" payload="<xml/>"/>
+<!-- END_INCLUDE(xero:create-or-update) -->

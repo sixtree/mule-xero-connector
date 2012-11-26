@@ -74,7 +74,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="../../../../../../favicon.ico" />
 <title>
 
-  UpdateMessageProcessor
+  CreateOrUpdateMessageProcessor
 
 
 | Mule Cloud Connector
@@ -222,6 +222,7 @@
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/CreateMessageProcessor.html">CreateMessageProcessor</a></li>
+          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html">CreateOrUpdateMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetAccountMessageProcessor.html">GetAccountMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetAccountsListMessageProcessor.html">GetAccountsListMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetBankTransactionMessageProcessor.html">GetBankTransactionMessageProcessor</a></li>
@@ -255,7 +256,6 @@
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetTrackingCategoryMessageProcessor.html">GetTrackingCategoryMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetUserMessageProcessor.html">GetUserMessageProcessor</a></li>
           <li class="api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/GetUsersListMessageProcessor.html">GetUsersListMessageProcessor</a></li>
-          <li class="selected api apilevel-"><a href="../../../../../../java/org/mule/module/xero/processors/UpdateMessageProcessor.html">UpdateMessageProcessor</a></li>
       </ul>
     </li>
               
@@ -417,7 +417,7 @@ Summary:
      
     
     class
-<h1>UpdateMessageProcessor</h1>
+<h1>CreateOrUpdateMessageProcessor</h1>
 
 
 
@@ -467,7 +467,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
         
-        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.xero.processors.UpdateMessageProcessor</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.mule.module.xero.processors.CreateOrUpdateMessageProcessor</td>
     </tr>
     
 
@@ -483,7 +483,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>UpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/module/xero/XeroConnector.html#update(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">update(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/module/xero/XeroConnector.html">XeroConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
+<p>CreateOrUpdateMessageProcessor invokes the <code><a href="../../../../../../java/org/mule/module/xero/XeroConnector.html#createOrUpdate(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)">createOrUpdate(org.mule.module.xero.XeroObjectTypes.XeroPostTypes, java.lang.String)</a></code> method in <code><a href="../../../../../../java/org/mule/module/xero/XeroConnector.html">XeroConnector</a></code>. For each argument there is a field in this processor to match it.  Before invoking the actual method the processor will evaluate and transform where possible to the expected argument type.
  
 </p>
 
@@ -681,7 +681,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="../../../../../../java/org/mule/module/xero/XeroObjectTypes.XeroPostTypes.html">XeroObjectTypes.XeroPostTypes</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#_objectTypeType">_objectTypeType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#_objectTypeType">_objectTypeType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -692,7 +692,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#_payloadType">_payloadType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#_payloadType">_payloadType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -703,7 +703,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           ExpressionManager</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#expressionManager">expressionManager</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#expressionManager">expressionManager</a></td>
           <td class="jd-descrcol" width="100%">Mule Expression Manager
  
 </td>
@@ -716,7 +716,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           FlowConstruct</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#flowConstruct">flowConstruct</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#flowConstruct">flowConstruct</a></td>
           <td class="jd-descrcol" width="100%">Flow construct
  
 </td>
@@ -729,7 +729,7 @@ org.mule.api.lifecycle.Stoppable
           static
           
           Logger</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#logger">logger</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#logger">logger</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -740,7 +740,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#moduleObject">moduleObject</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#moduleObject">moduleObject</a></td>
           <td class="jd-descrcol" width="100%">Module object
  
 </td>
@@ -753,7 +753,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           MuleContext</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#muleContext">muleContext</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#muleContext">muleContext</a></td>
           <td class="jd-descrcol" width="100%">Mule Context
  
 </td>
@@ -766,7 +766,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#objectType">objectType</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#objectType">objectType</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -777,7 +777,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           TemplateParser.PatternInfo</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#patternInfo">patternInfo</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#patternInfo">patternInfo</a></td>
           <td class="jd-descrcol" width="100%">Mule Pattern Info
  
 </td>
@@ -790,7 +790,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#payload">payload</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#payload">payload</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
@@ -801,7 +801,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/concurrent/atomic/AtomicInteger.html">AtomicInteger</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#retryCount">retryCount</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#retryCount">retryCount</a></td>
           <td class="jd-descrcol" width="100%">Variable used to track how many retries we have attempted on this message processor
  
 </td>
@@ -814,7 +814,7 @@ org.mule.api.lifecycle.Stoppable
           
           
           int</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#retryMax">retryMax</a></td>
+          <td class="jd-linkcol"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#retryMax">retryMax</a></td>
           <td class="jd-descrcol" width="100%">Maximum number of retries that can be attempted.</td>
       </tr>
       
@@ -844,7 +844,7 @@ org.mule.api.lifecycle.Stoppable
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#UpdateMessageProcessor()">UpdateMessageProcessor</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#CreateOrUpdateMessageProcessor()">CreateOrUpdateMessageProcessor</a></span>()</nobr>
         
   </td></tr>
 
@@ -873,7 +873,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#dispose()">dispose</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#dispose()">dispose</a></span>()</nobr>
         
   </td></tr>
 
@@ -889,7 +889,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#initialise()">initialise</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#initialise()">initialise</a></span>()</nobr>
         
         <div class="jd-descrdiv">Obtains the expression manager from the Mule context and initialises the connector.</div>
   
@@ -907,7 +907,7 @@ org.mule.api.lifecycle.Stoppable
             MuleEvent</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#process(org.mule.api.MuleEvent)">process</a></span>(MuleEvent event)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#process(org.mule.api.MuleEvent)">process</a></span>(MuleEvent event)</nobr>
         
         <div class="jd-descrdiv">Invokes the MessageProcessor.</div>
   
@@ -925,7 +925,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setFlowConstruct(org.mule.api.construct.FlowConstruct)">setFlowConstruct</a></span>(FlowConstruct flowConstruct)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setFlowConstruct(org.mule.api.construct.FlowConstruct)">setFlowConstruct</a></span>(FlowConstruct flowConstruct)</nobr>
         
         <div class="jd-descrdiv">Sets flow construct</div>
   
@@ -943,7 +943,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setModuleObject(java.lang.Object)">setModuleObject</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> moduleObject)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setModuleObject(java.lang.Object)">setModuleObject</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> moduleObject)</nobr>
         
         <div class="jd-descrdiv">Sets the instance of the object under which the processor will execute</div>
   
@@ -961,7 +961,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setMuleContext(org.mule.api.MuleContext)">setMuleContext</a></span>(MuleContext context)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setMuleContext(org.mule.api.MuleContext)">setMuleContext</a></span>(MuleContext context)</nobr>
         
         <div class="jd-descrdiv">Set the Mule context</div>
   
@@ -979,7 +979,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setObjectType(java.lang.Object)">setObjectType</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setObjectType(java.lang.Object)">setObjectType</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
         
         <div class="jd-descrdiv">Sets objectType</div>
   
@@ -997,7 +997,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setPayload(java.lang.Object)">setPayload</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setPayload(java.lang.Object)">setPayload</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> value)</nobr>
         
         <div class="jd-descrdiv">Sets payload</div>
   
@@ -1015,7 +1015,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#setRetryMax(int)">setRetryMax</a></span>(int value)</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#setRetryMax(int)">setRetryMax</a></span>(int value)</nobr>
         
         <div class="jd-descrdiv">Sets retryMax</div>
   
@@ -1033,7 +1033,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#start()">start</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#start()">start</a></span>()</nobr>
         
   </td></tr>
 
@@ -1049,7 +1049,7 @@ org.mule.api.lifecycle.Stoppable
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/UpdateMessageProcessor.html#stop()">stop</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../org/mule/module/xero/processors/CreateOrUpdateMessageProcessor.html#stop()">stop</a></span>()</nobr>
         
   </td></tr>
 
@@ -1979,7 +1979,7 @@ From interface
 
 
 
-<A NAME="UpdateMessageProcessor()"></A>
+<A NAME="CreateOrUpdateMessageProcessor()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1991,7 +1991,7 @@ From interface
          
         
       </span>
-      <span class="sympad">UpdateMessageProcessor</span>
+      <span class="sympad">CreateOrUpdateMessageProcessor</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">

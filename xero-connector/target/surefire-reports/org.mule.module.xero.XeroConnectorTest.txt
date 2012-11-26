@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.mule.module.xero.XeroConnectorTest
 -------------------------------------------------------------------------------
-Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 54.361 sec
+Tests run: 22, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 72.338 sec

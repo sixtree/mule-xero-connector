@@ -924,15 +924,15 @@ public class XeroConnector
     }
     
     /**
-     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:update}
+     * {@sample.xml ../../../doc/Xero-connector.xml.sample xero:create-or-update}
      * 
-     * update
-     * @param objectType The type of object to be updated in Xero
-     * @param payload The content of the object to be updated in Xero
-     * @return - returns the status of the update request
+     * createOrUpdate
+     * @param objectType The type of object to be either created or updated in Xero
+     * @param payload The content of the object to be either created or updated in Xero
+     * @return - returns the status of the createOrUpdate request
      */
     @Processor
-    public String update(XeroObjectTypes.XeroPostTypes objectType, 
+    public String createOrUpdate(XeroObjectTypes.XeroPostTypes objectType, 
     					 @Optional @Default("#[message.payload]") String payload)
     {
     	XeroConnectorClient xeroClient = new XeroConnectorClient(xeroApiUrl, consumerKey, consumerSecret, privateKeyFile);

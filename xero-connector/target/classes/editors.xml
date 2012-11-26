@@ -20,6 +20,7 @@
       <group caption="Generic" id="xeroConnectorGeneric">
         <modeSwitch description="Operation." caption="Operation" name="Xero operations to execute">
           <mode modeLabel="Create" modeId="http://www.mulesoft.org/schema/mule/xero/create"></mode>
+          <mode modeLabel="Create or update" modeId="http://www.mulesoft.org/schema/mule/xero/create-or-update"></mode>
           <mode modeLabel="Get account" modeId="http://www.mulesoft.org/schema/mule/xero/get-account"></mode>
           <mode modeLabel="Get accounts list" modeId="http://www.mulesoft.org/schema/mule/xero/get-accounts-list"></mode>
           <mode modeLabel="Get bank transaction" modeId="http://www.mulesoft.org/schema/mule/xero/get-bank-transaction"></mode>
@@ -53,7 +54,6 @@
           <mode modeLabel="Get tracking category" modeId="http://www.mulesoft.org/schema/mule/xero/get-tracking-category"></mode>
           <mode modeLabel="Get user" modeId="http://www.mulesoft.org/schema/mule/xero/get-user"></mode>
           <mode modeLabel="Get users list" modeId="http://www.mulesoft.org/schema/mule/xero/get-users-list"></mode>
-          <mode modeLabel="Update" modeId="http://www.mulesoft.org/schema/mule/xero/update"></mode>
         </modeSwitch>
       </group>
     </attribute-category>
@@ -522,11 +522,11 @@
       </group>
     </attribute-category>
   </cloud-connector>
-  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="update" icon="icons/small/xero-connector-24x16.png" caption="Update">
+  <cloud-connector returnType="java.lang.String" extends="http://www.mulesoft.org/schema/mule/xero/abstractXeroConnectorGeneric" abstract="true" image="icons/large/xero-connector-48x32.png" localId="create-or-update" icon="icons/small/xero-connector-24x16.png" caption="Create Or Update">
     <attribute-category description="General." caption="General">
       <group caption="General" id="general">
-        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be updated in Xero." caption="Payload" name="payload"></string>
-        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be updated in Xero." caption="Object Type" name="objectType">
+        <string defaultValue="#[message.payload]" javaType="java.lang.String" required="false" description="The content of the object to be either created or updated in Xero." caption="Payload" name="payload"></string>
+        <enum allowsCustom="true" javaType="org.mule.module.xero.XeroObjectTypes.XeroPostTypes" required="true" supportsExpressions="true" description="The type of object to be either created or updated in Xero." caption="Object Type" name="objectType">
           <option value="BankTransactions"></option>
           <option value="Contacts"></option>
           <option value="CreditNotes"></option>

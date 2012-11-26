@@ -1130,12 +1130,12 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="update" substitutionGroup="mule:abstract-message-processor" type="UpdateType">
+  <xs:element xmlns="http://www.mulesoft.org/schema/mule/xero" xmlns:mule="http://www.mulesoft.org/schema/mule/core" name="create-or-update" substitutionGroup="mule:abstract-message-processor" type="CreateOrUpdateType">
     <xs:annotation>
-      <xs:documentation>update</xs:documentation>
+      <xs:documentation>createOrUpdate</xs:documentation>
     </xs:annotation>
   </xs:element>
-  <xs:complexType name="UpdateType">
+  <xs:complexType name="CreateOrUpdateType">
     <xs:complexContent>
       <xs:extension xmlns:mule="http://www.mulesoft.org/schema/mule/core" base="mule:abstractMessageProcessorType">
         <xs:attribute name="config-ref" use="optional" type="xs:string">
@@ -1145,12 +1145,12 @@
         </xs:attribute>
         <xs:attribute xmlns="http://www.mulesoft.org/schema/mule/xero" name="objectType" use="required" type="XeroPostTypesEnumType">
           <xs:annotation>
-            <xs:documentation>The type of object to be updated in Xero</xs:documentation>
+            <xs:documentation>The type of object to be either created or updated in Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="payload" default="#[message.payload]" use="optional" type="xs:string">
           <xs:annotation>
-            <xs:documentation>The content of the object to be updated in Xero</xs:documentation>
+            <xs:documentation>The content of the object to be either created or updated in Xero</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryMax" default="1" use="optional" type="xs:string">

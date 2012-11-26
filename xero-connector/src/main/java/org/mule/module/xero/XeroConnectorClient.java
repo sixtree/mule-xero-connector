@@ -322,7 +322,7 @@ public class XeroConnectorClient {
 			HttpMessage httpRequest = HttpMessage.newRequest(request, ParameterStyle.AUTHORIZATION_HEADER);
 
 			HttpResponseMessage httpResponse = new HttpClient3().execute(httpRequest, new HashMap<String, Object>());
-			
+			int statusCode = httpResponse.getStatusCode();
 			httpResponse = HttpMessageDecoder.decode(httpResponse);
 			InputStream responseStream = httpResponse.getBody();
 			BufferedReader reader = new BufferedReader(new InputStreamReader(responseStream));

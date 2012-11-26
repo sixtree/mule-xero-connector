@@ -34,7 +34,7 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Override
     protected String getConfigResources()
     {
-        return "xero-connector-config.xml";
+        return XeroConnectorTestUtil.getConfigResourceFile();
     }
 
     @Test
@@ -202,4 +202,5 @@ public class XeroConnectorTest extends FunctionalTestCase
     	MuleEvent responseEvent = testUtil.setupGenericUpdateObjectTest("testUpdateInvoiceSuccess", payload);        
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
+    
 }

@@ -54,7 +54,7 @@ public class XeroConnectorNamespaceHandler
         registerBeanDefinitionParser("get-tracking-category", new GetTrackingCategoryDefinitionParser());
         registerBeanDefinitionParser("get-user", new GetUserDefinitionParser());
         registerBeanDefinitionParser("create", new CreateDefinitionParser());
-        registerBeanDefinitionParser("update", new UpdateDefinitionParser());
+        registerBeanDefinitionParser("create-or-update", new CreateOrUpdateDefinitionParser());
     }
 
 }

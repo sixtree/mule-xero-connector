@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.StringUtils;
 import org.mule.config.spring.MuleHierarchicalBeanDefinitionParserDelegate;
 import org.mule.config.spring.util.SpringXMLUtils;
-import org.mule.module.xero.processors.UpdateMessageProcessor;
+import org.mule.module.xero.processors.CreateOrUpdateMessageProcessor;
 import org.mule.util.TemplateParser;
 import org.springframework.beans.MutablePropertyValues;
 import org.springframework.beans.PropertyValue;
@@ -16,7 +16,7 @@ import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
 
-public class UpdateDefinitionParser
+public class CreateOrUpdateDefinitionParser
     implements BeanDefinitionParser
 {
 
@@ -26,12 +26,12 @@ public class UpdateDefinitionParser
      */
     private TemplateParser.PatternInfo patternInfo;
 
-    public UpdateDefinitionParser() {
+    public CreateOrUpdateDefinitionParser() {
         patternInfo = TemplateParser.createMuleStyleParser().getStyle();
     }
 
     public BeanDefinition parse(Element element, ParserContext parserContent) {
-        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(UpdateMessageProcessor.class.getName());
+        BeanDefinitionBuilder builder = BeanDefinitionBuilder.rootBeanDefinition(CreateOrUpdateMessageProcessor.class.getName());
         String configRef = element.getAttribute("config-ref");
         if ((configRef!= null)&&(!StringUtils.isBlank(configRef))) {
             builder.addPropertyValue("moduleObject", configRef);

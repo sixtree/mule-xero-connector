@@ -160,7 +160,7 @@
     </flow>
     
     <flow name="testUpdateInvoiceSuccess">
-        <xero:update objectType="Invoices" payload="#[message.payload]"/>
+        <xero:create-or-update objectType="Invoices" payload="#[message.payload]"/>
     </flow>
 
 </mule>

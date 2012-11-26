@@ -17,7 +17,11 @@ public class XeroConnectorTestUtil extends FunctionalTestCase{
 	
 	private static String configResourceFile = "xero-connector-config.xml"; 
 	
-    protected Flow lookupFlowConstruct(String name)
+    public static String getConfigResourceFile() {
+		return configResourceFile;
+	}
+
+	protected Flow lookupFlowConstruct(String name)
     {
         return (Flow) AbstractMuleTestCase.muleContext.getRegistry().lookupFlowConstruct(name);
     }
