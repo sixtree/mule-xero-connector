@@ -37,7 +37,7 @@ import net.oauth.http.HttpResponseMessage;
 import net.oauth.signature.RSA_SHA1;
 
 /**
- * @author Andy Evans on behalf of Sixtree
+ * @author Sixtree 
  *
  */
 

@@ -3,7 +3,7 @@ package org.mule.module.xero;
 import java.util.Map;
 
 /**
- * @author Andy Evans on behalf of Sixtree
+ * @author Sixtree
  *
  */
 

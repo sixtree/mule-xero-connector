@@ -1,7 +1,7 @@
 package org.mule.module.xero;
 
 /**
- * @author Andy Evans on behalf of Sixtree
+ * @author Sixtree
  *
  */
 

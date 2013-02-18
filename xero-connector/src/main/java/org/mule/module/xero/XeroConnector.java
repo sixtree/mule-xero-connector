@@ -20,7 +20,7 @@ import org.springframework.beans.factory.annotation.Value;
 /**
  * Xero Cloud Connector for Mule
  * 
- * @author Andy Evans on behalf of Sixtree.
+ * @author Sixtree
  *
  */
 
