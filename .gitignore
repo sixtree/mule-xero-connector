@@ -1,7 +1,6 @@
-*.class
-
-# Package Files #
-# *.jar
-
 *.pem
-/target
+*.log
+target/*
+.classpath
+.project
+.settings/*
