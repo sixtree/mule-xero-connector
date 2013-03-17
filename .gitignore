@@ -1,6 +1,6 @@
 *.pem
 *.log
-target/*
-.classpath
-.project
-.settings/*
+xero-connector/target/*
+xero-connector/.classpath
+xero-connector/.project
+xero-connector/.settings/*
