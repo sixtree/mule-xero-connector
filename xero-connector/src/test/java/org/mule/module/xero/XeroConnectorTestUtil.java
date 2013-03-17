@@ -36,6 +36,16 @@ public class XeroConnectorTestUtil extends FunctionalTestCase{
         return responseEvent;
     }
     
+    public MuleEvent setupGenericGetObjectByIdTest(String testConstructName, String id) throws Exception
+    {
+    	Flow flow = lookupFlowConstruct(testConstructName);
+    	MuleEvent event = getTestEvent(id);
+        MuleEvent responseEvent = flow.process(event);
+        System.out.print(responseEvent.getMessage().getPayload().toString()); //TODO - remove this line        
+                
+        return responseEvent;
+    }
+    
     public MuleEvent setupGenericCreateObjectTest(String testConstructName, String payload) throws Exception
     {
     	Flow flow = lookupFlowConstruct(testConstructName);

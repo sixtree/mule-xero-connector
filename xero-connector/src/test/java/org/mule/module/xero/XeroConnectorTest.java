@@ -28,8 +28,10 @@ public class XeroConnectorTest extends FunctionalTestCase
 {
     public static String responseOK = "<Status>OK</Status>";
     public static String responseErrorTen = "<ErrorNumber>10</ErrorNumber>";
-    
+    public static String invoiceNumberAnchor = "#InvoiceNumber#";
+	    
     XeroConnectorTestUtil testUtil = new XeroConnectorTestUtil();
+    public String invoiceNumberString = testUtil.generateRandomString();
     
     @Override
     protected String getConfigResources()
@@ -136,25 +138,18 @@ public class XeroConnectorTest extends FunctionalTestCase
     }
     
     @Test
-    public void testGetUsersSuccess() throws Exception
+    public void testGetUsersListSuccess() throws Exception
     {
     	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetUsersList");
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
-    
-    @Test
-    public void testGetAccountSuccess() throws Exception
-    {
-    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetAccount");
-        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
-    }
-    
-    @Test
-    public void testGetInvoiceSuccess() throws Exception
-    {
-    	MuleEvent responseEvent = testUtil.setupGenericGetObjectTest("testGetInvoice");
-        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
-    }
+//    
+//    @Test
+//    public void testGetAccountSuccess() throws Exception
+//    {
+//    	MuleEvent responseEvent = testUtil.setupGenericGetObjectByIdTest("testGetAccount");
+//        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+//    }
     
     @Test(expected=MuleException.class)
     public void testGetInvoiceInvalidId() 
@@ -178,12 +173,16 @@ public class XeroConnectorTest extends FunctionalTestCase
     @Test
     public void testCreateInvoiceWithInvoiceNumberSuccess() throws Exception
     {
-    	String invoiceNumberAnchor = "#InvoiceNumber#";
-    	String invoiceNumberString = testUtil.generateRandomString();
-    	
     	String payload = testUtil.readFile("src/test/resources/create_invoice_success_with_invoice_number.xml");
     	payload = payload.replace(invoiceNumberAnchor, invoiceNumberString);
     	MuleEvent responseEvent = testUtil.setupGenericCreateObjectTest("testCreateInvoiceWithInvoiceNumberSuccess", payload);        
+        assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
+    }
+    
+    @Test
+    public void testGetInvoiceSuccess() throws Exception
+    {
+    	MuleEvent responseEvent = testUtil.setupGenericGetObjectByIdTest("testGetInvoice", invoiceNumberString);
         assertTrue(responseEvent.getMessage().getPayload().toString().contains(responseOK));
     }
     

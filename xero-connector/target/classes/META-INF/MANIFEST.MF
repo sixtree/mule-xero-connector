@@ -2,9 +2,9 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Xero
 Bundle-SymbolicName: org.mule.tooling.ui.extension.xero;singleton:=true
-Bundle-Version: 1.0.0.201211261125
+Bundle-Version: %VERSION%
 Bundle-Activator: org.mule.tooling.ui.contribution.Activator
-Bundle-Vendor: Andy Evans on behalf of Sixtree.
+Bundle-Vendor: Sixtree
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.mule.tooling.core;bundle-version="1.0.0"

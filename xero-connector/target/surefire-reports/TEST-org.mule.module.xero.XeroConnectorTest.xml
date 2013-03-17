@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="72.066" errors="0" skipped="0" tests="22" name="org.mule.module.xero.XeroConnectorTest">
+<testsuite failures="0" time="84.561" errors="1" skipped="0" tests="21" name="org.mule.module.xero.XeroConnectorTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_33\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="classworlds.conf" value="C:\Program Files\Apache Software Foundation\apache-maven-3.0.4\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_33\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\tibco\tibrv\8.3\bin;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files (x86)\Common Files\Lenovo;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files (x86)\Windows Live\Shared;C:\SWTOOLS\ReadyApps;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\Program Files\Java\jdk1.6.0_33\bin;C:\Python27\python.exe\;C:\Program Files\Apache Ant\apache-ant-1.8.2\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Mercurial\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Google\google_appengine\;C:\Program Files\Apache Software Foundation\apache-maven-3.0.4\bin;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_33\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\dev\tibco\tibrv\8.3\bin;C:\oraclexe\app\oracle\product\11.2.0\server\bin;;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\ThinkPad\Bluetooth Software\;C:\Program Files\ThinkPad\Bluetooth Software\syswow64;C:\Program Files\Broadcom\WHL\;C:\Program Files\Broadcom\WHL\syswow64;C:\Program Files\Broadcom\WHL\SysWow64\;C:\Program Files\Broadcom\WHL\SysWow64\syswow64;C:\Program Files (x86)\Common Files\Lenovo;C:\Program Files (x86)\Common Files\Ulead Systems\MPEG;C:\Program Files (x86)\Windows Live\Shared;C:\SWTOOLS\ReadyApps;C:\Program Files (x86)\Intel\Services\IPT\;C:\Program Files (x86)\Symantec\VIP Access Client\;C:\Users\Andy\AppData\Local\Temp\LREC6FC.tmp\bin;C:\Python27\python.exe\;C:\Program Files\Apache Ant\apache-ant-1.8.2\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Mercurial\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\SlikSvn\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Apache Software Foundation\apache-maven-3.0.4\bin;C:\dev\scripts\ESBTools;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,26 +60,240 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="12.385" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountsListSuccess"/>
-  <testcase time="2.547" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBankTransactionsListSuccess"/>
-  <testcase time="4.203" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBrandingThemesListSuccess"/>
-  <testcase time="3.423" classname="org.mule.module.xero.XeroConnectorTest" name="testGetContactsListSuccess"/>
-  <testcase time="3.281" classname="org.mule.module.xero.XeroConnectorTest" name="testGetCreditNotesListSuccess"/>
-  <testcase time="1.922" classname="org.mule.module.xero.XeroConnectorTest" name="testGetEmployeesListSuccess"/>
-  <testcase time="1.981" classname="org.mule.module.xero.XeroConnectorTest" name="testGetExpenseClaimsListSuccess"/>
-  <testcase time="7.187" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoicesListSuccess"/>
-  <testcase time="1.678" classname="org.mule.module.xero.XeroConnectorTest" name="testGetItemsSuccess"/>
-  <testcase time="2.898" classname="org.mule.module.xero.XeroConnectorTest" name="testGetJournalsSuccess"/>
-  <testcase time="2.804" classname="org.mule.module.xero.XeroConnectorTest" name="testGetManualJournalsSuccess"/>
-  <testcase time="1.677" classname="org.mule.module.xero.XeroConnectorTest" name="testGetPaymentsListSuccess"/>
-  <testcase time="3.647" classname="org.mule.module.xero.XeroConnectorTest" name="testGetReceiptsListSuccess"/>
-  <testcase time="1.609" classname="org.mule.module.xero.XeroConnectorTest" name="testGetTrackingCategoriesListSuccess"/>
-  <testcase time="1.558" classname="org.mule.module.xero.XeroConnectorTest" name="testGetUsersSuccess"/>
-  <testcase time="1.988" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountSuccess"/>
-  <testcase time="2.545" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceSuccess"/>
-  <testcase time="1.987" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceInvalidId"/>
-  <testcase time="2.154" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceSuccess"/>
-  <testcase time="3.554" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceWithInvoiceNumberSuccess"/>
-  <testcase time="3.886" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceFailure"/>
-  <testcase time="3.152" classname="org.mule.module.xero.XeroConnectorTest" name="testUpdateInvoiceSuccess"/>
+  <testcase time="13.637" classname="org.mule.module.xero.XeroConnectorTest" name="testGetAccountsListSuccess"/>
+  <testcase time="3.473" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBankTransactionsListSuccess"/>
+  <testcase time="5.293" classname="org.mule.module.xero.XeroConnectorTest" name="testGetBrandingThemesListSuccess"/>
+  <testcase time="7.333" classname="org.mule.module.xero.XeroConnectorTest" name="testGetContactsListSuccess"/>
+  <testcase time="2.558" classname="org.mule.module.xero.XeroConnectorTest" name="testGetCreditNotesListSuccess"/>
+  <testcase time="3.119" classname="org.mule.module.xero.XeroConnectorTest" name="testGetEmployeesListSuccess"/>
+  <testcase time="2.768" classname="org.mule.module.xero.XeroConnectorTest" name="testGetExpenseClaimsListSuccess"/>
+  <testcase time="6.992" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoicesListSuccess"/>
+  <testcase time="3.127" classname="org.mule.module.xero.XeroConnectorTest" name="testGetItemsSuccess"/>
+  <testcase time="4.437" classname="org.mule.module.xero.XeroConnectorTest" name="testGetJournalsSuccess"/>
+  <testcase time="2.27" classname="org.mule.module.xero.XeroConnectorTest" name="testGetManualJournalsSuccess"/>
+  <testcase time="4.564" classname="org.mule.module.xero.XeroConnectorTest" name="testGetPaymentsListSuccess"/>
+  <testcase time="2.618" classname="org.mule.module.xero.XeroConnectorTest" name="testGetReceiptsListSuccess"/>
+  <testcase time="2.549" classname="org.mule.module.xero.XeroConnectorTest" name="testGetTrackingCategoriesListSuccess"/>
+  <testcase time="5.724" classname="org.mule.module.xero.XeroConnectorTest" name="testGetUsersListSuccess"/>
+  <testcase time="1.864" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceInvalidId"/>
+  <testcase time="2.182" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceSuccess"/>
+  <testcase time="3.386" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceWithInvoiceNumberSuccess"/>
+  <testcase time="1.688" classname="org.mule.module.xero.XeroConnectorTest" name="testGetInvoiceSuccess">
+    <error message="Failed to invoke getInvoice. Message payload is of type: String" type="org.mule.api.MessagingException">org.mule.api.MessagingException: Failed to invoke getInvoice. Message payload is of type: String
+	at org.mule.module.xero.processors.GetInvoiceMessageProcessor.process(GetInvoiceMessageProcessor.java:423)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:93)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:66)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:105)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:95)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:93)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:66)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:105)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.process(AbstractEnvelopeInterceptor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.AbstractInterceptingMessageProcessorBase.processNext(AbstractInterceptingMessageProcessorBase.java:105)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.chain.DefaultMessageProcessorChain.doProcess(DefaultMessageProcessorChain.java:93)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:66)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.doProcess(InterceptingChainLifecycleWrapper.java:57)
+	at org.mule.processor.chain.AbstractMessageProcessorChain.process(AbstractMessageProcessorChain.java:66)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.access$001(InterceptingChainLifecycleWrapper.java:29)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper$1.process(InterceptingChainLifecycleWrapper.java:90)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.chain.InterceptingChainLifecycleWrapper.process(InterceptingChainLifecycleWrapper.java:85)
+	at org.mule.construct.Flow$1.process(Flow.java:74)
+	at org.mule.construct.Flow$1.process(Flow.java:69)
+	at org.mule.execution.ExecuteCallbackInterceptor.execute(ExecuteCallbackInterceptor.java:20)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:34)
+	at org.mule.execution.HandleExceptionInterceptor.execute(HandleExceptionInterceptor.java:18)
+	at org.mule.execution.BeginAndResolveTransactionInterceptor.execute(BeginAndResolveTransactionInterceptor.java:58)
+	at org.mule.execution.SuspendXaTransactionInterceptor.execute(SuspendXaTransactionInterceptor.java:54)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:32)
+	at org.mule.execution.RethrowExceptionInterceptor.execute(RethrowExceptionInterceptor.java:17)
+	at org.mule.execution.ErrorHandlingExecutionTemplate.execute(ErrorHandlingExecutionTemplate.java:63)
+	at org.mule.execution.ErrorHandlingExecutionTemplate.execute(ErrorHandlingExecutionTemplate.java:34)
+	at org.mule.construct.Flow.process(Flow.java:68)
+	at org.mule.module.xero.XeroConnectorTestUtil.setupGenericGetObjectByIdTest(XeroConnectorTestUtil.java:43)
+	at org.mule.module.xero.XeroConnectorTest.testGetInvoiceSuccess(XeroConnectorTest.java:185)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at org.mule.tck.AbstractMuleTestCase.runBare(AbstractMuleTestCase.java:303)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at org.mule.tck.AbstractMuleTestCase.run(AbstractMuleTestCase.java:282)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: java.lang.RuntimeException: net.oauth.OAuthProblemException: HTTP/1.1 404 Not Found
+URL: https://api.xero.com/api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+oauth_signature base string: GET&amp;https%3A%2F%2Fapi.xero.com%2Fapi.xro%2F2.0%2FInvoices%2F94651943&amp;oauth_consumer_key%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_nonce%3D91008440540406%26oauth_signature_method%3DRSA-SHA1%26oauth_timestamp%3D1363259135%26oauth_token%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_version%3D1.0
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; HTTP request:
+GET /api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: api.xero.com
+
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HTTP response:
+HTTP/1.1 404 Not Found
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+WWW-Authenticate: OAuth Realm=&quot;api.xero.com&quot;
+X-S: 445759-O1VMAP02
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 14 Mar 2013 11:05:40 GMT
+Content-Length: 47
+
+The resource you&apos;re looking for cannot be found
+	at org.mule.module.xero.XeroConnectorClientException.&lt;init&gt;(XeroConnectorClientException.java:33)
+	at org.mule.module.xero.XeroConnectorClient.getXeroObject(XeroConnectorClient.java:257)
+	at org.mule.module.xero.XeroConnector.getInvoice(XeroConnector.java:674)
+	at org.mule.module.xero.processors.GetInvoiceMessageProcessor.process(GetInvoiceMessageProcessor.java:409)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.AsyncInterceptingMessageProcessor.process(AsyncInterceptingMessageProcessor.java:95)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.interceptor.AbstractEnvelopeInterceptor.process(AbstractEnvelopeInterceptor.java:55)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.processor.AbstractFilteringMessageProcessor.process(AbstractFilteringMessageProcessor.java:44)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	at org.mule.execution.ExceptionToMessagingExceptionExecutionInterceptor.execute(ExceptionToMessagingExceptionExecutionInterceptor.java:27)
+	at org.mule.execution.MessageProcessorNotificationExecutionInterceptor.execute(MessageProcessorNotificationExecutionInterceptor.java:43)
+	at org.mule.execution.MessageProcessorExecutionTemplate.execute(MessageProcessorExecutionTemplate.java:43)
+	... 41 more
+Caused by: net.oauth.OAuthProblemException: HTTP/1.1 404 Not Found
+URL: https://api.xero.com/api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+oauth_signature base string: GET&amp;https%3A%2F%2Fapi.xero.com%2Fapi.xro%2F2.0%2FInvoices%2F94651943&amp;oauth_consumer_key%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_nonce%3D91008440540406%26oauth_signature_method%3DRSA-SHA1%26oauth_timestamp%3D1363259135%26oauth_token%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_version%3D1.0
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; HTTP request:
+GET /api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: api.xero.com
+
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HTTP response:
+HTTP/1.1 404 Not Found
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+WWW-Authenticate: OAuth Realm=&quot;api.xero.com&quot;
+X-S: 445759-O1VMAP02
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 14 Mar 2013 11:05:40 GMT
+Content-Length: 47
+
+The resource you&apos;re looking for cannot be found
+	at net.oauth.client.OAuthResponseMessage.toOAuthProblemException(OAuthResponseMessage.java:83)
+	at net.oauth.client.OAuthClient.invoke(OAuthClient.java:308)
+	at net.oauth.client.OAuthClient.invoke(OAuthClient.java:262)
+</error>
+    <system-out>
+================================================================================
+= Testing: testGetInvoiceSuccess                                               =
+================================================================================
+[03-14 22:05:36] ERROR DefaultMessagingExceptionStrategy [main]: 
+********************************************************************************
+Message               : Failed to invoke getInvoice. Message payload is of type: String
+Code                  : MULE_ERROR-29999
+--------------------------------------------------------------------------------
+Exception stack is:
+1. HTTP/1.1 404 Not Found (net.oauth.OAuthProblemException)
+  net.oauth.client.OAuthResponseMessage:83 (null)
+2. net.oauth.OAuthProblemException: HTTP/1.1 404 Not Found
+URL: https://api.xero.com/api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+oauth_signature base string: GET&amp;https%3A%2F%2Fapi.xero.com%2Fapi.xro%2F2.0%2FInvoices%2F94651943&amp;oauth_consumer_key%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_nonce%3D91008440540406%26oauth_signature_method%3DRSA-SHA1%26oauth_timestamp%3D1363259135%26oauth_token%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_version%3D1.0
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; HTTP request:
+GET /api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: api.xero.com
+
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HTTP response:
+HTTP/1.1 404 Not Found
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+WWW-Authenticate: OAuth Realm=&quot;api.xero.com&quot;
+X-S: 445759-O1VMAP02
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 14 Mar 2013 11:05:40 GMT
+Content-Length: 47
+
+The resource you&apos;re looking for cannot be found (java.lang.RuntimeException)
+  org.mule.module.xero.XeroConnectorClientException:33 (null)
+3. Failed to invoke getInvoice. Message payload is of type: String (org.mule.api.MessagingException)
+  org.mule.module.xero.processors.GetInvoiceMessageProcessor:423 (http://www.mulesoft.org/docs/site/current3/apidocs/org/mule/api/MessagingException.html)
+--------------------------------------------------------------------------------
+Root Exception stack trace:
+net.oauth.OAuthProblemException: HTTP/1.1 404 Not Found
+URL: https://api.xero.com/api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+oauth_signature base string: GET&amp;https%3A%2F%2Fapi.xero.com%2Fapi.xro%2F2.0%2FInvoices%2F94651943&amp;oauth_consumer_key%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_nonce%3D91008440540406%26oauth_signature_method%3DRSA-SHA1%26oauth_timestamp%3D1363259135%26oauth_token%3DEPLR3DQTBYI23XM7WFF2M6QHFAMYKJ%26oauth_version%3D1.0
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; HTTP request:
+GET /api.xro/2.0/Invoices/94651943?oauth_token=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_consumer_key=EPLR3DQTBYI23XM7WFF2M6QHFAMYKJ&amp;oauth_signature_method=RSA-SHA1&amp;oauth_timestamp=1363259135&amp;oauth_nonce=91008440540406&amp;oauth_version=1.0&amp;oauth_signature=uTrWKOulu0iYuZiv4wYGuk801W0vpRywSMZrSHIM%2BASZxkeTykgRiNOR%2FBZdAvyRjOJlsB2NS1PeQZzo5LaitPjvf5gItVQBw%2FkCL%2FvviAOeMmZHXR4ezrrXlWaTQ%2Fk4gKIn%2FB75tJGaFVt0AuXrOjknzeTX9qy6HHhUuaXvzeE%3D
+User-Agent: Jakarta Commons-HttpClient/3.1
+Host: api.xero.com
+
+
+&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; HTTP response:
+HTTP/1.1 404 Not Found
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+WWW-Authenticate: OAuth Realm=&quot;api.xero.com&quot;
+X-S: 445759-O1VMAP02
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 14 Mar 2013 11:05:40 GMT
+Content-Length: 47
+
+The resource you&apos;re looking for cannot be found
+	at net.oauth.client.OAuthResponseMessage.toOAuthProblemException(OAuthResponseMessage.java:83)
+	at net.oauth.client.OAuthClient.invoke(OAuthClient.java:308)
+	at net.oauth.client.OAuthClient.invoke(OAuthClient.java:262)
+    + 3 more (set debug level logging or &apos;-Dmule.verbose.exceptions=true&apos; for everything)
+********************************************************************************
+
+</system-out>
+  </testcase>
+  <testcase time="2.989" classname="org.mule.module.xero.XeroConnectorTest" name="testCreateInvoiceFailure"/>
+  <testcase time="1.99" classname="org.mule.module.xero.XeroConnectorTest" name="testUpdateInvoiceSuccess"/>
 </testsuite>

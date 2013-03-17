@@ -1,11 +1,7 @@
 
 WELCOME
 =======
-Congratulations you have just created a new Mule Cloud Connector!
-
-This wizard created a number of new classes and resources useful for Mule
-modules.  Each of the created files contains documentation and TODO
-items where necessary.  Here is an overview of what was created.
+This is a Mule Cloud Connector for the Xero Accounting System - www.xero.com
 
 ./pom.xml:
 A maven project descriptor that describes how to build this module.
