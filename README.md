@@ -12,7 +12,7 @@ The Mule cloud connector for Xero is designed to interact with XML-formatted str
 
 For full details of the Xero API, refer to the Xero API reference - http://developer.xero.com/api/
 
-For an example of how to use this connector, refer to the 'demo' folder of this project and use the sample flows below as a guide
+For an example of how to use this connector, refer to the 'sample' project avaliable here: XXXX. The sample flows below can also be used as a guide
 
 Importing the Cloud Connector into Mule Studio
 ==============================================
@@ -30,9 +30,13 @@ Usage
 1. Set up a Xero developer account and register your application as a 'Private' application as per the steps outlined here:
 http://developer.xero.com/api-overview/private-applications/ - we recommend using the Xero 'Demo Company' account to avoid corrupting your organisations data while you are testing your integration.
 
-2. Sample GetInvoice:
+Sample Get Xero Invoice flow:
 
-3. Sample CreateInvoice:
+![Sample Get Xero Invoice flow](/sample/img/XeroGetInvoiceSample.jpg)
+
+Sample CreateInvoice:
+
+![Sample Create Xero Invoice flow](/sample/img/XeroCreateInvoiceSample.jpg)
 
 Manually Building the Connector
 ===============================
@@ -44,13 +48,13 @@ If you'd like to make your own modifications and/or you'd just like to rebuild t
 http://developer.xero.com/api-overview/private-applications/ - we recommend using the Xero 'Demo Company' account 
 to avoid corrupting your organisations data while you are testing and rebuilding the cloud connector.
 
-3. Create a file called 'xero.properties' under src/test/resources folder and include the following four properties:
-xero.consumerKey=<Your Xero Applications OAuth Consumer Key>
-xero.consumerSecret=<Your Xero Applications OAuth Consumer Secret>
-xero.privateKeyFile=<The path to your Xero Applications private key (.pem) file>
-xero.xeroApiUrl=https://api.xero.com/api.xro/2.0/
+3. Create a file called 'xero.properties' under src/test/resources folder and include the following four properties:  
+  - xero.consumerKey=[Your Xero Applications OAuth Consumer Key]
+  - xero.consumerSecret=[Your Xero Applications OAuth Consumer Secret>]
+  - xero.privateKeyFile=[The path to your Xero Applications private key (.pem) file]
+  - xero.xeroApiUrl=https://api.xero.com/api.xro/2.0/
 
-3. Follow the steps outlined at the following link in order to rebuild the connector:
+4. Follow the steps outlined at the following link in order to rebuild the connector:
 http://www.mulesoft.org/documentation/display/DEVKIT/Your+First+Cloud+Connector
 
 Testing
