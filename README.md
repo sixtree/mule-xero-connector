@@ -12,6 +12,8 @@ The Mule cloud connector for Xero is designed to interact with XML-formatted str
 
 For full details of the Xero API, refer to the Xero API reference - http://developer.xero.com/api/
 
+Currently this Cloud Connector provides the majority of the functionality available via the Xero API, with the exception of creating 'Reports'  
+
 For an example of how to use this connector, refer to the 'sample' project avaliable here: XXXX. The sample flows below can also be used as a guide
 
 Importing the Cloud Connector into Mule Studio
