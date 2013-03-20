@@ -34,7 +34,7 @@ Sample Get Xero Invoice flow:
 
 ![Sample Get Xero Invoice flow](/sample/img/XeroGetInvoiceSample.jpg)
 
-Sample CreateInvoice:
+Sample Create Xero Invoice flow:
 
 ![Sample Create Xero Invoice flow](/sample/img/XeroCreateInvoiceSample.jpg)
 
