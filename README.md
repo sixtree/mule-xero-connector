@@ -33,7 +33,7 @@ Importing the Cloud Connector into Mule Studio
 1. Refer to documentation - Installing additional connectors: 
 http://www.mulesoft.org/documentation/display/current/Additional+Cloud+Connectors
 
-2. Add the Mule Xero Connector update site - MuleStudio > Help > Install New Software... - Click "Add" and enter, Name=Mule Xero Connector, Location=https://s3-ap-southeast-2.amazonaws.com/sixtree-cdn-public/mule-connectors/mule-xero-connector/update-site/
+2. Add the Mule Xero Connector update site - MuleStudio > Help > Install New Software... - Click "Add" and enter, Name=Mule Xero Connector, Location=https://sixtree-cdn-public.s3-ap-southeast-2.amazonaws.com/mule-connectors/mule-xero-connector/update-site/
 
 3. Install the Xero Connector - Select Connectors/Xero Mule Studio Extension then Click 'Next' - Review and Accept license details, then Click 'Finish'
 
