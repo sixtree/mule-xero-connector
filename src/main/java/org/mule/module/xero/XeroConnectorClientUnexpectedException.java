@@ -4,7 +4,6 @@ package org.mule.module.xero;
  * @author Sixtree
  *
  */
-
 public class XeroConnectorClientUnexpectedException extends Exception {
     public XeroConnectorClientUnexpectedException(Throwable cause) {
         super(cause);

@@ -37,10 +37,11 @@ import net.oauth.http.HttpResponseMessage;
 import net.oauth.signature.RSA_SHA1;
 
 /**
+ * A helper class which encapsulates client logic (connection & 
+ * authentication) for comms to Xero.  
+ * 
  * @author Sixtree 
- *
  */
-
 public class XeroConnectorClient {
 	
     private String xeroApiUrl;

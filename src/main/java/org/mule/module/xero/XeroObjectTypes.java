@@ -1,10 +1,11 @@
 package org.mule.module.xero;
 
 /**
+ * 
+ * 
  * @author Sixtree
  *
  */
-
 public class XeroObjectTypes {
 	
 	public enum XeroGetTypes {

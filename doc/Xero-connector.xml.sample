@@ -1,8 +1,9 @@
 <!-- BEGIN_INCLUDE(xero:get-accounts-list) --> 
+	<xero:get-accounts-list/>
 <!-- END_INCLUDE(xero:get-accounts-list) -->
-
+ 
 <!-- BEGIN_INCLUDE(xero:get-bank-transactions-list) -->
-    <xero:get-bank-transactions-list/>
+    <xero:get-bank-transactions-list/> 
 <!-- END_INCLUDE(xero:get-bank-transactions-list) -->
 
 <!-- BEGIN_INCLUDE(xero:get-branding-themes-list) -->
@@ -29,7 +30,7 @@
     <xero:get-employees-list/>
 <!-- END_INCLUDE(xero:get-employees-list) -->
 
-!-- BEGIN_INCLUDE(xero:get-expense-claims-list) -->
+<!-- BEGIN_INCLUDE(xero:get-expense-claims-list) -->
     <xero:get-expense-claims-list/>
 <!-- END_INCLUDE(xero:get-expense-claims-list) -->
 
@@ -134,9 +135,9 @@
 <!-- END_INCLUDE(xero:get-user) -->
 
 <!-- BEGIN_INCLUDE(xero:create) -->
-    <xero:create objectType="Invoice" payload="<xml/>"/>
+    <xero:create objectType="Invoices" payload="XERO_XML_FRAGMENT"/>
 <!-- END_INCLUDE(xero:create) -->
 
-<!-- BEGIN_INCLUDE(xero:create-or-update) -->
-    <xero:create-or-update objectType="Invoice" payload="<xml/>"/>
+<!-- BEGIN_INCLUDE(xero:create-or-update) --> 
+    <xero:create-or-update objectType="Invoices" payload="XERO_XML_FRAGMENT"/> 
 <!-- END_INCLUDE(xero:create-or-update) -->

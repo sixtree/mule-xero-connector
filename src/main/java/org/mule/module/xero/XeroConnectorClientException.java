@@ -2,21 +2,18 @@ package org.mule.module.xero;
 
 import java.util.Map;
 
+import net.oauth.OAuthProblemException;
+
 /**
  * @author Sixtree
  *
  */
-
-import net.oauth.OAuthException;
-import net.oauth.OAuthProblemException;
-import net.oauth.http.HttpMessage;
-
 public class XeroConnectorClientException extends Exception {
 	
 	private String xeroException = null;
 	
 	public XeroConnectorClientException(OAuthProblemException oAuthProblemException) {
-		// TODO Auto-generated constructor stub
+		
 		super(oAuthProblemException);
 		
         String oAuthProblemExceptionString = null;
@@ -33,10 +30,11 @@ public class XeroConnectorClientException extends Exception {
         	throw new RuntimeException(oAuthProblemException);
         	//xeroException = (String) oAuthProblemException.getParameters().get(HttpMessage.RESPONSE);
         }
+        
 	}
 	
-	public String getXeroException(){
+	public String getXeroException() {
 		return xeroException;		
 	}
+	
 }
-
