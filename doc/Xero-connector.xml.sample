@@ -1,5 +1,4 @@
-<!-- BEGIN_INCLUDE(xero:get-accounts-list) -->
-    <xero:get-accounts-list whereClause="null"/>
+<!-- BEGIN_INCLUDE(xero:get-accounts-list) --> 
 <!-- END_INCLUDE(xero:get-accounts-list) -->
 
 <!-- BEGIN_INCLUDE(xero:get-bank-transactions-list) -->
