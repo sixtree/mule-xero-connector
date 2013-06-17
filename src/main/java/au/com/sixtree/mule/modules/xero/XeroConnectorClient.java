@@ -1,4 +1,4 @@
-package org.mule.module.xero;
+package au.com.sixtree.mule.modules.xero;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
