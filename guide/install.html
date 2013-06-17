@@ -209,15 +209,15 @@ information about how the Mule Plugin System works see <a href="http://www.mules
 <pre>
 &lt;repositories&gt;
     &lt;repository&gt;
-        &lt;id&gt;${project.distributionManagement.repository.id}&lt;/id&gt;
-        &lt;name&gt;${project.distributionManagement.repository.name}&lt;/name&gt;
-        &lt;url&gt;${project.distributionManagement.repository.url}&lt;/url&gt;
+        &lt;id&gt;sixtree-releases&lt;/id&gt;
+        &lt;name&gt;Sixtree Repository&lt;/name&gt;
+        &lt;url&gt;https://nexus-sixtree.rhcloud.com/nexus/content/repositories/releases/&lt;/url&gt;
         &lt;layout&gt;default&lt;/layout&gt;
     &lt;/repository&gt;
     &lt;repository&gt;
-        &lt;id&gt;${project.distributionManagement.snapshotRepository.id}&lt;/id&gt;
-        &lt;name&gt;${project.distributionManagement.snapshotRepository.name}&lt;/name&gt;
-        &lt;url&gt;${project.distributionManagement.snapshotRepository.url}&lt;/url&gt;
+        &lt;id&gt;sixtree-snapshots&lt;/id&gt;
+        &lt;name&gt;Sixtree Snapshot Repository&lt;/name&gt;
+        &lt;url&gt;https://nexus-sixtree.rhcloud.com/nexus/content/repositories/snapshots/&lt;/url&gt;
         &lt;layout&gt;default&lt;/layout&gt;
     &lt;/repository&gt;
 &lt;/repositories&gt;
@@ -230,7 +230,7 @@ element your POM:
 &lt;dependency&gt;
     &lt;groupId&gt;au.com.sixtree.mule.modules&lt;/groupId&gt;
     &lt;artifactId&gt;mule-module-xero&lt;/artifactId&gt;
-    &lt;version&gt;RELEASE&lt;/version&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </pre>
 
@@ -240,7 +240,7 @@ or if  you want to be on the bleeding edge
 &lt;dependency&gt;
     &lt;groupId&gt;au.com.sixtree.mule.modules&lt;/groupId&gt;
     &lt;artifactId&gt;mule-module-xero&lt;/artifactId&gt;
-    &lt;version&gt;LATEST&lt;/version&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
 &lt;/dependency&gt;
 </pre>
 
@@ -264,6 +264,35 @@ Add an special inclusion to the configuration of the Mule Maven plugin for this 
         &lt;/inclusions&gt;
     &lt;/configuration&gt;
 &lt;/plugin&gt;
+</pre>
+
+And finally, if you plan to include this module within a Mule application, add the following plugin repositories:
+
+<pre>
+&lt;pluginRepositories&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;sixtree-plugin-releases&lt;/id&gt;
+        &lt;name&gt;Sixtree Release Repository&lt;/name&gt;
+        &lt;url&gt;https://nexus-sixtree.rhcloud.com/nexus/content/repositories/releases/&lt;/url&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/releases&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+    &lt;/pluginRepository&gt;
+    &lt;pluginRepository&gt;
+        &lt;id&gt;sixtree-plugin-snapshots&lt;/id&gt;
+        &lt;name&gt;Sixtree Snapshot Repository&lt;/name&gt;
+        &lt;url&gt;https://nexus-sixtree.rhcloud.com/nexus/content/repositories/snapshots/&lt;/url&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;false&lt;/enabled&gt;
+        &lt;/releases&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+    &lt;/pluginRepository&gt;
+&lt;/pluginRepositories&gt;
 </pre>
 
 <div id="footer">
