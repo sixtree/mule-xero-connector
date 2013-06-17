@@ -1,0 +1,8 @@
+*.pem
+*.log
+*.properties
+./**/*.properties
+target/
+.settings/
+.classpath
+.project
