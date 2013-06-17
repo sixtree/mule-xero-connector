@@ -1,14 +1,14 @@
-org.mule.module.xero
-org.mule.module.xero.adapter
-org.mule.module.xero.adapters
-org.mule.module.xero.agents
-org.mule.module.xero.basic
-org.mule.module.xero.callback
-org.mule.module.xero.config
-org.mule.module.xero.connection
-org.mule.module.xero.devkit
-org.mule.module.xero.oauth
-org.mule.module.xero.process
-org.mule.module.xero.processors
-org.mule.module.xero.transformers
+au.com.sixtree.mule.modules.xero
+au.com.sixtree.mule.modules.xero.adapter
+au.com.sixtree.mule.modules.xero.adapters
+au.com.sixtree.mule.modules.xero.agents
+au.com.sixtree.mule.modules.xero.basic
+au.com.sixtree.mule.modules.xero.callback
+au.com.sixtree.mule.modules.xero.config
+au.com.sixtree.mule.modules.xero.connection
+au.com.sixtree.mule.modules.xero.devkit
+au.com.sixtree.mule.modules.xero.oauth
+au.com.sixtree.mule.modules.xero.process
+au.com.sixtree.mule.modules.xero.processors
+au.com.sixtree.mule.modules.xero.transformers
 
